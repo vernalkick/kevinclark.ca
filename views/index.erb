@@ -1,0 +1,25 @@
+<section class="main-section row">
+  <div class="column column--third column--left">
+    <h1>Hello!</h1>
+  </div>
+  <div class="column column--two-thirds column--right column--no-padding">
+    <h2>My name is Kevin Clark. I’m a Product Designer at Shopify, run the Montreal Dribbble meetups and make apps in my spare time. I live and work in the beautiful city of Montreal.</h2>
+    <a href="http://twitter.com" class="external-link">Follow me on Twitter</a>
+  </div>
+</section>
+
+<section class="main-section row">
+  <div class="column column--third column--left column--no-padding">
+    <h2>Recent articles</h2>
+  </div>
+  <ul class="article-list column column--two-thirds column--right column--no-padding">
+    <% @articles[0..5].each do |article| %>
+      <li class="article-list__item">
+        <a href="<%= article.url %>">
+          <h4><%= typography article.title %></h4>
+          <p><%= article.excerpt %></p>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</section>

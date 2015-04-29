@@ -1,0 +1,36 @@
+// =============================================================================
+// SIDEBAR
+// =============================================================================
+
+// SIDEBAR SECTION
+// -----------------------------------------------------------------------------
+
+.sidebar__section {
+  padding-bottom: 3rem;
+  font-size: 0.875rem;
+}
+
+.sidebar__title {
+  font-weight: 500;
+  color: $color--grey-light;
+}
+
+.sidebar__text {
+  color: $color--grey-lighter;
+  margin-bottom: 0.5rem;
+}
+
+
+// LINK LIST
+// -----------------------------------------------------------------------------
+
+.sidebar__link-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+.sidebar__link-list__item span {
+  display: block;
+}
+

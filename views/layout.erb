@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Required meta stuff-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- SEO magic -->
+    <title>Kevin Clark</title>
+    <meta name="description" content="Kevin Clark is a product designer living in Montreal.">
+    <meta name="author" content="Kevin Clark">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon.png">
+
+    <!-- Mobile optimizations -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+
+    <link href="/assets/styles.scss" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body>
+
+    <header role="banner" class="page-header">
+      <div class="wrap">
+        <a href="/" class="logo">
+          <%= embed_svg 'logo' %>
+          <span class="visually-hidden">Kevin Clark</span>
+        </a>
+        <nav class="page-navigation">
+          <ul class="page-navigation-list">
+            <% @nav.each do |nav_item| %>
+              <li class="page-navigation-list__item">
+                <a href="<%= nav_item[:url] %>" class="page-navigation-list__link"><%= nav_item[:title] %></a>
+              </li>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <div class="wrap">
+        <%= yield %>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="wrap">
+        <p>
+          Copyright © <%= DateTime.now.strftime "%Y" %> <a href="/">Kevin Clark</a>. All rights reserved.
+          Powered by <a href="https://middlemanapp.com/">Middleman</a> and hosted by <a href="http://fliphost.net/">FlipHost</a>. The code is on <a href="https://github.com/">Github</a>.<br/>
+          If you’d like to keep up with new content, you should subscribe to my <a href="/feed.xml">RSS feed</a>.
+        </p>
+        <ul class="social-link-list">
+          <li class="social-link-list__item">
+            <a href="https://twitter.com/vernalkick" class="social-link social-link--twitter">
+              <%= embed_svg 'twitter' %>
+              <span class="visually-hidden">Twitter</span>
+            </a>
+          </li>
+          <li class="social-link-list__item">
+            <a href="http://dribbble.com/vernalkick" class="social-link social-link--dribbble">
+              <%= embed_svg 'dribbble' %>
+              <span class="visually-hidden">Dribbble</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+  </body>
+</html>

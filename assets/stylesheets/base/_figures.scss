@@ -1,0 +1,54 @@
+// =============================================================================
+// FIGURE
+// =============================================================================
+
+figure {
+  margin-bottom: 1.5rem;
+}
+
+figure img {
+  width: 100%;
+  max-width: none;
+
+  @include media($media-query--mobile) {
+    width: calc(100% + 3rem);
+    margin-left: -1.5rem;
+  }
+}
+
+
+// CAPTION
+// -----------------------------------------------------------------------------
+
+figcaption {
+  color: $color--grey-lighter;
+  font-size: 0.875rem;
+  margin-top: 0.5em;
+}
+
+
+// FIGURE MODIFIERS
+// -----------------------------------------------------------------------------
+
+.figure--half-right {
+  @include media($media-query--desktop) {
+    margin-left: 2rem;
+    width: 65%;
+    float: right;
+    margin-right: -33.5%;
+  }
+
+  @include media($media-query--desktop-large) {
+    width: 62%;
+    margin-right: -20.5%;
+  }
+}
+
+.figure--extend-right img {
+  @include media($media-query--desktop) {
+    width: 133%;
+  }
+  @include media($media-query--desktop-large) {
+    width: 121%;
+  }
+}

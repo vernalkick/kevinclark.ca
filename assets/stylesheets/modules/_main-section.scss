@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+// MAIN SECTIONS
+// Separate main sections of the page with a separator
+// -----------------------------------------------------------------------------
+
+.main-section {
+  padding: 3em 0;
+  position: relative;
+
+  &:first-child { padding-top: 0; }
+  &:last-child { padding-bottom: 0; }
+
+  // Put a border that extends all the way to the end of the viewport
+  & + &:before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 200%;
+    background: $color--sky--light;
+    top: 0;
+    left: 0;
+  }
+}

@@ -1,0 +1,105 @@
+// =============================================================================
+// HEADER
+// =============================================================================
+
+// VARIABLES
+// -----------------------------------------------------------------------------
+
+$header--padding: 7rem;
+
+
+// HEADER
+// -----------------------------------------------------------------------------
+
+.page-header {
+  padding: 2rem 0;
+
+  @include media($media-query--tablet-up) {
+    padding: $header--padding 0;
+  }
+}
+
+
+// LOGO
+// -----------------------------------------------------------------------------
+
+.logo {
+  @include media($media-query--tablet-up) {
+    float: left;
+  }
+}
+
+.logo svg:hover {
+  fill: $color--accent;
+}
+
+
+// NAVIGATION
+// -----------------------------------------------------------------------------
+
+.page-navigation-list {
+  list-style-type: none;
+  margin: 0.5em 0 0;
+  padding: 0;
+
+  @include media($media-query--tablet-up) {
+    margin-top: -$header--padding; // Align navigation to the top of the screen
+    float: right;
+  }
+}
+
+.page-navigation-list__item {
+  display: inline-block;
+  @include margin-vertical(0);
+
+  & + & {
+    margin-left: 1em;
+
+    @include media($media-query--tablet-up) {
+      margin-left: 2em;
+    }
+
+    @include media($media-query--desktop) {
+      margin-left: 3em;
+    }
+  }
+
+  // Hide first navigation link to save space on tablet
+  &:first-child {
+    @include media($media-query--tablet) {
+      display: none;
+    }
+  }
+}
+
+.page-navigation-list__link {
+  position: relative;
+  display: block;
+
+  // Highlight the current nav item
+  .page-navigation-list__item--current & {
+    font-weight: 500;
+    color: $color--grey-dark;
+  }
+
+  @include media($media-query--tablet-up) {
+    border-left: 1px solid $color--sky--light;
+    padding: $header--padding 0 0.25em 1em;
+    font-size: 0.9em;
+
+    // Animate the border filling up on hover
+    &:after {
+      content: "";
+      display: block;
+      width: 1px;
+      position: absolute;
+      top: 0; left: -1px; bottom: 100%;
+      background: $color--grey-lighter;
+      transition: all $duration $easing;
+    }
+
+    &:hover:after {
+      bottom: 0;
+    }
+  }
+}

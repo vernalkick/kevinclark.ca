@@ -1,0 +1,71 @@
+// =============================================================================
+// ARTICLE
+// =============================================================================
+
+.post__header {
+  margin-bottom: 1.5rem;
+
+  @include media($media-query--tablet-up) {
+    margin-bottom: 3rem;
+  }
+}
+
+.column--no-padding {
+  padding: 0 !important;
+}
+
+@include media($media-query--desktop) {
+  .row {
+    @include clearfix;
+  }
+
+  .column--third,
+  .column--two-thirds {
+    box-sizing: border-box;
+    padding-right: 25%;
+  }
+}
+
+@include media($media-query--desktop-large) {
+  .column--left { float: left; }
+  .column--right { float: right; }
+
+  .column--third {
+    padding: 0;
+  }
+
+  .column--third {
+    width: 22%;
+    float: left;
+  }
+
+  .column--two-thirds {
+    padding-right: 12%;
+    width: 70%;
+  }
+}
+
+
+// FOOTNOTES
+// -----------------------------------------------------------------------------
+
+.footnotes {
+  font-size: 0.875em;
+  color: $color--grey-lighter;
+}
+
+// Put a dash between the footnote and the content of the article
+.footnotes:before {
+  content: "";
+  width: 5em;
+  height: 2px;
+  background-color: #EDECEC;
+  margin: 2em 0;
+  display: block;
+  border: none;
+}
+
+// Adjust the `↩` icon font-size to fit with the rest of the text
+.reversefootnote {
+  font-size: 0.875em;
+}
