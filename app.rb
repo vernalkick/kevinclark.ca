@@ -1,4 +1,5 @@
 class App < Sinatra::Base
+
   before do
     @articles = articles
     @nav = nav
@@ -13,12 +14,34 @@ class App < Sinatra::Base
     '404. You broke something.'
   end
 
+  get '/articles' do
+    erb :articles
+  end
+
+  get '/portfolio' do
+    erb :portfolio
+  end
+
+  get '/about' do
+    erb :about
+  end
+
   get '/articles/:slug' do
+    not_found unless Dir["articles/*#{params[:slug]}.md.erb"][0]
+
     @article = Article.new(slug: params[:slug])
+    @article.body
 
-    redirect '/404' unless @article.exists?
+    erb :layout, layout: false do
+      erb render_markdown(@article.body), layout: :article
+    end
 
-    erb :article
+    # markdown ERB.new(@article.body).result(binding), layout_engine: :erb, layout: :article
+  end
+
+  get '/articles/:slug/edit' do
+    @article = Article.new(slug: params[:slug])
+    erb :edit_article
   end
 
   def nav
@@ -35,6 +58,7 @@ class App < Sinatra::Base
 
     Dir["articles/*"].each do |file_path|
       article = Article.new(file_path: file_path)
+      # article.body = render_markdown(article.body)
       articles.insert(0, article) if article.published?
     end
 

@@ -55,7 +55,7 @@
 }
 
 // Put a dash between the footnote and the content of the article
-.footnotes:before {
+hr {
   content: "";
   width: 5em;
   height: 2px;
@@ -66,6 +66,6 @@
 }
 
 // Adjust the `↩` icon font-size to fit with the rest of the text
-.reversefootnote {
+[rev="footnote"] {
   font-size: 0.875em;
 }

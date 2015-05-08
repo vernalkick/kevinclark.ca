@@ -1,8 +1,8 @@
-module PartialHelpers
-  # def link_is_current_page?(link)
-  #   page_path = '/' + current_page.destination_path.gsub(/(index\.html|\/.*)/, '')
-  #   true if link == page_path
-  # end
+module Renderer
+  def Renderer.render(body)
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, highlight: true, footnotes: true)
+    markdown.render(ERB.new(body).result(binding))
+  end
 
   def embed_svg(filename, options={})
     file = File.read("assets/images/#{filename}.svg")
@@ -12,18 +12,13 @@ module PartialHelpers
       svg['class'] = options[:class]
     end
     doc.to_html
-   end
-
-   def typography(string)
-    string
-   end
-
-  def render_markdown(body)
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, highlight: true)
-    markdown.render(ERB.new(body).result(binding))
   end
 
-  def figure(url, caption = nil, options={})
+  def typography(string)
+    string
+  end
+
+  def Renderer.figure(url, caption = nil, options={})
     types = {
       image: /.*\.(png|gif|jpe?g|svg)/,
       video: /https?:\/\/.*youtube\.com.+?v=(\S+)/
@@ -49,4 +44,5 @@ module PartialHelpers
    def strip_html(string)
       string.gsub(%r{</?[^>]+?>}, '')
    end
+
 end

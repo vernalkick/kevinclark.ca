@@ -1,33 +1,64 @@
+require_relative '../helpers/renderer'
+
 class Article
-  attr_accessor :body, :title, :file_path, :url, :metadata
+  attr_accessor :body, :title, :file_path, :url, :data
 
   def initialize(params={})
     slug = params[:slug] || slug_from_path(params[:file_path])
+    @slug = slug
 
     @file_path = Dir["articles/*#{slug}.md.erb"][0]
 
-    return unless @file_path
-
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, highlight: true)
-
-    @metadata = YAML.load_file(@file_path)
-
-    @body = markdown.render(File.new(@file_path).read.split(/---/, )[2]).strip
-    @title = Typogruby.improve metadata['title']
-    @url = "/articles/#{slug}"
+    @data = YAML.load_file(@file_path)
   end
 
-  def exists?
-    true if @file_path
+
+  # METADATA
+  #########################################################
+
+  # TITLE
+  # Improve title string to remove orphans
+  def title
+    Typogruby.improve data['title']
   end
 
+  # PUBLISHED?
+  # Returns whether the article
   def published?
-    true if metadata['published'] != false
+    true if @data['published'] != false
   end
 
-  def excerpt(length = 150)
-    @body.gsub(%r{</?[^>]+?>}, '')[0..length - 1] + '…'
+  # DATE
+  # Publish date of the article
+  def date
+    Date.parse(data['date'] || file_path[/\d{4}-\d{2}-\d{2}/])
   end
+
+  # URL
+  # Link to the post
+  def url
+    "/articles/#{@slug}"
+  end
+
+
+  # CONTENT
+  #########################################################
+
+  # BODY
+  # Main content of the article
+  def body
+    Renderer::render File.new(file_path).read.split(/---/, )[2]
+  end
+
+  # EXCERPT
+  # Plain text summary of the body of the article
+  def excerpt(length = 150)
+    body.gsub(%r{</?[^>]+?>}, '')[0..length - 1] + '…'
+  end
+
+
+  # PRIVATE METHODS
+  #########################################################
 
   private
 
@@ -37,5 +68,9 @@ class Article
 
   def slug_from_path(path)
     /\d{4}-\d{2}-\d{2}-(.*?)\.md\.erb/.match(path)[1]
+  end
+
+  def file_path
+    Dir["articles/*#{@slug}.md.erb"][0]
   end
 end
