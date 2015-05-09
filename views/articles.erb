@@ -7,7 +7,7 @@
   </div>
 </section>
 
-<% @articles.group_by {|a| a.date.year }.each do |year, articles| %>
+<% @articles.group_by {|a| a.date.year }.sort.reverse_each do |year, articles| %>
   <%= year %>
 <% end %>
 
