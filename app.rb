@@ -62,7 +62,7 @@ class App < Sinatra::Base
       articles.insert(0, article) if article.published?
     end
 
-    articles
+    articles.sort! {|a, b| b.date <=> a.date}
   end
 
 end

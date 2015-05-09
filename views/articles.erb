@@ -7,6 +7,8 @@
   </div>
 </section>
 
+<%# {"2012": [2, 5, 8, 32] }["2012"] %>
+
 <% @articles.group_by {|a| a.date.year }.sort.reverse_each do |year, articles| %>
   <section class="main-section row">
     <div class="column column--third column--left">
