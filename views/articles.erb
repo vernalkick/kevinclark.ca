@@ -7,6 +7,10 @@
   </div>
 </section>
 
+<% @articles.group_by {|a| a.date.year }.each do |year, articles| %>
+  <%= year %>
+<% end %>
+
 <% @articles.group_by {|a| a.date.year }.sort_by {|year, articles| !year}.each do |year, articles| %>
   <section class="main-section row">
     <div class="column column--third column--left">
