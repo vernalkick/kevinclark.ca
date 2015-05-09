@@ -1,3 +1,7 @@
+class Redcarpet::Render::HTML
+  include Redcarpet::Render::SmartyPants
+end
+
 module Renderer
   def Renderer.render(body)
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, highlight: true, footnotes: true)
@@ -18,7 +22,7 @@ module Renderer
     string
   end
 
-  def Renderer.figure(url, caption = nil, options={})
+  def Renderer.figure(url, caption = "", options={})
     types = {
       image: /.*\.(png|gif|jpe?g|svg)/,
       video: /https?:\/\/.*youtube\.com.+?v=(\S+)/
@@ -41,8 +45,8 @@ module Renderer
     markup
    end
 
-   def strip_html(string)
-      string.gsub(%r{</?[^>]+?>}, '')
-   end
+  def Renderer.strip_html(string)
+    string.gsub(%r{</?[^>]+?>}, '')
+  end
 
 end
