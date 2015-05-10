@@ -47,7 +47,8 @@ class Article
   # BODY
   # Main content of the article
   def body
-    Renderer::render File.new(file_path).read.split(/---/, )[2]
+    file = File.new(file_path).read
+    Renderer::render file.sub(/---[\s\S]*?---/, '')
   end
 
   # EXCERPT
