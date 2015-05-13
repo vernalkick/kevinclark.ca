@@ -1,15 +1,15 @@
 
 
-<article class="post">
-  <header class="post__header row">
-    <h1><%= project.title %></h1>
+<article class="project">
+  <header class="project__header row">
+    <h1 class="project__title"><%= project.title %></h1>
     <% if project.link %>
-      <a href="<%= project.link %>">Visit site</a>
+      <a href="<%= project.link %>" class="project__link external-link">Visit site</a>
     <% end %>
   </header>
 
   <% if project.hero_image_url %>
-    <img src="<%= project.hero_image_url %>" alt="">
+    <img src="<%= project.hero_image_url %>" alt="" class="project__hero">
   <% end %>
 
   <div class="post__content row">

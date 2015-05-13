@@ -22,6 +22,7 @@ $media-query--tablet-up: "(min-width: #{$breakpoint--medium})";
 
 // Desktop media-query
 $media-query--desktop: "(min-width: #{$breakpoint--large})";
+$media-query--desktop-down: "(max-width: #{$breakpoint--xlarge - 1})";
 $media-query--desktop-large: "(min-width: #{$breakpoint--xlarge})";
 
 

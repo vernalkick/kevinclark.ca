@@ -14,6 +14,30 @@
   padding: 0 !important;
 }
 
+.column + .column {
+  @include media($media-query--desktop-down) {
+    margin-top: 2em;
+  }
+}
+
+aside {
+  color: $color--grey-lighter;
+  font-size: .875rem;
+
+  @include media($media-query--desktop) {
+    width: 40%;
+    float: right;
+    margin-right: -20%;
+    margin-top: .5em;
+    margin-left: 2em;
+    margin-bottom: 2em;
+  }
+}
+
+aside h4 {
+  color: $color--grey-light;
+}
+
 @include media($media-query--desktop) {
   .row {
     @include clearfix;

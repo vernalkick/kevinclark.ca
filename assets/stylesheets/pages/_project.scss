@@ -1,0 +1,28 @@
+// =============================================================================
+// PROJECT
+// =============================================================================
+
+.project__header {
+  margin-bottom: 1em;
+
+  @include media($media-query--tablet-up) {
+    margin-bottom: 2em;
+    display: flex;
+  }
+}
+
+.project__title {
+  margin-bottom: 0;
+
+  @include media($media-query--tablet-up) {
+    flex: 1 0 0;
+  }
+}
+
+.project__hero {
+  margin-bottom: 1em;
+
+  @include media($media-query--tablet-up) {
+    margin-bottom: 2em;
+  }
+}
