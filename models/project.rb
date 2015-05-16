@@ -23,6 +23,14 @@ class Project
     "/portfolio/#{slug}"
   end
 
+  def published?
+    true if @meta['published'] != false
+  end
+
+  def thumbnail
+    "/assets/portfolio/#{slug}/thumbnail.jpg"
+  end
+
   def description
     meta['description']
   end

@@ -14,7 +14,7 @@
   padding: 0 !important;
 }
 
-.column + .column {
+.sidebar {
   @include media($media-query--desktop-down) {
     margin-top: 2em;
   }
@@ -23,14 +23,20 @@
 aside {
   color: $color--grey-lighter;
   font-size: .875rem;
+  margin-bottom: 1.5em;
 
   @include media($media-query--desktop) {
-    width: 40%;
+    width: 30%;
     float: right;
-    margin-right: -20%;
+    margin-right: -30%;
     margin-top: .5em;
     margin-left: 2em;
     margin-bottom: 2em;
+  }
+
+  @include media($media-query--desktop-large) {
+    width: 40%;
+    margin-right: -20%;
   }
 }
 

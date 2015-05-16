@@ -1,4 +1,26 @@
 <section class="main-section row">
-  <h1>Portfolio</h1>
-  <p>Coming soon!</p>
+  <div class="column column--third column--left">
+    <h1>Portfolio</h1>
+  </div>
+  <div class="column column--two-thirds column--right column--no-padding">
+    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum perspiciatis at laudantium praesentium sequi saepe tenetur cumque voluptatibus. Vitae numquam saepe asperiores assumenda illum quis nihil aut blanditiis eum quia.</h2>
+  </div>
 </section>
+
+  <section class="main-section row">
+    <div class="column column--third column--left">
+      <h2>Web Design</h2>
+    </div>
+    <ul class="article-list column column--two-thirds column--right column--no-padding">
+      <% projects.each do |project| %>
+        <li class="article-list__item">
+          <a href="<%= project.url %>">
+            <img src="<%= project.thumbnail %>" alt="">
+            <h4><%= project.title %></h4>
+            <p><%= project.description %></p>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </section>
+

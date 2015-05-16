@@ -1,6 +1,7 @@
 class App < Sinatra::Base
 
   before do
+    @current_page = current_page
     @articles = articles
     @nav = nav
   end
@@ -19,7 +20,7 @@ class App < Sinatra::Base
   end
 
   get '/portfolio' do
-    erb :portfolio
+    erb :portfolio, locals: { projects: projects }
   end
 
   get '/portfolio/:slug' do
@@ -34,6 +35,10 @@ class App < Sinatra::Base
 
   get '/about' do
     erb :about
+  end
+
+  get '/rss' do
+    builder :rss
   end
 
   get '/articles/:slug' do
@@ -60,6 +65,10 @@ class App < Sinatra::Base
     ]
   end
 
+  def current_page
+    request.path[/(^\/[^\/]*)/]
+  end
+
   def articles
     articles = []
 
@@ -69,6 +78,18 @@ class App < Sinatra::Base
     end
 
     articles.sort! {|a, b| b.date <=> a.date}
+  end
+
+  def projects
+    projects = []
+
+    Dir["projects/*"].each do |file_path|
+      slug = /\/(.*?)\.md\.erb/.match(file_path)[1]
+      project = Project.new(slug)
+      projects.insert(0, project) if project.published?
+    end
+
+    projects
   end
 
 end

@@ -35,7 +35,7 @@
         <nav class="page-navigation">
           <ul class="page-navigation-list">
             <% @nav.each do |nav_item| %>
-              <li class="page-navigation-list__item">
+              <li class="page-navigation-list__item <%= 'page-navigation-list__item--current' if current_page == nav_item[:url] %>">
                 <a href="<%= nav_item[:url] %>" class="page-navigation-list__link"><%= nav_item[:title] %></a>
               </li>
             <% end %>
@@ -54,8 +54,8 @@
       <div class="wrap">
         <p>
           Copyright © <%= DateTime.now.strftime "%Y" %> <a href="/">Kevin Clark</a>. All rights reserved.
-          Powered by <a href="https://middlemanapp.com/">Middleman</a> and hosted by <a href="http://fliphost.net/">FlipHost</a>. The code is on <a href="https://github.com/">Github</a>.<br/>
-          If you’d like to keep up with new content, you should subscribe to my <a href="/feed.xml">RSS feed</a>.
+          Powered by <a href="http://www.sinatrarb.com">Sinatra</a> and hosted by <a href="http://heroku.com">Heroku</a>. The code is on <a href="https://github.com/">Github</a>.<br/>
+          If you’d like to keep up with new content, you should subscribe to my <a href="/rss">RSS feed</a>.
         </p>
         <ul class="social-link-list">
           <li class="social-link-list__item">

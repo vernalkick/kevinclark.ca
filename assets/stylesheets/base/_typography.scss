@@ -123,3 +123,14 @@ h3 {}
 h4 {}
 h5 {}
 h6 {}
+
+
+// SELECTION COLOR
+// -----------------------------------------------------------------------------
+
+@each $prefix in '::selection', '::-moz-selection' {
+  #{$prefix} {
+    background: $color--accent;
+    color: #fff;
+  }
+}

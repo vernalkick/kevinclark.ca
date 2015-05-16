@@ -9,7 +9,9 @@
   </header>
 
   <% if project.hero_image_url %>
-    <img src="<%= project.hero_image_url %>" alt="" class="project__hero">
+    <div class="project__hero">
+      <img src="<%= project.hero_image_url %>" alt="">
+    </div>
   <% end %>
 
   <div class="post__content row">

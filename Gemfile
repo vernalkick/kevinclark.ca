@@ -16,6 +16,9 @@ gem 'rack-canonical-host'
 # XML parsing
 gem 'nokogiri'
 
+# RSS Builder
+gem 'builder'
+
 # Markdown
 gem 'redcarpet'
 

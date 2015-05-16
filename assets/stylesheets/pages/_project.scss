@@ -21,8 +21,22 @@
 
 .project__hero {
   margin-bottom: 1em;
+  padding: 5% 0 0;
+  position: relative;
 
   @include media($media-query--tablet-up) {
     margin-bottom: 2em;
   }
+}
+
+.project__hero:after {
+  content: "";
+  display: block;
+  width: 500%;
+  height: 88%;
+  top: 0;
+  left: -100%;
+  background: #f2f2f2;
+  position: absolute;
+  z-index: -1;
 }
