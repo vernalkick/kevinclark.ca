@@ -11,7 +11,9 @@ gem 'sinatra'
 gem 'erubis'
 
 # Use the right host
-gem 'rack-canonical-host'
+# gem 'rack-canonical-host'
+
+gem 'rest-client'
 
 # XML parsing
 gem 'nokogiri'

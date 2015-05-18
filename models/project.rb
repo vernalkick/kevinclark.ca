@@ -20,7 +20,7 @@ class Project
   # URL
   # Link to the post
   def url
-    "/portfolio/#{slug}"
+    URL::BASE_URL + "/portfolio/#{slug}"
   end
 
   def published?

@@ -1,0 +1,35 @@
+---
+title: Shopify for Apple Watch
+description: Know what’s happening on your store directly from your Apple Watch.
+link: http://www.shopify.ca/blog/18102100-shopify-now-available-on-apple-watch
+hero_image: shopify-apple-watch-hero-2.png
+---
+
+This started as my Hack Days project. The SDK had came out a few months earlier, but the watch wasn’t even out yet. I decided I wanted to take a stab at figuring out what would be useful to see on the Apple Watch.
+
+My idea was simple, I wanted to be able to view how my store was doing at a glance and be notified of new sales. This way, both merchants with a lot of orders and merchants that are just starting out could get value out of the app and the interactions with the app wouldn’t be longer than a few seconds.
+
+I pulled out my sketchbook and started sketching a few ideas for ways to display your store’s data in a way that is visually interesting and makes the most of the small display of the watch.
+
+<%= figure "/assets/portfolio/shopify-apple-watch/sketches.jpg" %>
+
+<aside>
+  <h4>Aside</h4>
+  <p>Apple has <a href="https://developer.apple.com/watch/human-interface-guidelines/resources/">made available</a> resources for designing for the Apple Watch, like the San Francisco font and a few Sketch files of the different parts of the UI.</p>
+</aside>
+
+Then I put my headphones on and immediately started working on the actual UI in Sketch[^1]. A thing I kept asking myself when I was designing was “is this useful?”, “is this interesting?” It’s also easy to make the text too small. Because I had never seen one in person, mirroring the screen to my iPhone was really helpful in getting the sizing right.
+
+<p class="pull-quote">I kept asking myself questions when designing the app. Is this interesting? Is this useful?</p>
+
+Next, I decided to prototype some of this stuff. I wasn’t sure how long it would take me to wrap my head around WatchKit, so I figured that if I couldn’t have a live demo working, I could at least show a prototype. I compared the pros and cons of Framer, Origami and Form but quickly decided to go with Origami. It required the least time to get set up, had a way to display the app on an iPhone and interact with it in realtime and a great way to present. One thing I noticed is that it’s pretty good at prototyping single interactions or transitions, but more complex things like having different states required a huge amount of effort. All in all, in a day I went from an idea to a mostly working prototype of the functionality I wanted. Not bad.
+
+<%= figure "/assets/portfolio/shopify-apple-watch/shopify-watch.gif", "", class: 'figure--half-right' %>
+
+Next morning, I fired up Xcode and got to work on a working version, well… It wasn’t pulling real data, but but at least it wast real code running on the Watch/Phone. Due to the inherent simplicity of WatchKit, getting the UI working in Interface Builder was relatively easy. I was making good progress, but time was running out.
+
+I presented my project, and luckily enough a few people were interested in it too! So over the next few weeks, I handed over my project files and assets and they rewrote my terribly rushed code, improved a ton over the initial functionality of the app, hooked it up to real data from the app (pretty important part) and put a huge amount of effort trying to reduce the load time of the app.
+
+This was a super fun quick project to work on and gave me a nice change from what I usually work on. As you might have guessed, one of the first things I did when I got my Apple Watch was load up the app.
+
+[^1]: You have to get things done really quickly during Hack Days if you want to have something to show at the end of the second day.

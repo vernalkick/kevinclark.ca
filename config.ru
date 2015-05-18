@@ -3,7 +3,7 @@ require 'bundler'
 require 'autoprefixer-rails'
 Bundler.require(:default, ENV['RACK_ENV'])
 
-use Rack::CanonicalHost, ENV['CANONICAL_HOST'] if ENV['CANONICAL_HOST']
+# use Rack::CanonicalHost, ENV['CANONICAL_HOST'] if ENV['CANONICAL_HOST']
 
 map '/assets' do
   sprockets = Sprockets::Environment.new

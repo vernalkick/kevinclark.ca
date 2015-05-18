@@ -1,11 +1,15 @@
 <article class="post">
   <header class="post__header row">
     <div class="column column--two-thirds column--right">
-      <h1><%= @article.title %></h1>
+      <h1><%= article.title %></h1>
     </div>
   </header>
   <div class="post__content row">
     <div class="column column--two-thirds column--right">
-      <%= yield %>
+      <%= article.body %>
+
+      <a href="<%= Twitter.tweet_url(article.title + ' —', article.url) %>">
+        Share it on Twitter — <%= Twitter.tweet_count_message(article.url) %>
+      </a>
     </div>
 </article>

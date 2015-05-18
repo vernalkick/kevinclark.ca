@@ -44,10 +44,10 @@ class App < Sinatra::Base
   get '/articles/:slug' do
     not_found unless Dir["articles/*#{params[:slug]}.md.erb"][0]
 
-    @article = Article.new(slug: params[:slug])
+    article = Article.new(slug: params[:slug])
 
     erb :layout, layout: false do
-      erb render_markdown(@article.body), layout: :article
+      erb :article, locals: { article: article }
     end
   end
 
@@ -96,3 +96,4 @@ end
 
 require_relative 'helpers/helpers'
 require_relative 'models/models'
+require_relative 'models/twitter'

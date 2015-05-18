@@ -4,7 +4,7 @@
   <header class="project__header row">
     <h1 class="project__title"><%= project.title %></h1>
     <% if project.link %>
-      <a href="<%= project.link %>" class="project__link external-link">Visit site</a>
+      <a href="<%= project.link %>" class="project__link external-link">View project</a>
     <% end %>
   </header>
 
@@ -17,6 +17,10 @@
   <div class="post__content row">
     <div class="column column--two-thirds column--right">
       <%= project.body %>
+
+      <a href="<%= Twitter.tweet_url(project.title + ' —', project.url) %>">
+        Share it on Twitter — <%= Twitter.tweet_count_message(project.url) %>
+      </a>
     </div>
     <div class="column column--third column--left">
       <% if project.description %>
@@ -42,20 +46,6 @@
           </ul>
         </div>
       <% end %>
-      <!-- <div class="sidebar__section">
-        <h4 class="sidebar__title">Awards</h4>
-        <ul class="sidebar__link-list">
-          <li class="sidebar__link-list__item">
-            <a href="#" class="external-link">The Artboard</a>
-          </li>
-          <li class="sidebar__link-list__item">
-            <a href="#" class="external-link">Typekit Blog</a>
-          </li>
-          <li class="sidebar__link-list__item">
-            <a href="#" class="external-link">The Development</a>
-          </li>
-        </ul>
-      </div> -->
     </div>
   </div>
 </article>

@@ -1,4 +1,5 @@
 require_relative '../helpers/renderer'
+require_relative '../helpers/url'
 
 class Article
   attr_accessor :body, :title, :file_path, :url, :data
@@ -37,7 +38,7 @@ class Article
   # URL
   # Link to the post
   def url
-    "/articles/#{@slug}"
+    URL::BASE_URL + "/articles/#{@slug}"
   end
 
 
