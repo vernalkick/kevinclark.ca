@@ -16,10 +16,12 @@ class App < Sinatra::Base
   end
 
   get '/articles' do
+    @title = "Articles"
     erb :articles
   end
 
   get '/portfolio' do
+    @title = "Portfolio"
     erb :portfolio, locals: { projects: projects }
   end
 
@@ -27,6 +29,7 @@ class App < Sinatra::Base
     not_found unless Dir["projects/*#{params[:slug]}.md.erb"][0]
 
     project = Project.new(params[:slug])
+    @title = project.title
 
     erb :layout, layout: false do
       erb :project, locals: { project: project }
@@ -34,6 +37,7 @@ class App < Sinatra::Base
   end
 
   get '/about' do
+    @title = "About"
     erb :about
   end
 
@@ -45,6 +49,7 @@ class App < Sinatra::Base
     not_found unless Dir["articles/*#{params[:slug]}.md.erb"][0]
 
     article = Article.new(slug: params[:slug])
+    @title = article.title
 
     erb :layout, layout: false do
       erb :article, locals: { article: article }
