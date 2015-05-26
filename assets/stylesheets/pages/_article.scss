@@ -99,3 +99,21 @@ hr {
 [rev="footnote"] {
   font-size: 0.875em;
 }
+
+
+// SHARE ON TWITTER
+// -----------------------------------------------------------------------------
+
+.share-on-twitter {
+  display: block;
+  margin-top: 1em;
+
+  @include media($media-query--desktop) {
+    margin-top: 2em;
+  }
+}
+
+.share-on-twitter__icon {
+  vertical-align: -1px;
+  margin-right: .25em;
+}
