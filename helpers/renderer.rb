@@ -1,10 +1,18 @@
-class Redcarpet::Render::HTML
+class MarkdownRenderer < Redcarpet::Render::HTML
   include Redcarpet::Render::SmartyPants
+
+  def image(link, title, alt_text)
+    tag = "<figure class='figure--extend-right'>"
+    tag += "<img src='#{link}' />"
+    tag += "<figcaption>#{alt_text}</figcaption>" if alt_text
+    tag += "</figure>"
+    tag
+  end
 end
 
 module Renderer
   def Renderer.render(body)
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, highlight: true, footnotes: true)
+    markdown = Redcarpet::Markdown.new(MarkdownRenderer, highlight: true, footnotes: true)
     markdown.render(ERB.new(body).result(binding))
   end
 
