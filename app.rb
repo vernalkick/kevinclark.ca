@@ -21,8 +21,9 @@ class App < Sinatra::Base
   end
 
   get '/articles/new' do
-    Github.updateArticle Article.new(params)
-    redirect '/'
+    article = Article.new(params)
+    Github.updateArticle article
+    # redirect '/'
   end
 
   get '/portfolio' do

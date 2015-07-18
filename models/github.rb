@@ -6,8 +6,8 @@ class Github
     Authorization: "token 79e5173337ad4c771ec821a726c365e1c71d4f37"
   }
 
-  def self.updateArticle(data)
-    article = Article.new(data)
+  def self.updateArticle(article)
+    # article = Article.new(data)
     endpoint = BASE_URL + article.file_path
 
     begin

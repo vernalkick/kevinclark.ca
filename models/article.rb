@@ -3,6 +3,8 @@ class Article
 
   # Initializer
   def initialize(args={})
+    args = args
+
     @data = {
       "title" => args['title'],
       "date" => args['date'] || Time.now.to_s,
@@ -32,6 +34,7 @@ class Article
   end
 
   def date
+    puts @data
     Date.parse(@data['date'])
   end
 
