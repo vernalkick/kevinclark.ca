@@ -7,7 +7,6 @@ class App < Sinatra::Base
   end
 
   get '/' do
-    Github.updateArticle
     erb :index
   end
 
