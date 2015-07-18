@@ -11,16 +11,6 @@ class Article4
     @body = args['body']
   end
 
-  # def initialize(title, body, date = Time.now.to_s, published = false)
-  #   @data = {
-  #     "title" => title,
-  #     "date" => date,
-  #     "published" => published
-  #   }
-
-  #   @body = body
-  # end
-
   def self.init_from_file_path(file_path)
     file = File.new(file_path).read
 
@@ -79,10 +69,12 @@ class Article4
     slug.gsub!(/[^a-z0-9\-_\?]+/, sep)
 
     re_sep = Regexp.escape(sep)
+
     # No more than one of the separator in a row.
     slug.gsub!(/#{re_sep}{2,}/, sep)
     # Remove leading/trailing separator.
     slug.gsub!(/^#{re_sep}|#{re_sep}$/, '')
+
     slug
   end
 end
