@@ -49,7 +49,7 @@ class App < Sinatra::Base
     file_path = Dir["**/*#{params[:slug]}*"][0]
     not_found unless file_path
 
-    article = Article4.init_from_file_path(file_path)
+    article = Article.init_from_file_path(file_path)
     @title = article.title
 
     erb :layout, layout: false do
@@ -79,7 +79,7 @@ class App < Sinatra::Base
     articles = []
 
     Dir["articles/*"].each do |file_path|
-      article = Article4.init_from_file_path(file_path)
+      article = Article.init_from_file_path(file_path)
       articles.insert(0, article) if article.published?
     end
 

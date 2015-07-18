@@ -1,4 +1,4 @@
-class Article4
+class Article
 
   # Initializer
   def initialize(args={})
@@ -17,7 +17,7 @@ class Article4
     file_data = YAML.load_file(file_path)
     file_data['body'] = file.sub(/---[\s\S]*?---/, '')
 
-    Article4.new(file_data)
+    Article.new(file_data)
   end
 
   # Properties
