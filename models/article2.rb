@@ -4,8 +4,6 @@ class Article2
   FILE_EXT = '.md.erb'
 
   def initialize(title, body, date = false, published = false)
-    # @title = title #Typogruby.improve(title)
-    # @body = Renderer::render(body)
     @raw_title = title
     @raw_body = body
     @date = date ? Date.parse(date) : Time.now
