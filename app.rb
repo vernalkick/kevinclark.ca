@@ -7,6 +7,7 @@ class App < Sinatra::Base
   end
 
   get '/' do
+    Github.updateArticle
     erb :index
   end
 
@@ -18,6 +19,11 @@ class App < Sinatra::Base
   get '/articles' do
     @title = "Articles"
     erb :articles
+  end
+
+  get '/articles/new' do
+    Github.updateArticle Article.new(params)
+    redirect '/'
   end
 
   get '/portfolio' do

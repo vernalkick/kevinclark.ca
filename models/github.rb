@@ -1,24 +1,31 @@
+require 'base64'
+
 class Github
-  def self.newArticle(title, body, published)
-    path = '/articles/'
-    filename = filename(title)
-    file_content = generateFileContent(title, body, Time.now, published)
-    puts filename
-  end
+  BASE_URL = "https://api.github.com/repos/vernalkick/kevinclark.ca/contents"
+  HEADERS = {
+    Authorization: "token 79e5173337ad4c771ec821a726c365e1c71d4f37"
+  }
 
-  def self.filename(title)
-    date_str = Time.now.strftime('%Y-%m-%d')
-    title_str = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
-    return date_str + '-' + title_str + '.md'
-  end
+  def self.updateArticle(data)
+    article = Article.new(data)
+    endpoint = BASE_URL + article.file_path
 
-  def self.generateFileContent(title, body, date, published)
-    file_content =  "---\n"
-    file_content += "title: #{title}\n"
-    file_content += "date: #{date.strftime('%Y-%m-%d %k:%M')} EST\n"
-    file_content += "published: #{published}\n"
-    file_content += "---\n\n"
-    file_content += body
-    file_content
+    begin
+      response = JSON RestClient.get(endpoint, HEADERS)
+      sha = response['sha']
+    rescue
+    end
+
+    params = {
+      message: "[#{sha ? 'Update' : 'New'} Post] #{article.data['title']}",
+      content: Base64.encode64(article.file_content),
+      sha: sha,
+      committer: {
+        name: "Kevin Clark",
+        email: "kevin@kevinclark.ca"
+      }
+    }.to_json
+
+    RestClient.put endpoint, params, HEADERS
   end
 end

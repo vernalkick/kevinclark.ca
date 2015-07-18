@@ -1,4 +1,5 @@
 class Article
+  attr_reader :data
 
   # Initializer
   def initialize(args={})
