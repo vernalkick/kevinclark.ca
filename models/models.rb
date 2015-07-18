@@ -1,5 +1,3 @@
 require_relative '../helpers/helpers'
-require_relative 'article2'
-require_relative 'article3'
 require_relative 'article4'
 require_relative 'project'

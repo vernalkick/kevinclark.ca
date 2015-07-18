@@ -73,6 +73,16 @@ class Article4
   private
 
   def slug
-    @data['title'].downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+    sep = '-'
+
+    slug = @data['title'].downcase.strip
+    slug.gsub!(/[^a-z0-9\-_\?]+/, sep)
+
+    re_sep = Regexp.escape(sep)
+    # No more than one of the separator in a row.
+    slug.gsub!(/#{re_sep}{2,}/, sep)
+    # Remove leading/trailing separator.
+    slug.gsub!(/^#{re_sep}|#{re_sep}$/, '')
+    slug
   end
 end
