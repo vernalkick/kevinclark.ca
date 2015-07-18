@@ -34,7 +34,6 @@ class Article
   end
 
   def date
-    puts @data
     Date.parse(@data['date'])
   end
 
