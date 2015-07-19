@@ -12,7 +12,7 @@ class Article
     }
 
     @markdown_body = args['body']
-    @markdown_body.gsub!(/^\n*/, '') # Remove leading linebreaks
+    @markdown_body.sub!(/^\n*/, '') # Remove leading linebreaks
   end
 
   def self.init_from_file_path(file_path)
