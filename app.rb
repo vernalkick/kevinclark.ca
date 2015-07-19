@@ -60,7 +60,7 @@ class App < Sinatra::Base
         excerpt: article.excerpt,
         body: article.markdown_body,
         date: article.date.to_s,
-        published: article.published?
+        published: article.published? ? "true" : "false"
       }
     end
     array.to_json

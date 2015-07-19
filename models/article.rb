@@ -8,7 +8,7 @@ class Article
     @data = {
       "title" => args['title'],
       "date" => args['date'] || Time.now.to_s,
-      "published" => args['published'] || false
+      "published" => args['published']# || false
     }
 
     @markdown_body = args['body']
@@ -46,7 +46,8 @@ class Article
 
   def published?
     data = @data['published']
-    data ? data : true
+    data
+    #data ? data : true
   end
 
   def url
