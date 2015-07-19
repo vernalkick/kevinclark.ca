@@ -54,7 +54,7 @@ class App < Sinatra::Base
   get '/articles.json' do
     content_type :json, 'charset' => 'utf-8'
     array = []
-    articles.each do |article|
+    articles(drafts: true).each do |article|
       array << {
         title: article.data['title'],
         excerpt: article.excerpt,
@@ -96,12 +96,13 @@ class App < Sinatra::Base
     request.path[/(^\/[^\/]*)/]
   end
 
-  def articles
+  def articles(options={})
     articles = []
 
     Dir["articles/*"].each do |file_path|
       article = Article.init_from_file_path(file_path)
-      articles.insert(0, article) if article.published?
+      condition = options[:drafts] || article.published?
+      articles.insert(0, article) if condition
     end
 
     articles.sort! {|a, b| b.date <=> a.date}
