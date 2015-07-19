@@ -19,6 +19,7 @@ class Article
     file = File.new(file_path).read
 
     file_data = YAML.load_file(file_path)
+    file_data['date'] ||= file_path[/\d{4}-\d{2}-\d{2}/]
     file_data['body'] = file.sub(/---[\s\S]*?---/, '')
 
     Article.new(file_data)
@@ -44,7 +45,8 @@ class Article
   end
 
   def published?
-    @data['published']
+    data = @data['published']
+    data ? data : true
   end
 
   def url
