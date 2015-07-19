@@ -20,10 +20,10 @@ class App < Sinatra::Base
     erb :articles
   end
 
-  get '/articles/new' do
+  put '/articles/new' do
     article = Article.new(params)
     Github.updateArticle article
-    # redirect '/'
+    {message: 'Success!'}.to_json
   end
 
   get '/portfolio' do
