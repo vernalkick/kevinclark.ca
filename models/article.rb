@@ -1,5 +1,5 @@
 class Article
-  attr_reader :data
+  attr_reader :data, :markdown_body
 
   # Initializer
   def initialize(args={})
@@ -11,7 +11,8 @@ class Article
       "published" => args['published'] || false
     }
 
-    @body = args['body']
+    @markdown_body = args['body']
+    @markdown_body.gsub!(/^\n*/, '') # Remove leading linebreaks
   end
 
   def self.init_from_file_path(file_path)
@@ -30,7 +31,7 @@ class Article
   end
 
   def body
-    Renderer::render(@body)
+    Renderer::render(@markdown_body)
   end
 
   def date

@@ -51,6 +51,21 @@ class App < Sinatra::Base
     builder :rss
   end
 
+  get '/articles.json' do
+    content_type :json, 'charset' => 'utf-8'
+    array = []
+    articles.each do |article|
+      array << {
+        title: article.data['title'],
+        excerpt: article.excerpt,
+        body: article.markdown_body,
+        date: article.date.to_s,
+        published: article.published?
+      }
+    end
+    array.to_json
+  end
+
   get '/articles/:slug' do
     file_path = Dir["**/*#{params[:slug]}.md.erb"][0]
     not_found unless file_path
