@@ -56,7 +56,7 @@ class Article
   # File management
 
   def file_content
-    @data.to_yaml + "---\n\n" + @body
+    @data.to_yaml + "---\n\n" + @markdown_body
   end
 
   def file_name
