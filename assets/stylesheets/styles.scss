@@ -2,6 +2,9 @@
 // STYLES
 // =============================================================================
 
+// Global vars
+$border-radius: 4px;
+
 // Helpers
 @import 'helpers/media-queries';
 @import 'helpers/mixins';
@@ -25,7 +28,11 @@
 @import 'modules/sidebar';
 @import 'modules/article-list';
 @import 'modules/main-section';
+@import 'modules/headings';
+@import 'modules/buttons';
+@import 'modules/sections';
 
 // Pages
 @import 'pages/article';
 @import 'pages/project';
+@import 'pages/speaking';

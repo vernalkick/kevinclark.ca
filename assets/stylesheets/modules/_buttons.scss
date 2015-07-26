@@ -1,0 +1,19 @@
+// =============================================================================
+// BUTTONS
+// =============================================================================
+
+.btn {
+  background: $color--accent;
+  color: #fff;
+  padding: .75em 1em .6em;
+  border-radius: $border-radius;
+  display: inline-block;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+p .btn {
+  margin: 0 .5em;
+}

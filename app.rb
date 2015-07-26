@@ -42,6 +42,11 @@ class App < Sinatra::Base
     end
   end
 
+  get '/speaking' do
+    @title = "Speaking"
+    erb :speaking
+  end
+
   get '/about' do
     @title = "About"
     erb :about
@@ -85,9 +90,9 @@ class App < Sinatra::Base
 
   def nav
     [
-      {title: 'Home', url: '/'},
       {title: 'Articles', url: '/articles'},
       {title: 'Portfolio', url: '/portfolio'},
+      {title: 'Speaking', url: '/speaking'},
       {title: 'About', url: '/about'}
     ]
   end

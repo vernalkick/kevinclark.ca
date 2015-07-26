@@ -1,0 +1,52 @@
+// =============================================================================
+// SPEAKING
+// =============================================================================
+
+// EVENT LIST
+// -----------------------------------------------------------------------------
+
+.speaking-event-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+// EVENT
+// -----------------------------------------------------------------------------
+
+.speaking-event {
+  margin: 3em 0;
+}
+
+// HEADER
+.speaking-event__header {
+  display: flex;
+  align-items: baseline;
+}
+
+.speaking-event__title {
+  flex-grow: 1;
+  margin-bottom: 0;
+}
+
+.speaking-event__date {
+  flex-shrink: 0;
+  font-size: .875em;
+  color: #999;
+}
+
+// DESCRIPTION
+.speaking-event__description {
+  margin-bottom: 1rem;
+}
+
+// LINKS
+.speaking-event__link-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.speaking-event__link-item {
+  margin: 0 1rem 0 0;
+  display: inline-block;
+}
