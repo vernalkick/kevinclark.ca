@@ -44,6 +44,7 @@ class App < Sinatra::Base
 
   get '/speaking' do
     @title = "Speaking"
+    @data = YAML.load_file("data/speaking.yml")
     erb :speaking
   end
 

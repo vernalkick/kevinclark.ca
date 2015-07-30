@@ -20,51 +20,29 @@
   <div class="wrap">
     <div class="row">
       <div class="column column--two-thirds column--right">
-        <h1>Upcoming events</h1>
-        <ul class="speaking-event-list">
-          <li class="speaking-event">
-            <header class="speaking-event__header">
-              <h2 class="speaking-event__title">CocoaHeads MTL</h2>
-              <span class="speaking-event__date">August 11th, 2015</span>
-            </header>
-            <p class="speaking-event__description">
-              CocoaHeads Montréal brings together iOS and Mac developers every month for drinks and talks about anything Apple-related.
-            </p>
-            <ul class="speaking-event__link-list">
-              <li class="speaking-event__link-item"><a href="http://www.meetup.com/fr/CocoaHeads-Montreal/events/224056239/" class="external-link">RSVP on Meetup.com</a></li>
-              <li class="speaking-event__link-item"><a href="http://cocoaheadsmtl.com" class="external-link">Official Website</a></li>
-            </ul>
-          </li>
-        </ul>
-        <h1>Past events</h1>
-        <ul class="speaking-event-list">
-          <li class="speaking-event">
-            <header class="speaking-event__header">
-              <h2 class="speaking-event__title">Shopify UX Summit 2015</h2>
-              <span class="speaking-event__date">July 23rd, 2015</span>
-            </header>
-            <p class="speaking-event__description">
-              CocoaHeads Montréal brings together iOS and Mac developers every month for drinks and talks about anything Apple-related.
-            </p>
-            <ul class="speaking-event__link-list">
-              <li class="speaking-event__link-item"><a href="#" class="external-link">Official Website</a></li>
-              <li class="speaking-event__link-item"><a href="#" class="external-link">Official Website</a></li>
-            </ul>
-          </li>
-          <li class="speaking-event">
-            <header class="speaking-event__header">
-              <h2 class="speaking-event__title">Behance Portfolio Reviews</h2>
-              <span class="speaking-event__date">October, 2013</span>
-            </header>
-            <p class="speaking-event__description">
-              CocoaHeads Montréal brings together iOS and Mac developers every month for drinks and talks about anything Apple-related.
-            </p>
-            <ul class="speaking-event__link-list">
-              <li class="speaking-event__link-item"><a href="#" class="external-link">Official Website</a></li>
-              <li class="speaking-event__link-item"><a href="#" class="external-link">Official Website</a></li>
-            </ul>
-          </li>
-        </ul>
+        <% @data.group_by {|a| Date.parse(a['date']) < Date.today}.each do |future, events| %>
+          <h1><%= future ? 'Upcoming' : 'Past' %> Events</h1>
+          <ul class="speaking-event-list">
+            <% events.each do |event| %>
+              <li class="speaking-event">
+                <header class="speaking-event__header">
+                  <h2 class="speaking-event__title"><%= event['title'] %></h2>
+                  <span class="speaking-event__date"><%= event['date'] %></span>
+                </header>
+                <p class="speaking-event__description"><%= event['description'] %></p>
+                <% if event['links'] %>
+                  <ul class="speaking-event__link-list">
+                    <% event['links'].each do |link| %>
+                      <li class="speaking-event__link-item">
+                        <a href="<%= link['url'] %>" class="external-link"><%= link['title'] %></a>
+                      </li>
+                    <% end %>
+                  </ul>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        <% end %>
       </div>
       <div class="column column--third column--left">
         <div class="sidebar__section">
