@@ -28,7 +28,8 @@ class App < Sinatra::Base
 
   get '/portfolio' do
     @title = "Portfolio"
-    erb :portfolio, locals: { projects: projects }
+    erb :portfolio_placeholder
+    # erb :portfolio, locals: { projects: projects }
   end
 
   get '/portfolio/:slug' do
@@ -73,7 +74,7 @@ class App < Sinatra::Base
   end
 
   get '/articles/:slug' do
-    file_path = Dir["**/*#{params[:slug]}.md.erb"][0]
+    file_path = Dir["**/*#{params[:slug]}*"][0]
     not_found unless file_path
 
     article = Article.init_from_file_path(file_path)
