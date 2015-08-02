@@ -32,6 +32,11 @@ class App < Sinatra::Base
     # erb :portfolio, locals: { projects: projects }
   end
 
+  get '/portfolio-preview' do
+    @title = "Portfolio"
+    erb :portfolio, locals: { projects: projects }
+  end
+
   get '/portfolio/:slug' do
     not_found unless Dir["projects/*#{params[:slug]}.md.erb"][0]
 
