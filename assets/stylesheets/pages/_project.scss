@@ -8,6 +8,7 @@
   @include media($media-query--tablet-up) {
     margin-bottom: 2em;
     display: flex;
+    align-items: center;
   }
 }
 

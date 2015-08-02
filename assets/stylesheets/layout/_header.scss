@@ -15,6 +15,10 @@ $header--padding: 7rem;
   padding: 2rem 0;
 
   @include media($media-query--tablet-up) {
+    padding: 5rem 0 3rem;
+  }
+
+  @include media($media-query--desktop) {
     padding: $header--padding 0;
   }
 }
@@ -24,7 +28,7 @@ $header--padding: 7rem;
 // -----------------------------------------------------------------------------
 
 .logo {
-  @include media($media-query--tablet-up) {
+  @include media($media-query--desktop) {
     float: left;
   }
 }
@@ -42,7 +46,7 @@ $header--padding: 7rem;
   margin: 0.5em 0 0;
   padding: 0;
 
-  @include media($media-query--tablet-up) {
+  @include media($media-query--desktop) {
     margin-top: -$header--padding; // Align navigation to the top of the screen
     float: right;
   }
@@ -56,18 +60,11 @@ $header--padding: 7rem;
     margin-left: 1em;
 
     @include media($media-query--tablet-up) {
-      margin-left: 2em;
+      margin-left: 1.5em;
     }
 
     @include media($media-query--desktop) {
       margin-left: 3em;
-    }
-  }
-
-  // Hide first navigation link to save space on tablet
-  &:first-child {
-    @include media($media-query--tablet) {
-      display: none;
     }
   }
 }
@@ -82,7 +79,7 @@ $header--padding: 7rem;
     color: $color--grey-dark;
   }
 
-  @include media($media-query--tablet-up) {
+  @include media($media-query--desktop) {
     border-left: 1px solid $color--sky--light;
     padding: $header--padding 0 0.25em 1em;
     font-size: 0.9em;
