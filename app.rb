@@ -95,6 +95,33 @@ class App < Sinatra::Base
     erb :edit_article
   end
 
+  get '/pulls.json' do
+    content_type :json, 'charset' => 'utf-8'
+
+    [
+      {
+        version: '0.2',
+        link: "http://cl.ly/190J461S1j40/1"
+      },
+      {
+        version: '0.3',
+        link: "http://cl.ly/1J1y2X0y103m/1"
+      },
+      {
+        version: '0.4',
+        link: "http://cl.ly/1F193i0N0F1d/1"
+      },
+      {
+        version: '0.5',
+        link: "http://cl.ly/432o1r2i193u/1"
+      },
+      {
+        version: '0.6.2',
+        link: "http://cl.ly/1i1a2W3p3V07/1"
+      },
+    ].to_json
+  end
+
   def nav
     [
       {title: 'Articles', url: '/articles'},
