@@ -1,6 +1,9 @@
 require 'rubygems'
 require 'bundler'
 require 'autoprefixer-rails'
+configure :production do
+  require 'newrelic_rpm'
+end
 Bundler.require(:default, ENV['RACK_ENV'])
 
 map '/assets' do

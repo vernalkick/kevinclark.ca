@@ -39,3 +39,7 @@ group :development do
   # Reloading in development
   gem 'shotgun'
 end
+
+group :production do
+  gem 'newrelic'
+end
