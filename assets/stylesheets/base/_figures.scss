@@ -9,11 +9,6 @@ figure {
 figure img {
   width: 100%;
   max-width: none;
-
-  @include media($media-query--mobile) {
-    width: calc(100% + 3rem);
-    margin-left: -1.5rem;
-  }
 }
 
 figure iframe {
@@ -29,7 +24,7 @@ figure iframe {
 figcaption {
   color: $color--grey-lighter;
   font-size: 0.875rem;
-  margin-top: 0.5em;
+  margin-top: 1em;
   line-height: 1.6em;
 }
 
@@ -58,4 +53,29 @@ figcaption {
   @include media($media-query--desktop-large) {
     width: 121%;
   }
+}
+
+.extend-right {
+  @include media($media-query--mobile) {
+    width: calc(100% + 3rem);
+    margin-left: -1.5rem;
+  }
+  @include media($media-query--desktop) {
+    width: 133%;
+  }
+  @include media($media-query--desktop-large) {
+    width: 121%;
+  }
+}
+
+.image-row {
+  display: flex;
+
+  & + & {
+    margin-top: .5em;
+  }
+}
+
+.image-row img + img {
+  margin-left: .5em;
 }

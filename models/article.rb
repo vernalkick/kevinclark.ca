@@ -37,7 +37,7 @@ class Article
 
   def date
     date = @data['date']
-    date.is_a?(Date) ? date : Date.parse(date)
+    date.is_a?(DateTime) ? date : DateTime.parse(date)
   end
 
   def excerpt(length = 150)
