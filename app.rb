@@ -145,10 +145,6 @@ class App < Sinatra::Base
     end
 
     articles.sort! {|a, b| b.date <=> a.date}
-
-    articles.each do |article|
-      puts article.date
-    end
   end
 
   def projects

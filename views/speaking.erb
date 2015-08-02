@@ -22,7 +22,7 @@
     <div class="row">
       <div class="column column--two-thirds column--right">
         <% @data.group_by {|a| Date.parse(a['date']) < Date.today}.each do |future, events| %>
-          <h1><%= future ? 'Upcoming' : 'Past' %> Events</h1>
+          <h1><%= future ? 'Past' : 'Upcoming' %> Events</h1>
           <ul class="speaking-event-list">
             <% events.each do |event| %>
               <li class="speaking-event">
