@@ -32,7 +32,7 @@ class Article
   end
 
   def body
-    Renderer::render(@markdown_body)
+    Typogruby.improve(Renderer::render(@markdown_body))
   end
 
   def date

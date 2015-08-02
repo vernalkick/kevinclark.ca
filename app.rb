@@ -78,7 +78,7 @@ class App < Sinatra::Base
     not_found unless file_path
 
     article = Article.init_from_file_path(file_path)
-    @title = article.title
+    @title = article.data['title']
 
     erb :layout, layout: false do
       erb :article, locals: { article: article }
