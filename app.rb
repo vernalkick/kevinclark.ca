@@ -41,7 +41,7 @@ class App < Sinatra::Base
     not_found unless Dir["projects/*#{params[:slug]}.md.erb"][0]
 
     project = Project.new(params[:slug])
-    @title = project.title
+    @title = project.title.gsub(%r{</?[^>]+?>}, '')
 
     erb :layout, layout: false do
       erb :project, locals: { project: project }
