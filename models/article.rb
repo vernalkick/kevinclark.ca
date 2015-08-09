@@ -3,8 +3,6 @@ class Article
 
   # Initializer
   def initialize(args={})
-    args = args
-
     @data = {
       "title" => args['title'],
       "date" => args['date'] || Time.now.to_s,
@@ -45,9 +43,7 @@ class Article
   end
 
   def published?
-    data = @data['published']
-    data
-    #data ? data : true
+    @data['published'] == true || @data['published'] == 'true'
   end
 
   def url
