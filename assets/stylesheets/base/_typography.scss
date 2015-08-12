@@ -42,9 +42,20 @@ p {
   &:empty { display: none; }
 }
 
-blockquote p {
-  font-style: italic;
+blockquote {
+  // border-left: 4px solid #F8D71C;
+  border-left: 4px solid rgba(#000, .2);
+  margin: 0;
+  padding: 0 1.5em;
+  margin-bottom: 1.5em;
+}
+
+blockquote p,
+blockquote li {
+  // font-style: italic;
   color: $color--grey-light;
+  font-size: .875em;
+  line-height: 1.7em;
 }
 
 .caps {
