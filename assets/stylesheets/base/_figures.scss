@@ -70,10 +70,15 @@ figcaption {
 
 .image-row {
   display: flex;
+  align-items: center;
 
   & + & {
     margin-top: .5em;
   }
+}
+
+.image-row img {
+  flex: 1;
 }
 
 .image-row img + img {
