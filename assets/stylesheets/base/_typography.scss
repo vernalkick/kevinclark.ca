@@ -79,6 +79,10 @@ small {
 // LISTS
 // -----------------------------------------------------------------------------
 
+ol, ul {
+  margin-bottom: 3em;
+}
+
 li {
   @include margin-vertical(1.5em);
 
