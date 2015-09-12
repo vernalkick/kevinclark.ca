@@ -1,3 +1,10 @@
+- title: MacTech Conference
+  date: 'November 4th, 2015'
+  description: >-
+    MacTech Conference is a 3-day conference for Apple IT Pros, Enterprise, techs, and consultants. I'll be talking about the challenges of designing at scale and how being antifragile can help us deliver better experiences for people.
+  links:
+    - title: Official website
+      url: http://conference.mactech.com
 - title: CocoaHeads MTL
   date: 'August 11th, 2015'
   description: >-
