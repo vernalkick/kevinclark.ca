@@ -1,4 +1,7 @@
+require 'sinatra/content_for'
+
 class App < Sinatra::Base
+  helpers Sinatra::ContentFor
 
   before do
     @current_page = current_page
@@ -43,9 +46,11 @@ class App < Sinatra::Base
     project = Project.new(params[:slug])
     @title = project.title.gsub(%r{</?[^>]+?>}, '')
 
-    erb :layout, layout: false do
-      erb :project, locals: { project: project }
-    end
+    erb :project, locals: { project: project }
+
+    # erb :layout, layout: false do
+    #   erb :project, locals: { project: project }
+    # end
   end
 
   get '/speaking' do

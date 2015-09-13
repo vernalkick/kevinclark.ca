@@ -6,6 +6,7 @@ gem 'puma'
 
 # Simple HTTP
 gem 'sinatra'
+gem 'sinatra-contrib'
 
 # Faster ERB
 gem 'erubis'

@@ -35,6 +35,10 @@ class Project
     meta['description']
   end
 
+  def accent_color
+    meta['accent_color']
+  end
+
   # LINK
   # Link to a live version of the project
   def link
