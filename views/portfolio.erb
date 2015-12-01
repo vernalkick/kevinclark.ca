@@ -1,32 +1,33 @@
-<div class="section">
-  <div class="wrap">
-    <div class="row">
+<div class="wrap">
+    <div class="main-section row">
       <div class="column column--two-thirds column--right">
         <div class="heading">
           <h1 class="heading__title">Portfolio</h1>
           <h2 class="heading__lede">As a self-taught designer, I've learned everything I know from my peers and I think it's only fair that I give back to the community by sharing what I learn with other people. I'm passionate about design, typography, front-end, ecommerce and everything in between.</h2>
-          <p class="heading__note">I’m not currently taking any work inquiries</p>
+          <p class="heading__note">I’m not currently taking any work inquiries.</p>
         </div>
       </div>
     </div>
-  </div>
+
+  <% projects.group_by {|a| a.type }.sort.reverse_each do |type, these_projects| %>
+    <section class="main-section row">
+        <div class="column column--third column--left">
+          <h2><%= type %></h2>
+        </div>
+        <ul class="article-list column column--two-thirds column--right column--no-padding">
+          <% these_projects.each do |project| %>
+            <li class="article-list__item">
+              <a href="<%= project.url %>">
+                <img src="<%= project.thumbnail %>" alt="">
+                <h4><%= project.title %></h4>
+                <p><%= project.description %></p>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+    </section>
+  <% end %>
 </div>
 
-<section class="main-section row">
-  <div class="wrap">
-    <div class="column column--third column--left">
-      <h2>Web Design</h2>
-    </div>
-    <ul class="article-list column column--two-thirds column--right column--no-padding">
-      <% projects.each do |project| %>
-        <li class="article-list__item">
-          <a href="<%= project.url %>">
-            <img src="<%= project.thumbnail %>" alt="">
-            <h4><%= project.title %></h4>
-            <p><%= project.description %></p>
-          </a>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-</section>
+
+

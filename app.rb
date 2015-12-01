@@ -31,8 +31,8 @@ class App < Sinatra::Base
 
   get '/portfolio' do
     @title = "Portfolio"
-    erb :portfolio_placeholder
-    # erb :portfolio, locals: { projects: projects }
+    # erb :portfolio_placeholder
+    erb :portfolio, locals: { projects: projects }
   end
 
   get '/portfolio-preview' do
