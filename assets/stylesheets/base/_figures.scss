@@ -81,7 +81,19 @@ figcaption {
   }
 }
 
+.figure--half-right img {
+  @include media($media-query--mobile) {
+    width: calc(100% + 3rem);
+    margin-left: -1.5rem;
+  }
+}
+
 .figure--extend-right img {
+  @include media($media-query--mobile) {
+    width: calc(100% + 3rem);
+    margin-left: -1.5rem;
+  }
+
   @include media($media-query--desktop) {
     width: 133%;
   }

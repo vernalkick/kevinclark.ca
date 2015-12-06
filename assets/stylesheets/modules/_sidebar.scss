@@ -2,6 +2,14 @@
 // SIDEBAR
 // =============================================================================
 
+.sidebar {
+  @include media($media-query--mobile) {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 2em;
+    margin-top: 2em;
+  }
+}
+
 // SIDEBAR SECTION
 // -----------------------------------------------------------------------------
 
