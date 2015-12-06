@@ -32,6 +32,41 @@ figcaption {
 // FIGURE MODIFIERS
 // -----------------------------------------------------------------------------
 
+.figure--flush {
+  @include media($media-query--mobile) {
+    width: calc(100% + 3rem);
+    margin-left: -1.5rem;
+  }
+
+  @include media($media-query--tablet) {
+    margin-left: -26%;
+    width: 152%;
+  }
+
+  @include media($media-query--desktop) {
+    margin-left: -17%;
+    width: 167%;
+  }
+
+  @include media($media-query--desktop-large) {
+    margin-left: -74%;
+    width: 217%;
+  }
+}
+
+.figure--full {
+  @include media($media-query--desktop-large) {
+    margin-left: -52%;
+    width: 173%
+  }
+}
+
+.figure--left {
+  width: 40%;
+  margin-left: -51.5%;
+  float: left
+}
+
 .figure--half-right {
   @include media($media-query--desktop) {
     margin-left: 2rem;

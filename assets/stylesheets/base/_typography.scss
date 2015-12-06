@@ -80,10 +80,11 @@ small {
 // -----------------------------------------------------------------------------
 
 ol, ul {
-  margin-bottom: 3em;
+  margin-bottom: 1.5em;
 }
 
 li {
+  line-height: 1.7em;
   @include margin-vertical(1.5em);
 
   &:first-child { margin-top: 0; }
