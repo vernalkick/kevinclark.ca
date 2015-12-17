@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'bundler'
 require 'autoprefixer-rails'
-require 'newrelic_rpm'
 
 Bundler.require(:default, ENV['RACK_ENV'])
 
