@@ -52,3 +52,11 @@
     display: none;
   }
 }
+
+.hanging {
+  @include media($media-query--desktop-large) {
+    float: left;
+    width: 42%;
+    margin-left: -51.5%;
+  }
+}
