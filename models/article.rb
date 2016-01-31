@@ -15,6 +15,8 @@ class Article
 
   def self.init_from_file_path(file_path)
     file = File.new(file_path).read
+    puts file_path
+    puts file
 
     file_data = YAML.load_file(file_path)
     file_data['date'] ||= file_path[/\d{4}-\d{2}-\d{2}/]
