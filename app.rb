@@ -84,9 +84,8 @@ class App < Sinatra::Base
   end
 
   get '/articles/:slug' do
-    file_path = Dir["**/*#{params[:slug]}*"][0]
+    file_path = Dir["**/*#{params[:slug]}.*"][0]
     puts file_path
-    # puts "**/*#{params[:slug]}.md.erb"
     not_found unless file_path
 
     article = Article.init_from_file_path(file_path)
