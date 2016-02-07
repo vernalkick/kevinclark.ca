@@ -27,10 +27,7 @@
 $inside-margin: 40px;
 
 .home-projects {
-  @include media($media-query--desktop) {
-    column-count: 2;
-    column-gap: $inside-margin;
-  }
+  @include clearfix;
 }
 
 .project-feature {
@@ -39,12 +36,11 @@ $inside-margin: 40px;
   break-inside: avoid;
   height: 240px; // TODO: Replace this with actual value
   overflow: hidden;
-
-  transition: transform .3s ease-in-out;
-  // transform: scaleY(2);
+  transition: all .3s ease-in-out;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.025);
+    box-shadow: 0 0 60px rgba(#000, .3);
   }
 
   @include media($media-query--desktop) {
@@ -77,6 +73,22 @@ $inside-margin: 40px;
     width: 126%;
     height: 740px;
   }
+}
+
+@include media($media-query--desktop) {
+.home-projects__column-1 {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  padding-right: $inside-margin / 2;
+}
+
+.home-projects__column-2 {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  padding-left: $inside-margin / 2;
+}
 }
 
 .project-feature__header {
