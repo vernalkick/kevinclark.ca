@@ -113,8 +113,8 @@ a {
 // HEADERS
 // -----------------------------------------------------------------------------
 
-h1, h2, h3, h4, h5 , h6 {
-  margin: 2em 0 .5em;
+h1, h2, h3, h4, h5, h6 {
+  margin: 2em 0 0.5em;
 
   &:first-child { margin-top: 0; }
   &:last-child { margin-bottom: 0; }
@@ -131,13 +131,13 @@ h1 {
 }
 
 h2 {
-  font-size: 1.11em;
+  font-size: 24px;
   font-weight: 400;
   color: $color--grey-darker;
-  line-height: 1.6em;
+  line-height: 1.4em;
 
   @include media($media-query--tablet-up) {
-    font-size: 1.3em;
+    font-size: 28px;
   }
 }
 
@@ -157,7 +157,12 @@ h4 {
   line-height: 1.4em;
 }
 
-h5 {}
+h5 {
+  font-size: 20px;
+  font-weight: normal;
+  color: $color--grey-darker;
+}
+
 h6 {}
 
 

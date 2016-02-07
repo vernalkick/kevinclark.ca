@@ -1,24 +1,49 @@
 <div class="wrap">
-  <section class="main-section row">
-    <div class="column column--third column--left">
-      <h1>Hello!</h1>
+
+  <section class="home-intro">
+    <h2 class="home-intro__text">I’m a Product Designer at Shopify.<br> I co-host <a href="#">Layout</a>, a podcast about design.</h2>
+    <a href="#" class="home-intro__twitter-link">
+      <svg width="19" height="17" viewBox="0 0 19 17" xmlns="http://www.w3.org/2000/svg" class="home-intro__twitter-icon"><path d="M18.922 2.817c-.696.318-1.444.533-2.23.63.802-.495 1.417-1.28 1.707-2.212-.75.458-1.58.79-2.466.97C15.226 1.428 14.217.942 13.1.942c-2.144 0-3.882 1.79-3.882 4 0 .313.034.618.1.91-3.226-.166-6.086-1.76-8-4.178C.982 2.264.79 2.95.79 3.684c0 1.388.685 2.612 1.727 3.33-.638-.02-1.236-.2-1.76-.5v.05c0 1.937 1.338 3.553 3.114 3.92-.326.092-.67.14-1.023.14-.25 0-.492-.024-.73-.07.495 1.587 1.928 2.744 3.627 2.776-1.33 1.073-3.003 1.712-4.822 1.712-.313 0-.622-.02-.926-.056 1.717 1.135 3.758 1.796 5.95 1.796 7.14 0 11.045-6.093 11.045-11.377 0-.174-.004-.346-.01-.517.757-.565 1.415-1.27 1.936-2.07" fill="currentColor"/></svg>
+      <span>Follow me on Twitter</span>
+    </a>
+  </section>
+
+  <section class="home-projects">
+    <div class="project-feature project-feature--1">
+      <header class="project-feature__header">
+        <h2 class="project-feature__title">Shopify for Apple Watch</h2>
+        <span class="project-feature__description">Your sales, directly on your wrist</span>
+      </header>
+      <img src="/assets/portfolio/shopify-apple-watch/shopify-apple-watch-hero-2.png" class="project-feature__image">
     </div>
-    <div class="column column--two-thirds column--right column--no-padding">
-      <h2>My name is Kevin Clark. I’m a Product Designer at <a href="http://shopify.com">Shopify</a>, I co-host the <a href="http://layout.fm">Layout</a> a podcast about design, I organize the <a href="http://mtldribbblemeetup.com">Montreal Dribbble Meetup</a> and I live in the beautiful city of Montreal.</h2>
-      <a href="http://twitter.com/vernalkick" class="external-link">Follow me on Twitter</a>
+    <div class="project-feature project-feature--2">
+      <header class="project-feature__header">
+        <h2 class="project-feature__title">MTL Dribbble Meetup</h2>
+        <span class="project-feature__description">Getting the design community together</span>
+      </header>
+      <img src="/assets/portfolio/mtl-dribbble-meetup/mtl-dribbble-meetup-hero-2.png" class="project-feature__image">
+    </div>
+    <div class="project-feature project-feature--3">
+      <header class="project-feature__header">
+        <h2 class="project-feature__title">Tipsy</h2>
+        <span class="project-feature__description">The best tip calculator for your iPhone</span>
+      </header>
+      <img src="/assets/portfolio/tipsy/tipsy-hero-2.png" class="project-feature__image">
     </div>
   </section>
 
-  <section class="main-section row">
-    <div class="column column--third column--left column--no-padding">
-      <h2>Recent articles</h2>
-    </div>
-    <ul class="article-list column column--two-thirds column--right column--no-padding">
+  <section class="home-articles">
+    <h2 class="home-articles__title">Recent articles</h2>
+    <ul class="home-article-list">
       <% @articles[0..5].each do |article| %>
-        <li class="article-list__item">
+        <li class="home-article">
           <a href="<%= article.url %>">
-            <h4><%= article.title %></h4>
-            <p><%= article.excerpt %></p>
+            <h5 class="home-article__title"><%= article.title %></h5>
+            <p class="home-article__description"><%= article.excerpt %></p>
+            <span class="home-article__link">
+              Read now
+              <svg width="14" height="13" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg" class="home-article__arrow"><path d="M10.734 5.75H.75v1.5h10.048l-4.33 4.352 1.064 1.058 5.58-5.608.53-.533-.535-.53L7.527.463 6.473 1.53l4.262 4.22z" fill="currentColor"/></svg>
+            </span>
           </a>
         </li>
       <% end %>
