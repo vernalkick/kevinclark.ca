@@ -1,6 +1,6 @@
 ---
 title: 'Book Recommendations from Twitter'
-date: 2016-02-09
+date: '2016-02-09'
 published: true
 ---
 
