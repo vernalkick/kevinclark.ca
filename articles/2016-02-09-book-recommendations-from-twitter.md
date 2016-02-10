@@ -58,3 +58,10 @@ Recommended by [@jules2689](http://twitter.com/jules2689)
 > The Way of the Essentialist isn’t about getting more done in less time. It’s not about getting less done. It’s about getting only the right things done. It’s about challenging the core assumption of ‘we can have it all’ and ‘I have to do everything’ and replacing it with the pursuit of ‘the right thing, in the right way, at the right time’. It’s about regaining control of our own choices about where to spend our time and energies instead of giving others implicit permission to choose for us.
 
 [Buy on Amazon](http://www.amazon.com/Essentialism-The-Disciplined-Pursuit-Less/dp/0804137382)
+
+## Start with Why
+Recommended by [@ryanelward](http://twitter.com/ryanelward)
+
+> Any person or organization can explain what they do; some can explain how they are different or better; but very few can clearly articulate why. WHY is not about money or profit – those are results. WHY is the thing that inspires us and inspires those around us. 
+
+[Buy on Amazon](http://www.amazon.com/Start-Why-Leaders-Inspire-Everyone/dp/1591846447)
