@@ -34,3 +34,8 @@ I've read this one right when it came out. I really recommend it if you want to 
 Recommended by [@cjmlgrto](http://twitter.com/cjmlgrto)
 
 > Math is boring, says the mathematician and comedian Matt Parker. Part of the problem may be the way the subject is taught, but it's also true that we all, to a greater or lesser extent, find math difficult and counterintuitive. This counterintuitiveness is actually part of the point, argues Parker: the extraordinary thing about math is that it allows us to access logic and ideas beyond what our brains can instinctively do--through its logical tools we are able to reach beyond our innate abilities and grasp more and more abstract concepts.
+
+## Creative Confidence
+Recommended by [@itsneal](http://twitter.com/itsneal)
+
+> Too often, companies and individuals assume that creativity and innovation are the domain of the “creative types.” But two of the leading experts in innovation, design, and creativity on the planet show us that each and every one of us is creative. David and Tom Kelley identify the principles and strategies that will allow us to tap into our creative potential in our work lives, and in our personal lives, and allow us to innovate in terms of how we approach and solve problems.
