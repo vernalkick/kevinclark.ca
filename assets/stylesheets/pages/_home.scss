@@ -32,6 +32,7 @@ $inside-margin: 40px;
   @include media($media-query--tablet-down) {
     white-space: nowrap;
     overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
     margin-left: -1.5em;
     width: calc(1.5em * 2 + 100%);
   }
@@ -49,7 +50,6 @@ $inside-margin: 40px;
 .project-feature {
   display: block;
   background: #e5e5e5;
-  margin-bottom: 0.5em;
   break-inside: avoid;
   height: 240px; // TODO: Replace this with actual value
   overflow: hidden;
