@@ -8,7 +8,10 @@ I'm not a gamer. I have 2 games on my iPhone: [Monument Valley][monument] and [A
 
 Because I loved the game so much, I decided to give my computer a Firewatch look.
 
-![](http://d.pr/i/ccoh/60ES192P+)
+<figure class="figure--flush">
+  <img src="http://d.pr/i/ccoh/60ES192P+" alt="">
+  <figcaption>Here's the final product in all its glory. <a href="http://d.pr/i/ccoh/60ES192P+" class="external-link">View full size</a></figcaption>
+</figure>
 
 ### Here's how you can recreate it:
 

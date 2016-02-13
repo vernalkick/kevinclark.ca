@@ -54,6 +54,10 @@ figcaption {
   }
 }
 
+.figure--flush figcaption {
+  padding: 0 1.5rem;
+}
+
 .figure--full {
   @include media($media-query--desktop-large) {
     margin-left: -52%;
