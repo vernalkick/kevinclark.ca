@@ -1,5 +1,5 @@
 ---
-title: Firewatch-themed Desktop
+title: Firewatch-Themed Desktop
 date: 2016-02-13 13:54 EDT
 published: true
 ---
