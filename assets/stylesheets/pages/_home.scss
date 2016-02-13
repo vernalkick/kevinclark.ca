@@ -109,15 +109,15 @@ $inside-margin: 40px;
   display: flex;
 
   .project-feature--1 & {
-    background: linear-gradient(180deg, #75C44E 50%, rgba(#75C44E, 0%) 100%);
+    background: linear-gradient(180deg, #75C44E 50%, rgba(#75C44E, 0) 100%);
   }
 
   .project-feature--2 & {
-    background: linear-gradient(180deg, #EA3578 50%, rgba(#EA3578, 0%) 100%);
+    background: linear-gradient(180deg, #EA3578 50%, rgba(#EA3578, 0) 100%);
   }
 
   .project-feature--3 & {
-    background: linear-gradient(180deg, #F94545 50%, rgba(#F94545, 0%) 100%);
+    background: linear-gradient(180deg, #F94545 50%, rgba(#F94545, 0) 100%);
   }
 
   .project-feature:hover & {
