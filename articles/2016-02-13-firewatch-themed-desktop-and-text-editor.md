@@ -16,9 +16,10 @@ Because I loved the game so much, I decided to give my computer a Firewatch look
 ### Here's how you can recreate it:
 
 - [Download the official Firewatch wallpaper][wallpaper], available on the Campo Santo website. It's absolutely beautiful.
-- Use [Simurai][simurai]'s [DuoTone Dark Space theme][theme] for Atom.
-- Optional: Set [Input][input] from Font Bureau as your text editor typeface. It has nothing to do with Firewatch, but I recently changed over to it from Source Code and I really like it. It has just the right amount of personality for me. Oh and it's free for personal use.
-- Optional: Use William Bout's [fantastic icon set for Atom][icons]. They complement the whole look really well.
+- [Download the One Dark Atom UI theme][ui]. Thanks to [Matt Davey][matt] for pointing out that I had initially forgotten to write about the UI theme I was using.
+- Download [Simurai][simurai]'s [DuoTone Dark Space theme][theme] for Atom.
+- **Optional:** Set [Input][input] from Font Bureau as your text editor typeface. It has nothing to do with Firewatch, but I recently changed over to it from Source Code and I really like it. It has just the right amount of personality for me. Oh and it's free for personal use.
+- **Optional:** Use [William Bout][william]'s [fantastic icon set for Atom][icons]. They complement the whole look really well.
 
 [monument]: http://www.monumentvalleygame.com
 [alto]: http://altosadventure.com
@@ -29,3 +30,6 @@ Because I loved the game so much, I decided to give my computer a Firewatch look
 [simurai]: http://simurai.com/projects/2016/01/01/duotone-themes
 [input]: http://input.fontbureau.com
 [icons]: http://williambout.me/work/nucleon/
+[ui]: https://github.com/atom/one-dark-ui
+[matt]: https://twitter.com/mattdavey
+[william]: https://twitter.com/williambout
