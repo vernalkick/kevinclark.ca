@@ -50,4 +50,4 @@ Nevertheless, I find myself using my iPad a lot more because of this keyboard. I
 
 [You can buy the Brydge Mini II on Brydge’s website](http://www.brydgekeyboards.com/products/brydgemini-ii?variant=8305506753)
 
-[Brydge](http://www.brydgekeyboards.com/products/brydgemini-ii?variant=8305506753)
+[Brydge]: http://www.brydgekeyboards.com/products/brydgemini-ii?variant=8305506753
