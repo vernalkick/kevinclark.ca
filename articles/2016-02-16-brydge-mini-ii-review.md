@@ -1,6 +1,6 @@
 ---
 title: Brydge Mini II Review
-date: 2016-02-16
+date: '2016-02-16'
 published: true
 ---
 
