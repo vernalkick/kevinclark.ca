@@ -10,7 +10,7 @@ Last week I asked people on Twitter if they considered themselves a generalist o
 
 While I do think that there's no good answer, I think I'm more of a generalist as well. (Self selection maybe?) I get bored easily, so learning new stuff constantly keeps my brain engaged. A lot of interesting things happen [at the borderlands](http://www.frankchimero.com/writing/designing-in-the-borderlands/).
 
-I also find that there are diminishing returns to becoming the very very best at something. This article articulates this idea well:
+I also find that there are diminishing returns to becoming the very very best at something. [This article on the Dilbert blog](http://dilbertblog.typepad.com/the_dilbert_blog/2007/07/career-advice.html) articulates this idea well:
 
 > [Becoming the very best at one specific thing] is difficult to the point of near impossibility. Few people will ever play in the NBA or make a platinum album. I don’t recommend anyone even try.
 
