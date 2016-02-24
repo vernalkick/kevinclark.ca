@@ -83,6 +83,7 @@ $inside-margin: 40px;
     padding-bottom: 63%;
     margin-left: -26%;
     margin-top: 120px;
+    animation: .5s project-feature-intro $easing--bounce backwards;
   }
 }
 
@@ -91,6 +92,7 @@ $inside-margin: 40px;
 
   @include media($media-query--desktop) {
     padding-bottom: 63%;
+    animation: .5s .4s project-feature-intro $easing--bounce backwards;
   }
 }
 
@@ -100,6 +102,7 @@ $inside-margin: 40px;
   @include media($media-query--desktop) {
     width: 126%;
     padding-bottom: 135%;
+    animation: .5s .2s project-feature-intro $easing--bounce backwards;
   }
 }
 
@@ -204,11 +207,13 @@ $inside-margin: 40px;
       bottom: -5em;
     }
   }
+}
 
-  // display: none;
-  // width: 100%;
-  // height: 100%;
-  // object-fit: cover;
+@keyframes project-feature-intro {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
 }
 
 
