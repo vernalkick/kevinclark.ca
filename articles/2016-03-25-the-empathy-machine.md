@@ -8,7 +8,9 @@ I’ve only started getting into House Of Cards. I know what you're thinking. I 
 
 All of that to say I've become a big Kevin Spacey fan, so when I saw someone post a link to this interview with Spacey, I immediately clicked the link.
 
-<iframe src="http://www.youtube.com/embed/qNTIo45bOu0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+<figure>
+	<iframe src="http://www.youtube.com/embed/qNTIo45bOu0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+</figure>
 
 It's a pretty incredible interview, James Harding really is an excellent interviewer. They touch on a bunch of interesting topics, including Spacey's move to longer form storytelling, the sad state of the news industry and VR, which he describes as the ultimate empathy machine.
 
