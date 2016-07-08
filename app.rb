@@ -125,6 +125,10 @@ class App < Sinatra::Base
         version: '0.6.2',
         link: "http://cl.ly/1i1a2W3p3V07/1"
       },
+      {
+        version: '1.0',
+        link: "https://itunes.apple.com/ca/app/pulls/id1097581300?ls=1&mt=12"
+      }
     ].to_json
   end
 
