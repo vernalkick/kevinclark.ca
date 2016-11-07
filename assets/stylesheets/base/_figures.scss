@@ -71,6 +71,16 @@ figcaption {
   float: left
 }
 
+.figure--right {
+  float: right;
+  margin-right: 0;
+  width: 30%;
+
+  @include media($media-query--desktop) {
+    margin-right: -32%;
+  }
+}
+
 .figure--half-right {
   @include media($media-query--desktop) {
     margin-left: 2rem;
