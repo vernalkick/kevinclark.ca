@@ -49,8 +49,12 @@ figcaption {
   }
 
   @include media($media-query--desktop-large) {
-    margin-left: -74%;
-    width: 217%;
+    width: 101vw;
+    position: relative;
+    left: 34%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
   }
 }
 
