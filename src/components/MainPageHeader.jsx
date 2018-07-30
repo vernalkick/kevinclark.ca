@@ -47,7 +47,9 @@ const PreTitle = styled.span`
   margin-bottom: 1rem;
   display: block;
 
-  font-size: 35px;
+  ${Media.desktop`
+    font-size: 35px;
+  `}
 `
 
 class MainPageHeader extends React.Component {

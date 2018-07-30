@@ -1,17 +1,40 @@
 import React from 'react'
 import styled from 'styled-components';
+import { css } from 'styled-components';
+import { Media } from '../components/Media'
 
 const Container = styled.figure`
   margin: 0;
+  position: relative;
 `
 
 const Image = styled.img`
   display: block;
-  max-width: 100%;
+  max-width: none;
+  margin-left: -1rem;
+  width: calc(100% + 2rem);
+
+  ${Media.tablet`
+    max-width: 100%;
+    margin-left: 0;
+    width: auto;
+
+    ${props => props.overlap && css`
+      width: 60%;
+      padding-left: 40%;
+    `};
+  `}
 `
 
 const Caption = styled.figcaption`
   margin-top: 1.5rem;
+  
+  ${Media.desktop`
+    ${props => props.overlap && css`
+      margin-top: -3rem;
+      width: 65%;
+    `}
+  `}
 `
 
 const CaptionTitle = styled.span`
@@ -43,17 +66,19 @@ const CaptionText = styled.span`
   }
 `
 
-export const FigCaption = ({title, children, decoration}) => (
-  <Caption>
+export const FigCaption = ({title, children, decoration, overlap}) => (
+  <Caption overlap={overlap}>
     {title ? <CaptionTitle>{title}</CaptionTitle> : ''}
     <CaptionText decoration={decoration}>{children}</CaptionText>
   </Caption>
 )
 
 
-const Figure = ({src, caption, alt, children}) => (
+const Figure = ({src, caption, alt, children, overlap}) => (
   <Container>
+    <Image src={src} alt={alt} overlap={overlap} />
     {children}
+    {caption ? <FigCaption title={caption.title} overlap={overlap}>{caption.content}</FigCaption> : ''}
   </Container>
 )
 

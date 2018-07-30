@@ -10,6 +10,10 @@ const ButtonContainer = styled.a`
   color: var(--bottom-background-color);
   font-weight: 500;
   font-size: 18px;
+
+  p + & {
+    margin-top: 1.5rem;
+  }
 `
 
 const ButtonLink = ({ to, children }) => (

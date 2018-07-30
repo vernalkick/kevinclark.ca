@@ -7,11 +7,17 @@ import styled from 'styled-components'
 import { Media } from '../components/Media'
 
 const Lead = styled.p`
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.3;
   hyphens: none;
   max-width: 880px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+
+  ${Media.desktop`
+    font-size: 36px;
+  `}
 `
 
 const Content = styled.div`
@@ -25,9 +31,13 @@ const Content = styled.div`
 `
 
 const Title = styled.h2`
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 600;
   line-height: 1.2;
+
+  ${Media.desktop`
+    font-size: 36px;
+  `}
 `
 
 const events = [

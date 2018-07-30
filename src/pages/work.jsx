@@ -4,16 +4,17 @@ import MainPageHeader from '../components/MainPageHeader'
 
 const WorkPage = ({
   data: {
-    allMarkdownRemark
+    allSitePage,
+    allJavascriptFrontmatter
   },
 }) => {
-  console.log(allMarkdownRemark.edges.map(project => project))
+  console.log(allJavascriptFrontmatter)
   return (
     <div>
       <MainPageHeader>Work</MainPageHeader>
-      {allMarkdownRemark.edges.map(project =>
-        <Link to={project.node.fields.slug} key={project.node.fields.slug}>
-          {project.node.frontmatter.title}
+      {allSitePage.edges.map(project =>
+        <Link to={project.node.path} key={project.node.path}>
+          {project.node.path}
         </Link>
       )}
     </div>
@@ -24,22 +25,23 @@ export default WorkPage;
 
 export const workQuery = graphql`
   query WorkQuery {
-    allMarkdownRemark(
-      filter: {fileAbsolutePath: { regex: "/work/"}},
-      sort: { order: DESC, fields: [frontmatter___date] }
-    ) {
+    allSitePage(filter: {path: { regex: "/work\/./" }}) {
       edges {
         node {
-          id
-          excerpt(pruneLength: 150)
-          fields {
-            slug
-          }
+          path
+        }
+      }
+    }
+
+    allJavascriptFrontmatter {
+      edges {
+        node {
           frontmatter {
             title
           }
         }
       }
     }
+
   }
 `;

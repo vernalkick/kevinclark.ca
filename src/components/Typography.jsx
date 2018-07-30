@@ -36,10 +36,10 @@ injectGlobal `
   p {
     line-height: 1.7;
     font-size: 18px;
-    hyphens: auto;
+    margin: 0;
 
     & + & {
-      margin-top: 2rem;
+      margin-top: 2.5rem;
     }
   }
 
