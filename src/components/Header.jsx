@@ -47,6 +47,11 @@ const Social = styled.div`
   position: absolute;
   right: 0;
   top: 1rem;
+
+  ${Media.tablet`
+    position: relative;
+    top: 0.5rem;
+  `}
 `
 const SocialLink = styled(Link)`
   margin-right: 1rem;

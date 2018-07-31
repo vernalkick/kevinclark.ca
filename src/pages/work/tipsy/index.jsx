@@ -7,7 +7,9 @@ import TwoColumns from '../../../components/TwoColumns'
 import hero from './tipsy-hero-2.png'
 
 exports.frontmatter = {
-  title: "Tipsy"
+  title: "Tipsy",
+  image: "./tipsy-thumb.png",
+  date: '2018-07-31'
 }
 
 const Tipsy = () => (

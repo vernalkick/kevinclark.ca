@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import styled from 'styled-components';
+import styled from 'styled-components'
+import { Media } from '../components/Media'
 import Instagram from '../assets/instagram.svg'
 import Twitter from '../assets/twitter.svg'
 
@@ -16,10 +17,20 @@ const FooterContainer = styled.div`
 const Copyright = styled.span`
   min-width: 35%;
   margin-right: 1rem;
+  flex-grow: 1;
+
+  ${Media.tablet`
+    flex-grow: 0;
+  `}
 `
 
 const Contact = styled.div`
   flex-grow: 1;
+  display: none;
+
+  ${Media.tablet`
+    display: block;
+  `}
 `
 
 const SocialLink = styled(Link)`

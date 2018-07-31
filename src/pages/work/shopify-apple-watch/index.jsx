@@ -31,7 +31,9 @@ const Half = styled.div`
 `
 
 exports.frontmatter = {
-  title: "Shopify for Apple Watch"
+  title: 'Shopify for Apple Watch',
+  image: './shopify-watch-thumb.png',
+  date: '2018-07-30'
 }
 
 const ShopifyAppleWatch = () => (

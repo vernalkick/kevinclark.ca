@@ -1,6 +1,120 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import MainPageHeader from '../components/MainPageHeader'
+import styled from 'styled-components'
+import { Media } from '../components/Media'
+
+const Grid = styled.div`
+  margin-top: 1.5rem;
+  /* 1083 */
+  ${Media.desktop`
+    display: grid;
+    grid-template-columns: 3.78% 12.28% 22.08% 9.59% 2.03% 8.12% 31.55% 4.71% 5.82%;
+    grid-template-rows: 273px 201px 191px 45px 89px 385px 120px 94px 71px 321px 215px;
+    margin-top: -7rem;
+  `}
+`
+
+const GridElement = styled(Link)`
+  background: #333;
+  overflow: hidden;
+  position: relative;
+  padding-left: 120px;
+  transition: box-shadow .3s ease-in-out;
+  box-shadow: 0 45.4px 70px -20.4px rgba(0,0,0,0.3);
+  display: block;
+  height: 200px;
+
+  & + & {
+    margin-top: 1rem;
+  }
+
+  ${Media.desktop`
+    height: auto;
+
+    & + & {
+      margin-top: 0;
+    }
+  `}
+
+  &:hover {
+    box-shadow: 0 45.4px 100px -20.4px rgba(0,0,0,0.5);
+
+    & img {
+      transform: scale(1.075);
+    }
+  }
+
+  &:nth-child(6n+1) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+
+  &:nth-child(6n+2) {
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  &:nth-child(6n+3) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 8;
+  }
+
+  &:nth-child(6n+4) {
+    grid-column-start: 7;
+    grid-column-end: 10;
+    grid-row-start: 5;
+    grid-row-end: 7;
+  }
+
+  &:nth-child(6n+5) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 10;
+    grid-row-end: 13;
+  }
+
+  &:nth-child(6n+6) {
+    grid-column-start: 6;
+    grid-column-end: 9;
+    grid-row-start: 9;
+    grid-row-end: 11;
+  }
+`
+
+const ProjectTitle = styled.span`
+  color: #fff;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 18px;
+  font-weight: 500;
+  width: 120px;
+  line-height: 1.3;
+`
+
+const ProjectImage = styled.img`
+  float: right;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 50%;
+  width: calc(100% - 30px);
+  transition: transform 1s ease-out;
+`
+
+const ProjectNumber = styled.span`
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: var(--secondary-font);
+`
 
 const WorkPage = ({
   data: {
@@ -12,11 +126,15 @@ const WorkPage = ({
   return (
     <div>
       <MainPageHeader>Work</MainPageHeader>
-      {allSitePage.edges.map(project =>
-        <Link to={project.node.path} key={project.node.path}>
-          {project.node.path}
-        </Link>
-      )}
+      <Grid>
+        {allJavascriptFrontmatter.edges.map((project, index) =>
+          <GridElement to={allSitePage.edges.reverse()[index].node.path} key={allSitePage.edges.reverse()[index].node.path}>
+            {project.node.frontmatter.image && <ProjectImage src={project.node.frontmatter.image.publicURL} /> }
+            <ProjectTitle>{project.node.frontmatter.title}</ProjectTitle>
+            <ProjectNumber>0{index + 1}</ProjectNumber>
+          </GridElement>
+        )}
+      </Grid>
     </div>
   )
 };
@@ -33,11 +151,14 @@ export const workQuery = graphql`
       }
     }
 
-    allJavascriptFrontmatter {
+    allJavascriptFrontmatter(filter: {fileAbsolutePath: { regex: "/work\/./" }}, sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           frontmatter {
             title
+            image {
+              publicURL
+            }
           }
         }
       }
