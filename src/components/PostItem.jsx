@@ -21,6 +21,8 @@ const PostExcerpt = styled.p`
 const More = styled.span`
   font-size: 16px;
   font-weight: 500;
+  margin-top: 1rem;
+  display: block;
 `
 
 class PostItem extends React.Component {

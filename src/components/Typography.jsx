@@ -38,7 +38,8 @@ injectGlobal `
     font-size: 18px;
     margin: 0;
 
-    & + & {
+    & + &,
+    blockquote + & {
       margin-top: 2.5rem;
     }
   }
@@ -79,6 +80,11 @@ injectGlobal `
       position: absolute;
       left: 0;
       font-size: 60px;
+    }
+
+    & + &,
+    p + & {
+      margin-top: 2.5rem;
     }
   }
 

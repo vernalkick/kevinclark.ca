@@ -66,7 +66,7 @@ class MainPageHeader extends React.Component {
     return (
       <HeaderContainer>
         <PreTitle>{this.props.preTitle}</PreTitle>
-        <Title dangerouslySetInnerHTML={{__html: strippedChildren}} />
+        <Title>{this.props.children}</Title>
       </HeaderContainer>
     )
   }
