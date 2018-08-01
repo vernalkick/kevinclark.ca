@@ -122,13 +122,14 @@ const WorkPage = ({
     allJavascriptFrontmatter
   },
 }) => {
+  console.log(allSitePage)
   console.log(allJavascriptFrontmatter)
   return (
     <div>
       <MainPageHeader>Work</MainPageHeader>
       <Grid>
         {allJavascriptFrontmatter.edges.map((project, index) =>
-          <GridElement to={allSitePage.edges.reverse()[index].node.path} key={allSitePage.edges.reverse()[index].node.path}>
+          <GridElement to={'/work/' + project.node.frontmatter.slug} key={project.node.frontmatter.slug}>
             {project.node.frontmatter.image && <ProjectImage src={project.node.frontmatter.image.publicURL} /> }
             <ProjectTitle>{project.node.frontmatter.title}</ProjectTitle>
             <ProjectNumber>0{index + 1}</ProjectNumber>
@@ -154,8 +155,10 @@ export const workQuery = graphql`
     allJavascriptFrontmatter(filter: {fileAbsolutePath: { regex: "/work\/./" }}, sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
+          fileAbsolutePath
           frontmatter {
             title
+            slug
             image {
               publicURL
             }

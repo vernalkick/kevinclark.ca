@@ -5,7 +5,8 @@ import MainPageHeader from '../../../components/MainPageHeader'
 exports.frontmatter = {
   title: "Climate",
   image: './climate-hero.png',
-  date: '2018-07-01'
+  date: '2018-07-01',
+  slug: 'climate'
 }
 
 const Climate = () => (

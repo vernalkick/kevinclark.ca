@@ -5,7 +5,8 @@ import MainPageHeader from '../../../components/MainPageHeader'
 exports.frontmatter = {
   title: "Tiny Conf",
   image: './tiny-conf-thumb.png',
-  date: '2018-04-01'
+  date: '2018-04-01',
+  slug: 'tiny-conf'
 }
 
 const TinyConf = () => (

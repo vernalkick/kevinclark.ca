@@ -5,7 +5,8 @@ import MainPageHeader from '../../../components/MainPageHeader'
 exports.frontmatter = {
   title: "Order Status Page",
   image: './osp-hero.png',
-  date: '2018-06-01'
+  date: '2018-06-01',
+  slug: 'order-status-page'
 }
 
 const OrderStatusPage = () => (

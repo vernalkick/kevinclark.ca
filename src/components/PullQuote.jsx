@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Media } from '../components/Media'
 
 const Quote = styled.blockquote`
   padding: 0;
@@ -16,10 +17,14 @@ const Quote = styled.blockquote`
 `
 
 const Paragraph = styled.p`
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 500;
   line-height: 1.4;
   margin: 0;
+
+  ${Media.tablet`
+    font-size: 32px;
+  `}
 `
 
 const Source = styled.p`

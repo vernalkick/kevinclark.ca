@@ -5,7 +5,8 @@ import MainPageHeader from '../../../components/MainPageHeader'
 exports.frontmatter = {
   title: "Shopify Gift Cards",
   image: './gift-cards-thumb.png',
-  date: '2018-05-01'
+  date: '2018-05-01',
+  slug: 'shopify-gift-cards'
 }
 
 const GiftCards = () => (
