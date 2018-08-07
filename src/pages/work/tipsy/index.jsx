@@ -4,10 +4,12 @@ import MainPageHeader from '../../../components/MainPageHeader'
 import Section from '../../../components/Section'
 import PullQuote from '../../../components/PullQuote'
 import TwoColumns from '../../../components/TwoColumns'
+import OffsetImage from '../../../components/OffsetImage'
 import { FigCaption } from '../../../components/Figure'
 import { Media } from '../../../components/Media'
 
 import hero from './tipsy-hero-2.png'
+import code from './code.png'
 
 exports.frontmatter = {
   title: "Tipsy",
@@ -21,12 +23,26 @@ const Centered = styled.div`
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-gap: 5rem;
-
-    & *:first-child {
-      grid-column-start: 2;
-    }
   `}
 `
+//
+// const CenteredColumn = styled.div`
+//   position: relative;
+// `
+//
+// const ImageContainer = styled.div`
+//   height: 100%;
+//   padding-left: 350%;
+//   position: absolute;
+//   right: 0;
+// `
+//
+// const OffsetImage = styled.img`
+//   max-width: none;
+//   height: 100%;
+//   position: absolute;
+//   right: 0;
+// `
 
 const Tipsy = () => (
   <div>
@@ -46,6 +62,12 @@ const Tipsy = () => (
       </Section>
       <Section>
         <Centered>
+          <OffsetImage src={code} />
+          {/* <CenteredColumn>
+            <ImageContainer>
+              <OffsetImage src={code} />
+            </ImageContainer>
+          </CenteredColumn> */}
           <div>
             <p><strong>So I started looking for iOS classes or tutorials online.</strong> Most of them were either focused on learning how to achieve one specific effect for someone who already knows the ins and outs of UIKit or was so broad and so theoretical that I could’t bring myself to go through it all. And then, <a href="http://joshlong.cc/">Josh Long</a> and <a href="http://soff.es/">Sam Soffes</a> announced Execute iOS. It was exactly what I wanted: an experienced iOS developer reaches someone new to programming how to make a real iOS app, top to bottom. No theory bullshit, just things you’re actually going to use. I bought it right away.</p>
             <p>Listening to the first few videos and following along, I was able to pick up the basics of Objective-C pretty quickly. The language is intimidating at first, but when you look past the square brackets and verbose method names, it’s a pretty good language.</p>

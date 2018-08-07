@@ -50,7 +50,12 @@ injectGlobal `
   }
 
   p a {
-    border-bottom: 2px solid currentColor;
+    border-bottom: 2px solid var(--subdued-elements-color);
+    font-weight: 500;
+
+    &:hover {
+      background: #fff;
+    }
   }
 
   ul {
