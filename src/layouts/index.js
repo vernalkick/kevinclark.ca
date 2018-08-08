@@ -9,7 +9,8 @@ import '../layouts/styles.css'
 const Layout = ({ location, children, data }) => (
   <div>
     <Helmet
-      title={data.site.siteMetadata.title}
+      defaultTitle={data.site.siteMetadata.title}
+      titleTemplate={`%s | ${data.site.siteMetadata.title}`}
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
@@ -17,9 +18,6 @@ const Layout = ({ location, children, data }) => (
     />
     <Wrap>
       <Header siteTitle={data.site.siteMetadata.title} pathName={location.pathname} />
-      {/* {data.allJavascriptFrontmatter.edges.map(edge =>
-        <p>{edge.node.frontmatter.title}</p>
-      )} */}
       {children()}
       <Footer />
     </Wrap>
