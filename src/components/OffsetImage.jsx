@@ -12,12 +12,14 @@ const ImageContainer = styled.div`
 `
 
 const Image = styled.img`
+  filter: drop-shadow(0 15px 20px rgba(0,0,0,.6));
+  
   ${Media.desktop`
     max-width: none;
     height: 100%;
     position: absolute;
     ${props => props.direction}: 0;
-    filter: drop-shadow(0 15px 20px rgba(0,0,0,.6));
+
   `}
 `
 

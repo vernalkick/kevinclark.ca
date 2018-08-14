@@ -4,6 +4,10 @@ import styled, { css } from 'styled-components'
 import { Media } from '../components/Media'
 
 const ContentGridElement = styled.div`
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: 1fr;
+
   ${Media.desktop`
     display: grid;
     grid-gap: 5rem;
@@ -20,8 +24,11 @@ const ContentGridElement = styled.div`
 
 export const Column = styled.div`
   position: relative;
-  grid-column-start: ${props => props.number};
-  grid-row-start: 1;
+
+  ${Media.desktop`
+    grid-column-start: ${props => props.number};
+    grid-row-start: 1;
+  `}
 `
 
 class ContentGrid extends React.Component {

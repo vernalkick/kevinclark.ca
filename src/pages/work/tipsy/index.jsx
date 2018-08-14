@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import MainPageHeader from '../../../components/MainPageHeader'
 import Section from '../../../components/Section'
 import PullQuote from '../../../components/PullQuote'
-import TwoColumns from '../../../components/TwoColumns'
 import ContentGrid from '../../../components/ContentGrid'
 import OffsetImage from '../../../components/OffsetImage'
 import { FigCaption } from '../../../components/Figure'
@@ -19,32 +18,51 @@ exports.frontmatter = {
   slug: 'tipsy'
 }
 
-const Centered = styled.div`
+const HalfHeader = styled.div`
+  margin-bottom: 3rem;
+
   ${Media.desktop`
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-gap: 5rem;
+    width: 45%;
+    margin-bottom: 6rem;
+    position: relative;
+  `}
+`
+
+const MainImage = styled.div`
+  margin-top: 1rem;
+  margin-left: -15%;
+  width: 130%;
+
+  ${Media.desktop`
+    position: absolute;
+    margin: 0;
+    left: 105%;
+    width: 150%;
+    top: -2rem;
+  `}
+`
+
+const MainContent = styled.div`
+  margin-top: 1.5rem;
+
+  ${Media.desktop`
+    margin-top: 3rem;
   `}
 `
 
 const Tipsy = () => (
   <div>
-    <MainPageHeader>Tipsy</MainPageHeader>
+    <HalfHeader>
+      <MainPageHeader>Tipsy</MainPageHeader>
+      <MainImage>
+        <img src={hero} alt="Mockup of the Tipsy app on an iPhone 6" />
+      </MainImage>
+      <MainContent>
+        <p><strong>I work on the web day in, day out.</strong> I know the medium very well: its capabilities, its limitations, its opportunities. But I’m doing a lot less on the web today than I did just a few years ago. My phone is an incredible computer that is not only more convenient, but often more enjoyable to use. I thought it’d be interesting to start designing for it. It would be a new canvas to play with and would make me understand the constraints of mobile a lot better.</p>
+        <p>I didn’t want to just make fake apps though. There is some value in designing just for the sake of designing, but It’s incredibly limiting. I wanted to make apps that people could use.</p>
+      </MainContent>
+    </HalfHeader>
     <div>
-      <Section>
-
-      </Section>
-      <Section>
-        <ContentGrid columns={2}>
-          <ContentGrid.Column number={2}>
-            <img src={hero} alt="Mockup of the Tipsy app on an iPhone 6"/>
-          </ContentGrid.Column>
-          <ContentGrid.Column>
-            <p><strong>I work on the web day in, day out.</strong> I know the medium very well: its capabilities, its limitations, its opportunities. But I’m doing a lot less on the web today than I did just a few years ago. My phone is an incredible computer that is not only more convenient, but often more enjoyable to use. I thought it’d be interesting to start designing for it. It would be a new canvas to play with and would make me understand the constraints of mobile a lot better.</p>
-            <p>I didn’t want to just make fake apps though. There is some value in designing just for the sake of designing, but It’s incredibly limiting. I wanted to make apps that people could use.</p>
-          </ContentGrid.Column>
-        </ContentGrid>
-      </Section>
       <Section>
         <ContentGrid columns={3}>
           <ContentGrid.Column>
@@ -70,7 +88,7 @@ const Tipsy = () => (
             <p>Speaking of which, you can download it for free if you want to check it out.</p>
           </ContentGrid.Column>
           <ContentGrid.Column>
-            <PullQuote>It’s extremely simple and it’s definitely not setting the world on fire, but I’m super proud of it. I learned so much.</PullQuote>
+            <PullQuote>The app is extremely simple and it’s definitely not setting the world on fire, but I’m super proud of it. I learned so much.</PullQuote>
           </ContentGrid.Column>
         </ContentGrid>
       </Section>

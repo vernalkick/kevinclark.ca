@@ -10,7 +10,8 @@ const Grid = styled.div`
   ${Media.desktop`
     display: grid;
     grid-template-columns: 3.78% 12.28% 22.08% 9.59% 2.03% 8.12% 31.55% 4.71% 5.82%;
-    grid-template-rows: 273px 201px 191px 45px 89px 385px 120px 94px 71px 321px 215px;
+    // grid-template-rows: 273px 201px 191px 45px 89px 385px 120px 94px 71px 321px 215px;
+    grid-auto-rows: 273px 201px 191px 45px 89px 385px 120px 94px 71px 321px 215px;
     margin-top: -7rem;
   `}
 `
@@ -47,44 +48,44 @@ const GridElement = styled(Link)`
 
   &:nth-child(6n+1) {
     grid-column-start: 1;
-    grid-column-end: 5;
+    grid-column-end: span 4;
     grid-row-start: 2;
-    grid-row-end: 4;
+    grid-row-end: span 2;
   }
 
   &:nth-child(6n+2) {
     grid-column-start: 7;
-    grid-column-end: 8;
+    grid-column-end: span 1;
     grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-end: span 2;
   }
 
   &:nth-child(6n+3) {
     grid-column-start: 3;
-    grid-column-end: 5;
+    grid-column-end: span 2;
     grid-row-start: 6;
-    grid-row-end: 8;
+    grid-row-end: span 2;
   }
 
   &:nth-child(6n+4) {
     grid-column-start: 7;
-    grid-column-end: 10;
+    grid-column-end: span 3;
     grid-row-start: 5;
-    grid-row-end: 7;
+    grid-row-end: span 2;
   }
 
   &:nth-child(6n+5) {
     grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-end: span 2;
     grid-row-start: 10;
-    grid-row-end: 13;
+    grid-row-end: span 2;
   }
 
   &:nth-child(6n+6) {
     grid-column-start: 6;
-    grid-column-end: 9;
+    grid-column-end: span 3;
     grid-row-start: 9;
-    grid-row-end: 11;
+    grid-row-end: span 2;
   }
 `
 

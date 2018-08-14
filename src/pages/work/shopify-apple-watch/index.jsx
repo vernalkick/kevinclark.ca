@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import MainPageHeader from '../../../components/MainPageHeader'
 import Section from '../../../components/Section'
-import TwoColumns from '../../../components/TwoColumns'
 import Figure from '../../../components/Figure'
 import {FigCaption} from '../../../components/Figure'
 import PullQuote from '../../../components/PullQuote'
@@ -28,7 +27,7 @@ exports.frontmatter = {
 
 const ShopifyAppleWatch = () => (
   <div>
-    <MainPageHeader preTitle='Shopify'>Shopify for Apple Watch</MainPageHeader>
+    <MainPageHeader preTitle='Shopify'>Shopify for Apple&nbsp;Watch</MainPageHeader>
     <div>
       <Section>
         <img src={hero} alt=""/>
