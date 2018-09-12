@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import MainPageHeader from '../components/MainPageHeader'
 import styled from 'styled-components'
 import { Media } from '../components/Media'
+import ProjectItem from '../components/Project'
 
 const Grid = styled.div`
   margin-top: 1.5rem;
@@ -12,6 +13,17 @@ const Grid = styled.div`
     grid-auto-rows: 273px 201px 191px 45px 89px 385px 120px 94px 71px 321px 215px;
     margin-top: -7rem;
   `}
+
+  > * {
+    height: 200px;
+    margin-top: 1rem;
+
+    ${Media.desktop`
+      height: auto;
+      margin-top: 0;
+      ${gridposition()}
+    `}
+  }
 `
 
 export function gridposition() {
@@ -65,89 +77,18 @@ export function gridposition() {
   return css
 }
 
-const GridElement = styled(Link)`
-  background: #333;
-  overflow: hidden;
-  position: relative;
-  padding-left: 120px;
-  transition: box-shadow .3s ease-in-out;
-  box-shadow: 0 45.4px 70px -20.4px rgba(0,0,0,0.3);
-  display: block;
-  height: 200px;
-  ${gridposition()}
-
-  & + & {
-    margin-top: 1rem;
-  }
-
-  ${Media.desktop`
-    height: auto;
-
-    & + & {
-      margin-top: 0;
-    }
-  `}
-
-  &:hover {
-    box-shadow: 0 45.4px 100px -20.4px rgba(0,0,0,0.5);
-
-    & img {
-      transform: scale(1.075);
-    }
-  }
-}
-`
-
-const Project = styled.a`
-  
-`
-
-const ProjectTitle = styled.span`
-  color: #fff;
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-  font-size: 18px;
-  font-weight: 500;
-  width: 120px;
-  line-height: 1.3;
-`
-
-const ProjectImage = styled.img`
-  float: right;
-  height: 100%;
-  object-fit: cover;
-  object-position: 0 50%;
-  width: calc(100% - 30px);
-  transition: transform 1s ease-out;
-`
-
-const ProjectNumber = styled.span`
-  position: absolute;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  color: rgba(255, 255, 255, 0.6);
-  font-family: var(--secondary-font);
-`
-
 const WorkPage = ({
   data: {
     allSitePage,
     allJavascriptFrontmatter
   },
 }) => {
-  console.log(allSitePage)
-  console.log(allJavascriptFrontmatter)
   return (
     <div>
       <MainPageHeader>Work</MainPageHeader>
       <Grid>
         {allJavascriptFrontmatter.edges.map((project, index) =>
-          <GridElement to={'/work/' + project.node.frontmatter.slug} key={project.node.frontmatter.slug}>
-            {project.node.frontmatter.image && <ProjectImage src={project.node.frontmatter.image.publicURL} /> }
-            <ProjectTitle>{project.node.frontmatter.title}</ProjectTitle>
-            <ProjectNumber>0{index + 1}</ProjectNumber>
-          </GridElement>
+          <ProjectItem index={index} project={project} key={project.node.frontmatter.slug} />
         )}
       </Grid>
     </div>
