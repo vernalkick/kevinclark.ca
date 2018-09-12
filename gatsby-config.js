@@ -33,6 +33,7 @@ module.exports = {
       options: {
         plugins: [
           "gatsby-remark-component",
+          `gatsby-remark-smartypants`,
           {
             resolve: `gatsby-remark-images`,
             options: {

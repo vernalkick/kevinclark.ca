@@ -6,7 +6,7 @@ import MainPageHeader from '../../components/MainPageHeader'
 
 import AboutItem from './AboutItem'
 
-import profilePicture from './profile.jpg'
+import profilePicture from '../../assets/images/profile.jpg'
 
 const MainColumn = styled.div`
   grid-column: 2;

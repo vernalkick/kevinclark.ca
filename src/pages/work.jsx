@@ -6,15 +6,64 @@ import { Media } from '../components/Media'
 
 const Grid = styled.div`
   margin-top: 1.5rem;
-  /* 1083 */
   ${Media.desktop`
     display: grid;
     grid-template-columns: 3.78% 12.28% 22.08% 9.59% 2.03% 8.12% 31.55% 4.71% 5.82%;
-    // grid-template-rows: 273px 201px 191px 45px 89px 385px 120px 94px 71px 321px 215px;
     grid-auto-rows: 273px 201px 191px 45px 89px 385px 120px 94px 71px 321px 215px;
     margin-top: -7rem;
   `}
 `
+
+export function gridposition() {
+  let css = ""
+  for (let index = 0; index < 5; index++) {
+    css += `
+    &:nth-child(${1 + 6 * index}) {
+      grid-column-start: 1;
+      grid-column-end: span 4;
+      grid-row-start: ${2 + 11 * index};
+      grid-row-end: span 2;
+    }
+
+    &:nth-child(${2 + 6 * index}) {
+      grid-column-start: 7;
+      grid-column-end: span 1;
+      grid-row-start: ${1 + 11 * index};
+      grid-row-end: span 2;
+    }
+
+    &:nth-child(${3 + 6 * index}) {
+      grid-column-start: 3;
+      grid-column-end: span 2;
+      grid-row-start: ${6 + 11 * index};
+      grid-row-end: span 2;
+    }
+
+    &:nth-child(${4 + 6 * index}) {
+      grid-column-start: 7;
+      grid-column-end: span 3;
+      grid-row-start: ${5 + 11 * index};
+      grid-row-end: span 2;
+    }
+
+    &:nth-child(${5 + 6 * index}) {
+      grid-column-start: 2;
+      grid-column-end: span 2;
+      grid-row-start: ${10 + 11 * index};
+      grid-row-end: span 2;
+    }
+
+    &:nth-child(${6 + 6 * index}) {
+      grid-column-start: 6;
+      grid-column-end: span 3;
+      grid-row-start: ${9 + 11 * index};
+      grid-row-end: span 2;
+    }
+    `
+  }
+
+  return css
+}
 
 const GridElement = styled(Link)`
   background: #333;
@@ -25,6 +74,7 @@ const GridElement = styled(Link)`
   box-shadow: 0 45.4px 70px -20.4px rgba(0,0,0,0.3);
   display: block;
   height: 200px;
+  ${gridposition()}
 
   & + & {
     margin-top: 1rem;
@@ -45,48 +95,11 @@ const GridElement = styled(Link)`
       transform: scale(1.075);
     }
   }
+}
+`
 
-  &:nth-child(6n+1) {
-    grid-column-start: 1;
-    grid-column-end: span 4;
-    grid-row-start: 2;
-    grid-row-end: span 2;
-  }
-
-  &:nth-child(6n+2) {
-    grid-column-start: 7;
-    grid-column-end: span 1;
-    grid-row-start: 1;
-    grid-row-end: span 2;
-  }
-
-  &:nth-child(6n+3) {
-    grid-column-start: 3;
-    grid-column-end: span 2;
-    grid-row-start: 6;
-    grid-row-end: span 2;
-  }
-
-  &:nth-child(6n+4) {
-    grid-column-start: 7;
-    grid-column-end: span 3;
-    grid-row-start: 5;
-    grid-row-end: span 2;
-  }
-
-  &:nth-child(6n+5) {
-    grid-column-start: 2;
-    grid-column-end: span 2;
-    grid-row-start: 10;
-    grid-row-end: span 2;
-  }
-
-  &:nth-child(6n+6) {
-    grid-column-start: 6;
-    grid-column-end: span 3;
-    grid-row-start: 9;
-    grid-row-end: span 2;
-  }
+const Project = styled.a`
+  
 `
 
 const ProjectTitle = styled.span`
