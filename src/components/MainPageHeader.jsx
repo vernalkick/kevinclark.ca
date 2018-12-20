@@ -48,7 +48,7 @@ const PreTitle = styled.span`
   display: block;
 
   ${Media.desktop`
-    font-size: 35px;
+    font-size: 32px;
   `}
 `
 

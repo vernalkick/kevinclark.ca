@@ -7,12 +7,14 @@ import Instagram from '../assets/instagram.svg'
 import Twitter from '../assets/twitter.svg'
 
 const MainHeader = styled.header`
-  display: flex;
-  flex-wrap: wrap;
+
+  display: block;
   margin-top: 1.5rem;
   position: relative;
 
-  ${Media.desktop`
+  ${Media.tablet`
+    display: flex;
+    flex-wrap: wrap;
     margin: 10vw 0 0 0;
   `}
 `
@@ -22,6 +24,7 @@ const Logo = styled(Link)`
   min-width: 45%;
   line-height: 1.3;
   margin-bottom: 1rem;
+  display: block;
 `
 
 const Name = styled.span`

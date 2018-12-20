@@ -13,7 +13,8 @@ const ContentGridElement = styled.div`
     grid-gap: 5rem;
 
     ${props => props.columns == 2 && css`
-      grid-template-columns: 3fr 4fr;
+      grid-gap: 7rem;
+      grid-template-columns: 4fr 4fr;
     `}
 
     ${props => props.columns == 3 && css`

@@ -11,13 +11,13 @@ injectGlobal `
     --bottom-background-color: #F1F1F1;
   }
 
-  ${'' /* :root {
-    --primary-text-color: #fff;
-    --secondary-text-color: #999;
-    --subdued-elements-color: rgba(255, 255, 255, 0.25);
-    --top-background-color: #000;
-    --bottom-background-color: #222;
-  } */}
+  // :root {
+  //   --primary-text-color: #fff;
+  //   --secondary-text-color: #999;
+  //   --subdued-elements-color: rgba(255, 255, 255, 0.25);
+  //   --top-background-color: #111;
+  //   --bottom-background-color: #222;
+  // }
 
   html {
     height: 100%;
@@ -33,7 +33,7 @@ injectGlobal `
     min-height: 100vh;
   }
 
-  p {
+  p, ol > li {
     line-height: 1.7;
     font-size: 18px;
     margin: 0;
