@@ -1,4 +1,5 @@
-import {injectGlobal} from 'styled-components'
+import styled, {injectGlobal} from 'styled-components'
+import { Media } from '../components/Media'
 
 injectGlobal `
   :root {
@@ -63,6 +64,10 @@ injectGlobal `
     line-height: 1.7;
   }
 
+  ol > li + li {
+    margin-top: 1.5em;
+  }
+
   hr {
     height: 2px;
     background: #fff;
@@ -96,5 +101,16 @@ injectGlobal `
   img {
     max-width: 100%;
     display: block;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0;
+
+    ${Media.tablet`
+      font-size: 32px;
+    `}
   }
 `
