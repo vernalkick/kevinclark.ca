@@ -10,6 +10,8 @@ import { Grid, Column } from '../../../components/ContentGrid'
 
 import heroIpad from "./shopify-pay-hero-ipad.png"
 import announcement from "./on-stage-announcement.jpg"
+import unite from "./unite-images.png"
+import sketch from "./sketch.jpg"
 
 exports.frontmatter = {
   title: "Shopify Pay Landing Page",
@@ -35,24 +37,25 @@ const ShopifyPayLanding = () => (
         <img src={heroIpad} alt=""/>
       </Section>
       <Section>
-
         <Grid>
-          <Column width={6}>
-            <PullQuote>Shopify Pay is the first buyer-facing product Shopify created. It’s goal at the time was to simplify and streamline the tedious parts of shopping to let people focus on the parts that they love.</PullQuote>
+          <Column width={2}>
+            <FigCaption title="Photo Credit">
+             Thanks to Facebook for providing these hands to use in our designs
+            </FigCaption>
           </Column>
-          <Column width={4}>
+          <Column start={4} width={5}>
+            <h2>Shopify Pay is the first buyer-facing product Shopify created to simplify and streamline the tedious parts of shopping to let people focus on the parts that they love.</h2>
+          </Column>
+        </Grid>
+        <Grid>
+          <Column start={4} width={4}>
             <p>In practice, Shopify Pay allows buyers to opt in to save their information at checkout and be able to automatically reuse it on any other Shopify store. While the core concept is fairly simple to grasp, we thought it would be helpful to provide a page for people to get all of the information on how it works.</p>
           </Column>
         </Grid>
       </Section>
       <Section>
-        <FullWidthContainer>
-          <img src={announcement} alt=""/>
-        </FullWidthContainer>
-      </Section>
-      <Section>
         <Grid>
-          <Column start={3} width={4}>
+          <Column width={4}>
             <h2>Our Goals</h2>
             <ol>
               <li><strong>To show people how simple the experience is</strong> and set the right expectation for what will happen at their next purchase.</li>
@@ -60,19 +63,24 @@ const ShopifyPayLanding = () => (
               <li>The last goal was to <strong>give people a place to opt-out</strong> that was front and center. We didn’t want to bury it or hide it. If you’ve signed up by mistake or change your mind, it should be as easy to opt-out as it was to opt-in.</li>
             </ol>
           </Column>
-          <Column start={7} width={2}>
-            <FigCaption title="Note" decoration={true}>
-             Having clarity in your goals from the very start makes it so much easier to execute on the solution effectively. User research was really useful in deepening our understanding of our varied user base.
-            </FigCaption>
+          <Column start={5} width={4}>
+            <img src={unite} />
           </Column>
         </Grid>
       </Section>
       <Section>
         <Grid>
-          <Column width={4}>
+          <Column start={4} width={4} align="end">
             <p><strong>A big question we had</strong> was “should we include the standard Shopify navigation?” While we all liked the consistency of including the same navigation as the rest of the website we ultimately decided to not include it. Why? Because the audience of this website are buyers, not merchants. Including things like our pricing page in the navigation here would’ve added more confusion than clarity. It’s a great example of how consistency is a not a goal in and of itself. In this case, consistency was working against our goal of creating a simple and clear message for our intended audience.</p>
           </Column>
-          <Column start={6} width={3}>
+          <Column start={1} width={3}>
+            <img src={sketch} />
+          </Column>
+        </Grid>
+      </Section>
+      <Section>
+        <Grid>
+          <Column start={5} width={4}>
             <PullQuote>In this case, consistency was working against our goal of creating a simple and clear message for our intended audience.</PullQuote>
           </Column>
         </Grid>

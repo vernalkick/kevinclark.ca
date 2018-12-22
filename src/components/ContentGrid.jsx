@@ -17,11 +17,12 @@ export const Grid = styled.div`
 
 export const Column = styled.div`
   position: relative;
-  
+
   ${Media.desktop`
     grid-row-start: 1;
     grid-column-start: ${props => props.start};
     grid-column-end: span ${props => props.width};
+    align-self: ${props => props.align};
   `}
 `
 
