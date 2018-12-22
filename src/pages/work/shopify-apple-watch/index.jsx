@@ -29,9 +29,11 @@ const ShopifyAppleWatch = () => (
   <div>
     <MainPageHeader preTitle='Shopify'>Shopify for Apple&nbsp;Watch</MainPageHeader>
     <div>
-      <Section>
-        <img src={hero} alt=""/>
-      </Section>
+    <Section>
+      <img src={hero} alt=""/>
+    </Section>
+    </div>
+    <div>
       <Section>
         <Grid>
           <Column start={5} width={4}>

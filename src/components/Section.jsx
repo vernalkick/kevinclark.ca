@@ -14,7 +14,7 @@ const Section = styled.div`
     margin-top: 3rem;
 
     ${Media.desktop`
-      margin-top: 6rem;
+      margin-top: 9rem;
     `}
   }
 `

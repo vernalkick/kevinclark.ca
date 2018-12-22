@@ -108,6 +108,30 @@ injectGlobal `
     line-height: 1.7;
   }
 
+  ol {
+    counter-reset: li;
+    list-style: none;
+    padding: 0;
+  }
+
+  ol li {
+    counter-increment: li;
+    position: relative;
+    padding-left: 2.5em;
+
+    &:before {
+      content: counter(li);
+      display: inline-block;
+      background: var(--subdued-elements-color);
+      border-radius: 20px;
+      padding: 0 0.5em;
+      min-width: 0.6em;
+      text-align: center;
+      position: absolute;
+      left: 0;
+    }
+  }
+
   ol > li + li {
     margin-top: 1.5em;
   }
