@@ -14,7 +14,7 @@ import announcement from "./on-stage-announcement.jpg"
 import unite from "./unite-images.png"
 import sketch from "./sketch-blob.png"
 import landingPage from "./shopify-pay-landing-page.png"
-import video from "./shopify-pay-video.mp4"
+import video from "./shopify-pay-video-2.mp4"
 
 exports.frontmatter = {
   title: "Shopify Pay Landing Page",
