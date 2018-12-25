@@ -5,13 +5,16 @@ import Section from '../../../components/Section'
 import Figure from '../../../components/Figure'
 import {FigCaption} from '../../../components/Figure'
 import PullQuote from '../../../components/PullQuote'
+import IpadPro from '../../../components/iPadPro'
 import { Media } from '../../../components/Media'
 import { Grid, Column } from '../../../components/ContentGrid'
 
 import heroIpad from "./shopify-pay-hero-ipad.png"
 import announcement from "./on-stage-announcement.jpg"
 import unite from "./unite-images.png"
-import sketch from "./sketch.jpg"
+import sketch from "./sketch-blob.png"
+import landingPage from "./shopify-pay-landing-page.png"
+import video from "./shopify-pay-video.mp4"
 
 exports.frontmatter = {
   title: "Shopify Pay Landing Page",
@@ -34,7 +37,9 @@ const ShopifyPayLanding = () => (
     <MainPageHeader preTitle='Shopify'>Shopify Pay Landing Page</MainPageHeader>
     <div>
       <Section>
-        <img src={heroIpad} alt=""/>
+        <IpadPro>
+          <video src={video} autoPlay />
+        </IpadPro>
       </Section>
       <Section>
         <Grid>
