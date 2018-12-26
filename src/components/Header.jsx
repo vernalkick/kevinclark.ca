@@ -7,7 +7,6 @@ import Instagram from '../assets/instagram.svg'
 import Twitter from '../assets/twitter.svg'
 
 const MainHeader = styled.header`
-
   display: block;
   margin-top: 1.5rem;
   position: relative;
@@ -21,10 +20,15 @@ const MainHeader = styled.header`
 
 const Logo = styled(Link)`
   font-size: 18px;
-  min-width: 45%;
   line-height: 1.3;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   display: block;
+  padding-right: 5rem;
+
+  ${Media.desktop`
+    min-width: 45%;
+    padding-right: 0;
+  `}
 `
 
 const Name = styled.span`
@@ -44,6 +48,11 @@ const List = styled.ul`
   flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+
+  ${Media.desktop`
+    justify-content: flex-start;
+  `}
 `
 
 const Social = styled.div`
@@ -54,6 +63,7 @@ const Social = styled.div`
   ${Media.tablet`
     position: relative;
     top: 0.5rem;
+    margin-left: 2rem;
   `}
 `
 const SocialLink = styled(Link)`
