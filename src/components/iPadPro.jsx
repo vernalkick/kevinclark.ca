@@ -1,7 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import styled from 'styled-components';
-import { Media } from '../components/Media'
 
 import DeviceImage from '../assets/images/ipad-pro.png'
 import DeviceShadowImage from '../assets/images/ipad-pro-shadow.png'
@@ -18,15 +16,12 @@ const DeviceShadow = styled.img`
   position: absolute;
   left: -3.22%;
   top: -4.5%;
-  /* right: -19.66%; */
-  /* bottom: -19.66%; */
   width: 122.88%;
   max-width: none;
   z-index: -1;
 `
 
 const Screen = styled.div`
-  /* background: #fff; */
   position: absolute;
   left: 3.25%;
   top: 7.6%;

@@ -3,11 +3,12 @@ import styled from 'styled-components'
 import MainPageHeader from '../../../components/MainPageHeader'
 import Section from '../../../components/Section'
 import Figure from '../../../components/Figure'
-import {FigCaption} from '../../../components/Figure'
+import { FigCaption } from '../../../components/Figure'
 import PullQuote from '../../../components/PullQuote'
 import IpadPro from '../../../components/iPadPro'
 import { Media } from '../../../components/Media'
 import { Grid, Column } from '../../../components/ContentGrid'
+import HeroImage from '../../../components/HeroImage'
 
 import heroIpad from "./shopify-pay-hero-ipad.png"
 import announcement from "./on-stage-announcement.jpg"
@@ -34,14 +35,14 @@ const FullWidthContainer = styled.div`
 
 const ShopifyPayLanding = () => (
   <div>
-    <MainPageHeader preTitle='Shopify'>Shopify Pay Landing Page</MainPageHeader>
+    <MainPageHeader preTitle='Shopify'>Shopify Pay Landing&nbsp;Page</MainPageHeader>
     <div>
       <Section>
-        <IpadPro>
-          <video src={video} autoPlay />
-        </IpadPro>
-      </Section>
-      <Section>
+        <HeroImage>
+          <IpadPro>
+            <video src={video} autoPlay />
+          </IpadPro>
+        </HeroImage>
         <Grid>
           <Column width={2}>
             <FigCaption title="Photo Credit">

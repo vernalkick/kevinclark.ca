@@ -7,6 +7,7 @@ import {FigCaption} from '../../../components/Figure'
 import PullQuote from '../../../components/PullQuote'
 import { Media } from '../../../components/Media'
 import { Grid, Column } from '../../../components/ContentGrid'
+import HeroImage from '../../../components/HeroImage'
 
 import hero from "./hero.png"
 import sketch from "./sketch.jpg"
@@ -29,12 +30,12 @@ const ShopifyAppleWatch = () => (
   <div>
     <MainPageHeader preTitle='Shopify'>Shopify for Apple&nbsp;Watch</MainPageHeader>
     <div>
-    <Section>
-      <img src={hero} alt=""/>
-    </Section>
-    </div>
-    <div>
       <Section>
+        <HeroImage>
+          <Section>
+            <img src={hero} alt=""/>
+          </Section>
+        </HeroImage>
         <Grid>
           <Column start={5} width={4}>
             <p><strong>This started as my Hack Days project.</strong> The SDK had came out a few months earlier, but the watch wasn’t even out yet. I decided I wanted to take a stab at figuring out what would be useful to see on the Apple Watch.</p>

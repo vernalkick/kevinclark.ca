@@ -27,8 +27,8 @@ const Image = styled.img`
 `
 
 const Caption = styled.figcaption`
-  margin-top: 1.5rem;
-  
+  /* margin-top: 1rem; */
+
   ${Media.desktop`
     ${props => props.overlap && css`
       margin-top: -3rem;
