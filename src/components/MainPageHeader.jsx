@@ -43,12 +43,13 @@ const Title = styled.h1`
 `
 
 const PreTitle = styled.span`
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 1rem;
   display: block;
+  font-weight: 500;
 
   ${Media.desktop`
-    font-size: 32px;
+    font-size: 24px;
   `}
 `
 
