@@ -41,7 +41,7 @@ const SocialLink = styled(Link)`
   }
 `
 
-const EmailLink = styled(Link)`
+const FooterLink = styled(Link)`
   font-weight: 500;
 `
 
@@ -50,8 +50,8 @@ const year = today.getFullYear()
 
 const Footer = () => (
   <FooterContainer>
-    <Copyright>Copyright © {year} Kevin Clark</Copyright>
-    <Contact>Email me at <EmailLink to='mailto:kevin@kevinclark.ca'>kevin@kevinclark.ca</EmailLink></Contact>
+    <Copyright>Copyright © {year} <FooterLink>Kevin Clark</FooterLink></Copyright>
+    <Contact>Email me at <FooterLink to='mailto:kevin@kevinclark.ca'>kevin@kevinclark.ca</FooterLink></Contact>
     <div>
       <SocialLink to='http://instagram.com/vernalkick/'><Instagram /></SocialLink>
       <SocialLink to='http://twitter.com/vernalkick'><Twitter /></SocialLink>

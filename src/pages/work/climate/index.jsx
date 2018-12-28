@@ -6,10 +6,12 @@ import PullQuote from '../../../components/PullQuote'
 import {Grid, Column} from '../../../components/ContentGrid'
 import {FigCaption} from '../../../components/Figure'
 import HeroImage from '../../../components/HeroImage'
+import FullWidthContainer from '../../../components/FullWidthContainer'
 
 import hero from './climate-hero.png'
 import appleWeather from './apple-weather-app.png'
-import breakdown from './climate-breakdown.png'
+import breakdown from './climate-breakdown-new.png'
+import complication from './climate-complication.jpg'
 
 exports.frontmatter = {
   title: "Climate",
@@ -54,6 +56,11 @@ const Climate = () => (
             </PullQuote>
           </Column>
         </Grid>
+      </Section>
+      <Section>
+        <FullWidthContainer>
+          <img src={complication} />
+        </FullWidthContainer>
       </Section>
       <Section>
         <Grid>

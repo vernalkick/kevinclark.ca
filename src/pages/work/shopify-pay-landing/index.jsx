@@ -24,15 +24,6 @@ exports.frontmatter = {
   slug: 'shopify-pay-landing'
 }
 
-const FullWidthContainer = styled.div`
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-`
-
 const ShopifyPayLanding = () => (
   <div>
     <MainPageHeader preTitle='Shopify'>Shopify Pay Landing&nbsp;Page</MainPageHeader>
@@ -86,7 +77,7 @@ const ShopifyPayLanding = () => (
       </Section>
       <Section>
         <Grid>
-          <Column start={5} width={4}>
+          <Column start={5} width={5}>
             <PullQuote>In this case, consistency was working against our goal of creating a simple and clear message for our intended audience.</PullQuote>
           </Column>
         </Grid>
