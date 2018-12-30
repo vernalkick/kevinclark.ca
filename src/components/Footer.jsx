@@ -10,8 +10,12 @@ const FooterContainer = styled.div`
   font-size: 16px;
   display: flex;
   flex-wrap: wrap;
-  padding: 2rem 0 4rem;
+  padding: 2rem 0 2rem;
   margin-top: 5rem;
+
+  ${Media.desktop`
+    padding-bottom: 4rem;
+  `}
 `
 
 const Copyright = styled.span`

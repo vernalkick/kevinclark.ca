@@ -1,5 +1,6 @@
 import React from 'react'
-import styled from 'styled-components';
+import styled from 'styled-components'
+import { Media } from '../components/Media'
 
 const Link = styled.a`
   display: block;
@@ -8,6 +9,12 @@ const Link = styled.a`
   & + & {
     margin-top: 3rem;
   }
+
+  ${Media.desktop`
+    & + & {
+      margin-top: 0;
+    }
+  `}
 `
 
 const Title = styled.h3`

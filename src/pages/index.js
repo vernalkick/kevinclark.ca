@@ -4,6 +4,7 @@ import MainPageHeader from '../components/MainPageHeader'
 import PostItem from '../components/PostItem'
 import { Media } from '../components/Media'
 import Twitter from '../assets/twitter.svg'
+
 import profilePicture from '../assets/images/profile.jpg'
 
 const PostList = styled.ul`

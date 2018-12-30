@@ -39,8 +39,12 @@ const ArticleTitle = styled.h1`
   font-size: 2.25rem;
   font-weight: 500;
   margin: 0;
-  margin-bottom: 7.5rem;
+  margin-bottom: 3rem;
   color: var(--main-text-color);
+
+  ${Media.desktop`
+    margin-bottom: 7.5rem;
+  `}
 `
 
 const DateLabel = styled.span`
@@ -61,7 +65,7 @@ const ArticleContainer = styled.div`
 
 export default ({data}) => {
   const post = data.markdownRemark
-  console.log(Media)
+
   return (
     <ArticleWrapper>
       <ArticleHeader>

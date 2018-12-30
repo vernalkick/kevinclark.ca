@@ -14,8 +14,12 @@ const NavListItem = styled.li`
 `
 
 const NavLink = styled(Link)`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: ${props => props.selected ? '500' : 'normal'};
+
+  ${Media.desktop`
+    font-size: 18px;
+  `}
 `
 
 class NavItem extends React.Component {

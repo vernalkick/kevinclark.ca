@@ -151,16 +151,22 @@ injectGlobal `
   blockquote {
     position: relative;
     margin: 0;
-    padding: 0 1em 0 4em;
+    padding: 0 2em 0 3em;
+    color: #777;
+    font-size: 14px;
+    border-left: 2px solid #fff;
 
-    &:before {
-      content: "“";
-      position: absolute;
-      left: 0;
-      font-size: 60px;
+    // &:before {
+    //   content: "“";
+    //   position: absolute;
+    //   left: 0;
+    //   // font-size: 60px;
+    // }
+
+    & + & {
+      padding-top: 2.5rem;
     }
 
-    & + &,
     p + & {
       margin-top: 2.5rem;
     }
@@ -180,6 +186,17 @@ injectGlobal `
 
     ${Media.tablet`
       font-size: 32px;
+    `}
+  }
+
+  h3 {
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 0.5em;
+    font-weight: 500;
+
+    ${Media.tablet`
+      font-size: 24px;
     `}
   }
 `

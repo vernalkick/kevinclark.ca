@@ -4,7 +4,7 @@ import MainPageHeader from '../../../components/MainPageHeader'
 import Section from '../../../components/Section'
 import HeroImage from '../../../components/HeroImage'
 import {Grid, Column} from '../../../components/ContentGrid'
-import {FigCaption} from '../../../components/Figure'
+import Figure, {FigCaption} from '../../../components/Figure'
 import PullQuote from '../../../components/PullQuote'
 import FullWidthContainer from '../../../components/FullWidthContainer'
 
@@ -90,8 +90,9 @@ const OrderStatusPage = () => (
       <Section>
         <Grid>
           <Column width={3} start={1}>
-            <img src={customer_journey} />
-            <FigCaption>Thanks to Cynthia Savard Saucier for introducing me to this method and leading the session.</FigCaption>
+            <Figure src={customer_journey} caption={{
+              content: 'Thanks to Cynthia Savard Saucier for introducing me to this method and leading the session.'
+            }} />
           </Column>
           <Column width={4} start={5}>
             <h2>User journey</h2>
@@ -109,8 +110,9 @@ const OrderStatusPage = () => (
       <Section>
         <Grid>
           <Column width={3} start={6}>
-            <img src={user_research} />
-            <FigCaption>Shout out to Dalia El-Shimy for creating this amazing poster with all of the research findings.</FigCaption>
+            <Figure src={user_research} caption={{
+              content: 'Shout out to Dalia El-Shimy for creating this amazing poster with all of the research findings.'
+            }} />
           </Column>
           <Column width={4} start={1}>
             <h2>Reality check, aka user-research</h2>

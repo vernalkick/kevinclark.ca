@@ -1,10 +1,9 @@
 ---
+pretitle: Introducing
 title: Skolar Sans
 tags: Typography
-date: 2014-12-07 20:27 EST
+date: 2014-12-07
 ---
-
-![](/assets/articles/skolar-sans/skolar-sans.jpg)
 
 [Rosetta][rosetta] recently released [a *sans* version of the beautiful Skolar][skolar-sans]. It follows the proportions of its predecessor but with a more modern twist that you expect from sans serifs.
 

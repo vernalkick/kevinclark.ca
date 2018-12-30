@@ -4,6 +4,8 @@ import { Media } from '../components/Media'
 
 const Quote = styled.blockquote`
   padding: 0;
+  color: var(--primary-text-color);
+  border: none;
 
   &:before {
     content: "";
@@ -13,6 +15,9 @@ const Quote = styled.blockquote`
     transform: rotate(45deg) translateY(-15%);
     top: -2rem;
     z-index: -1;
+    display: block;
+    position: absolute;
+    left: 0;
   }
 `
 

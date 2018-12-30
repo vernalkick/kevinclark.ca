@@ -31,7 +31,11 @@ const Climate = () => (
         <h2>After getting the Apple Watch, I noticed that in my usage the most useful apps were the ones that presented me with information quickly and let me go along with my day. Apps like Calendar, Activity and Weather were the apps that really worked well on the watch. There was one major problem with that: the 1st-party weather app for the Apple Watch leaves a lot to be desired.</h2>
       </Section>
       <Section>
-        <img src={appleWeather} />
+        <Grid>
+          <Column width={8}>
+            <img src={appleWeather} />
+          </Column>
+        </Grid>
         <Grid>
           <Column width={3}>
             <FigCaption title="Apple's Weather app">
