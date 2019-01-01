@@ -8,6 +8,7 @@ import PullQuote from '../../../components/PullQuote'
 import { Media } from '../../../components/Media'
 import { Grid, Column } from '../../../components/ContentGrid'
 import HeroImage from '../../../components/HeroImage'
+import NewFigure from '../../../components/NewFigure'
 
 import hero from "./hero.png"
 import sketch from "./sketch.jpg"
@@ -73,10 +74,9 @@ const ShopifyAppleWatch = () => (
       <Section>
         <Grid>
           <Column width={3}>
-            <Figure src={gif} overlap isPortrait={true} background='#fff' caption={{
-              title: 'First Prototype',
-              content: 'This is the first working prototype I was able to see in the Simulator. I was so happy.'
-            }} />
+            <NewFigure isPortrait={true} background="#fff" caption={{ title: 'First Prototype', content: 'This is the first working prototype I was able to see in the Simulator. I was so happy.'}}>
+              <img src={gif} />
+            </NewFigure>
           </Column>
           <Column start={5} width={4}>
             <p><strong>Next morning, I fired up Xcode</strong> and got to work on a working version, well… It wasn’t pulling real data, but but at least it wast real code running on the Watch/Phone. Due to the inherent simplicity of WatchKit, getting the UI working in Interface Builder was relatively easy. I was making good progress, but time was running out.</p>

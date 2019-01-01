@@ -7,6 +7,7 @@ import {Grid, Column} from '../../../components/ContentGrid'
 import Figure, {FigCaption} from '../../../components/Figure'
 import PullQuote from '../../../components/PullQuote'
 import FullWidthContainer from '../../../components/FullWidthContainer'
+import NewFigure from '../../../components/NewFigure'
 
 import hero from './osp-hero.png'
 import customer_journey from './customer-journey.png'
@@ -64,12 +65,21 @@ const IphoneContainer = styled.div`
   filter: drop-shadow(0 18px 43px rgba(0,0,0,.15));
 `
 
+const Iphone = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+`
+
 const IphoneScreen = styled.img`
   max-width: none;
   position: absolute;
   top: 13%;
-  left: 7.5%;
-  width: 85.25%;
+  /* left: 7.5%;
+  width: 85.25%; */
+  width: 100%;
+  height: 74.8%;
+  object-fit: contain;
 `
 
 
@@ -254,10 +264,12 @@ const OrderStatusPage = () => (
       <Section>
         <Grid>
           <Column width={3}>
-            <IphoneContainer>
-              <img src={iphone} />
-              <IphoneScreen src={mobile} />
-            </IphoneContainer>
+            <NewFigure isPortrait={true}>
+              <IphoneContainer>
+                <Iphone src={iphone} />
+                <IphoneScreen src={mobile} />
+              </IphoneContainer>
+            </NewFigure>
           </Column>
           <Column width={4} start={5}>
             <h2>What I learned</h2>
