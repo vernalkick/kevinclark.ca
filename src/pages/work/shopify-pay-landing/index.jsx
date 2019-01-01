@@ -71,7 +71,7 @@ const ShopifyPayLanding = () => (
             <p><strong>A big question we had</strong> was “should we include the standard Shopify navigation?” While we all liked the consistency of including the same navigation as the rest of the website we ultimately decided to not include it. Why? Because the audience of this website are buyers, not merchants. Including things like our pricing page in the navigation here would’ve added more confusion than clarity. It’s a great example of how consistency is a not a goal in and of itself. In this case, consistency was working against our goal of creating a simple and clear message for our intended audience.</p>
           </Column>
           <Column start={1} width={3}>
-            <img src={sketch} />
+            <Figure src={sketch} isPortrait={true} />
           </Column>
         </Grid>
       </Section>

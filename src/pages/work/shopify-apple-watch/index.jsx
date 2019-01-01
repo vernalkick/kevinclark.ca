@@ -73,7 +73,7 @@ const ShopifyAppleWatch = () => (
       <Section>
         <Grid>
           <Column width={3}>
-            <Figure src={gif} overlap caption={{
+            <Figure src={gif} overlap isPortrait={true} background='#fff' caption={{
               title: 'First Prototype',
               content: 'This is the first working prototype I was able to see in the Simulator. I was so happy.'
             }} />

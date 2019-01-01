@@ -8,16 +8,37 @@ const Container = styled.figure`
   position: relative;
 `
 
-const Image = styled.img`
-  display: block;
-  max-width: none;
+const ImageContainer = styled.div`
   margin-left: -1rem;
   width: calc(100% + 2rem);
 
+  ${props => props.background && css`
+    padding: 1rem 0;
+    background: ${props.background};
+  `}
+
   ${Media.tablet`
-    max-width: 100%;
+    padding: 0;
+    background: transparent;
     margin-left: 0;
     width: auto;
+  `}
+`
+
+const Image = styled.img`
+  display: block;
+  max-width: none;
+  width: 100%;
+
+  ${props => props.isPortrait && css`
+    width: auto;
+    max-height: 400px;
+    margin: 0 auto;
+  `};
+
+  ${Media.tablet`
+    max-width: 100%;
+    max-height: none;
 
     ${props => props.overlap && css`
       width: 60%;
@@ -78,12 +99,16 @@ export const FigCaption = ({title, children, decoration, overlap}) => (
 )
 
 
-const Figure = ({src, caption, alt, children, overlap}) => (
-  <Container>
-    <Image src={src} alt={alt} overlap={overlap} />
-    {children}
-    {caption ? <FigCaption title={caption.title} overlap={overlap}>{caption.content}</FigCaption> : ''}
-  </Container>
-)
+const Figure = ({src, caption, alt, children, overlap, isPortrait, background}) => {
+  return (
+    <Container>
+      <ImageContainer background={background}>
+        <Image src={src} alt={alt} overlap={overlap} isPortrait={isPortrait} />
+      </ImageContainer>
+      {children}
+      {caption ? <FigCaption title={caption.title} overlap={overlap}>{caption.content}</FigCaption> : ''}
+    </Container>
+  )
+}
 
 export default Figure
