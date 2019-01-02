@@ -36,38 +36,14 @@ const HeaderContainer = styled.header`
   }
 `
 
-const Title = styled.h1`
-  font-size: 1em;
-  margin: 0;
-  line-height: 1;
-`
 
-const PreTitle = styled.span`
-  font-size: 20px;
-  margin-bottom: 1rem;
-  display: block;
-  font-weight: 500;
 
-  ${Media.desktop`
-    font-size: 24px;
-  `}
-`
 
 class MainPageHeader extends React.Component {
   render() {
-    var strippedChildren = ''
-
-    if (typeof this.props.children == 'string') {
-      const indexOfLastSpace = this.props.children.lastIndexOf(" ")
-      strippedChildren = this.props.children.replace(/(.+)( )/g, '$1&nbsp;')
-    } else {
-      strippedChildren = this.props.children
-    }
-
     return (
       <HeaderContainer>
-        <PreTitle>{this.props.preTitle}</PreTitle>
-        <Title>{this.props.children}</Title>
+        {this.props.children}
       </HeaderContainer>
     )
   }

@@ -5,7 +5,12 @@ import {FigCaption} from './Figure'
 
 const Container = styled.figure`
   margin: 0;
+  margin-bottom: 1.5rem;
   position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 `
 
 const ImageContainer = styled.div`
@@ -29,13 +34,24 @@ const ImageContainer = styled.div`
 `
 
 const NewFigure = ({caption, children, isPortrait, background}) => {
+  var caption = []
+  var newChildren = []
+
+  React.Children.forEach(children, (child, i) => {
+    if (child.type.name === 'FigCaption') {
+      caption.push(child)
+    } else {
+      newChildren.push(child)
+    }
+  })
+
   return (
     <Container>
       <ImageContainer background={background} isPortrait={isPortrait}>
-        {children}
+        {newChildren}
       </ImageContainer>
 
-      {caption ? <FigCaption title={caption.title}>{caption.content}</FigCaption> : ''}
+      {caption}
     </Container>
   )
 }

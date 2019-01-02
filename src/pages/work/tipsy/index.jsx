@@ -7,11 +7,13 @@ import { Grid, Column } from '../../../components/ContentGrid'
 import OffsetImage from '../../../components/OffsetImage'
 import { FigCaption } from '../../../components/Figure'
 import { Media } from '../../../components/Media'
+import Project from '../../../templates/Project'
 
 import hero from './tipsy-hero-2.png'
 import code from './code.png'
 
 exports.frontmatter = {
+  company: 'Personal Project',
   title: "Tipsy",
   image: "./tipsy-thumb.png",
   date: '2018-07-31',
@@ -38,7 +40,7 @@ const MainImage = styled.div`
     margin: 0;
     left: 105%;
     width: 150%;
-    top: -2rem;
+    top: -12rem;
   `}
 `
 
@@ -51,9 +53,8 @@ const MainContent = styled.div`
 `
 
 const Tipsy = () => (
-  <div>
+  <Project frontmatter={exports.frontmatter}>
     <HalfHeader>
-      <MainPageHeader>Tipsy</MainPageHeader>
       <MainImage>
         <img src={hero} alt="Mockup of the Tipsy app on an iPhone 6" />
       </MainImage>
@@ -93,7 +94,7 @@ const Tipsy = () => (
         </Grid>
       </Section>
     </div>
-  </div>
+  </Project>
 )
 
 export default Tipsy

@@ -4,10 +4,11 @@ import MainPageHeader from '../../../components/MainPageHeader'
 import Section from '../../../components/Section'
 import HeroImage from '../../../components/HeroImage'
 import {Grid, Column} from '../../../components/ContentGrid'
-import Figure, {FigCaption} from '../../../components/Figure'
+import {FigCaption} from '../../../components/Figure'
 import PullQuote from '../../../components/PullQuote'
 import FullWidthContainer from '../../../components/FullWidthContainer'
 import NewFigure from '../../../components/NewFigure'
+import Project from '../../../templates/Project'
 
 import hero from './osp-hero.png'
 import customer_journey from './customer-journey.png'
@@ -23,6 +24,7 @@ import mobile from './mobile.gif'
 import plan from './plan.png'
 
 exports.frontmatter = {
+  company: 'Shopify',
   title: "Order Status Page",
   image: './osp-hero.png',
   date: '2018-06-01',
@@ -84,8 +86,7 @@ const IphoneScreen = styled.img`
 
 
 const OrderStatusPage = () => (
-  <div>
-    <MainPageHeader preTitle='Shopify'>Order Status Page</MainPageHeader>
+  <Project frontmatter={exports.frontmatter}>
     <div>
       <Section>
         <HeroImage>
@@ -100,9 +101,10 @@ const OrderStatusPage = () => (
       <Section>
         <Grid>
           <Column width={3} start={1}>
-            <Figure src={customer_journey} caption={{
-              content: 'Thanks to Cynthia Savard Saucier for introducing me to this method and leading the session.'
-            }} />
+            <NewFigure>
+              <img src={customer_journey} />
+              <FigCaption>Thanks to <a href="https://twitter.com/cynthiasavard">Cynthia Savard Saucier</a> for introducing me to this method and leading the session.</FigCaption>
+            </NewFigure>
           </Column>
           <Column width={4} start={5}>
             <h2>User journey</h2>
@@ -120,9 +122,10 @@ const OrderStatusPage = () => (
       <Section>
         <Grid>
           <Column width={3} start={6}>
-            <Figure src={user_research} caption={{
-              content: 'Shout out to Dalia El-Shimy for creating this amazing poster with all of the research findings.'
-            }} />
+            <NewFigure>
+              <img src={user_research} />
+              <FigCaption>Shout out to <a href="http://delshimy.com">Dalia El-Shimy</a> for creating this amazing poster with all of the research findings.</FigCaption>
+            </NewFigure>
           </Column>
           <Column width={4} start={1}>
             <h2>Reality check, aka user-research</h2>
@@ -263,14 +266,7 @@ const OrderStatusPage = () => (
 
       <Section>
         <Grid>
-          <Column width={3}>
-            <NewFigure isPortrait={true}>
-              <IphoneContainer>
-                <Iphone src={iphone} />
-                <IphoneScreen src={mobile} />
-              </IphoneContainer>
-            </NewFigure>
-          </Column>
+
           <Column width={4} start={5}>
             <h2>What I learned</h2>
             <ol>
@@ -279,10 +275,18 @@ const OrderStatusPage = () => (
               <li><strong>Try everything.</strong> When you’re exploring design solutions to the problems you’ve discovered, make sure you try a lot of different ideas. It’s highly unlikely that your first idea ends up being the best one, but when you’ve tried everything the solution is forcibly hidden somewhere in there. For this technique to work you also have to turn down the judgmental part of your brain. Your goal here should be to produce a lot of different ideas, you’ll decide which ones make the cut after.</li>
             </ol>
           </Column>
+          <Column width={3}>
+            <NewFigure isPortrait={true}>
+              <IphoneContainer>
+                <Iphone src={iphone} />
+                <IphoneScreen src={mobile} />
+              </IphoneContainer>
+            </NewFigure>
+          </Column>
         </Grid>
       </Section>
     </div>
-  </div>
+  </Project>
 )
 
 export default OrderStatusPage

@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import PostItem from '../components/PostItem'
 import MainPageHeader from '../components/MainPageHeader'
@@ -63,7 +64,12 @@ const ArticlesPage = ({
 
   return(
     <div>
-      <MainPageHeader>Articles</MainPageHeader>
+      <Helmet>
+        <title>Articles</title>
+      </Helmet>
+      <MainPageHeader>
+        <h1>Articles</h1>
+      </MainPageHeader>
       <div>
         {Posts}
       </div>

@@ -10,7 +10,7 @@ const Layout = ({ location, children, data }) => (
   <div>
     <Helmet
       defaultTitle={data.site.siteMetadata.title}
-      titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+      titleTemplate={`%s — ${data.site.siteMetadata.title}`}
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },

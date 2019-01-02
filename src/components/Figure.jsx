@@ -89,6 +89,10 @@ const CaptionText = styled.span`
     right: 1rem;
     z-index: -1;
   }
+
+  a {
+    border-bottom: 2px solid var(--subdued-elements-color);
+  }
 `
 
 export const FigCaption = ({title, children, decoration, overlap}) => (

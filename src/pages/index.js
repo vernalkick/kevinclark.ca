@@ -60,10 +60,12 @@ const IndexPage = ({
     <div>
       <HomeHeaderContainer>
         <MainPageHeader>
-          Designer.<br/>
-          Manager.<br/>
-          Podcaster.<br/>
-          Developer.<br/>
+          <h1>
+            Designer.<br/>
+            Manager.<br/>
+            Podcaster.<br/>
+            Developer.<br/>
+          </h1>
         </MainPageHeader>
         <TwitterLink href="https://twitter.com/vernalkick"><Twitter /> Follow me on Twitter</TwitterLink>
         <HomeAvatar src={profilePicture} alt=""/>

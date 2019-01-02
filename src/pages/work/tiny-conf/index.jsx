@@ -5,10 +5,12 @@ import Section from '../../../components/Section'
 import { Grid, Column } from '../../../components/ContentGrid'
 import { FigCaption } from '../../../components/Figure'
 import HeroImage from '../../../components/HeroImage'
+import Project from '../../../templates/Project'
 
 import hero from './tiny-conf-hero.png'
 
 exports.frontmatter = {
+  company: 'Personal Project',
   title: "Tiny Conf",
   image: './tiny-conf-thumb.png',
   date: '2018-04-01',
@@ -16,8 +18,7 @@ exports.frontmatter = {
 }
 
 const TinyConf = () => (
-  <div>
-    <MainPageHeader>Tiny Conf</MainPageHeader>
+  <Project frontmatter={exports.frontmatter}>
     <div>
       <Section>
         <HeroImage>
@@ -35,7 +36,7 @@ const TinyConf = () => (
         </Grid>
       </Section>
     </div>
-  </div>
+  </Project>
 )
 
 export default TinyConf

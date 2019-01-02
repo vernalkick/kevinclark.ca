@@ -1,5 +1,6 @@
 import React from "react"
 import styled from 'styled-components'
+import Helmet from 'react-helmet'
 import { Media } from '../components/Media'
 import '../components/Typography'
 
@@ -67,18 +68,23 @@ export default ({data}) => {
   const post = data.markdownRemark
 
   return (
-    <ArticleWrapper>
-      <ArticleHeader>
-        <DateLabel>{post.frontmatter.date}</DateLabel>
-        <ArticleTitle>
-          <PreTitle>{post.frontmatter.pretitle}</PreTitle>
-          {post.frontmatter.title}
-        </ArticleTitle>
-      </ArticleHeader>
-      <ArticleContainer>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </ArticleContainer>
-    </ArticleWrapper>
+    <div>
+      <Helmet>
+        <title>{post.frontmatter.title}</title>
+      </Helmet>
+      <ArticleWrapper>
+        <ArticleHeader>
+          <DateLabel>{post.frontmatter.date}</DateLabel>
+          <ArticleTitle>
+            <PreTitle>{post.frontmatter.pretitle}</PreTitle>
+            {post.frontmatter.title}
+          </ArticleTitle>
+        </ArticleHeader>
+        <ArticleContainer>
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        </ArticleContainer>
+      </ArticleWrapper>
+    </div>
   );
 };
 

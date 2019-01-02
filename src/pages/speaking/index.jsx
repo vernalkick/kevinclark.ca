@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import MainPageHeader from '../../components/MainPageHeader'
 import ButtonLink from '../../components/ButtonLink'
@@ -39,6 +40,7 @@ const Title = styled.h2`
   font-size: 24px;
   font-weight: 600;
   line-height: 1.2;
+  margin-bottom: 1em;
 
   ${Media.desktop`
     font-size: 36px;
@@ -69,7 +71,7 @@ const HeroImage = styled.img`
   ${Media.desktop`
     max-width: none;
     width: 150%;
-    margin-top: -8rem;
+    margin-top: -9rem;
     margin-bottom: 0;
   `}
 `
@@ -118,7 +120,12 @@ class SpeakingPage extends React.Component {
   render() {
     return (
       <div>
-        <MainPageHeader>Speaking</MainPageHeader>
+        <Helmet>
+          <title>Speaking</title>
+        </Helmet>
+        <MainPageHeader>
+          <h1>Speaking</h1>
+        </MainPageHeader>
         <Content>
           <Section>
             <Grid>

@@ -7,6 +7,7 @@ import {Grid, Column} from '../../../components/ContentGrid'
 import {FigCaption} from '../../../components/Figure'
 import HeroImage from '../../../components/HeroImage'
 import FullWidthContainer from '../../../components/FullWidthContainer'
+import Project from '../../../templates/Project'
 
 import hero from './climate-hero.png'
 import appleWeather from './apple-weather-app.png'
@@ -14,6 +15,7 @@ import breakdown from './climate-breakdown-new.png'
 import complication from './climate-complication.jpg'
 
 exports.frontmatter = {
+  company: 'Personal Project',
   title: "Climate",
   image: './climate-hero.png',
   date: '2018-07-01',
@@ -21,8 +23,7 @@ exports.frontmatter = {
 }
 
 const Climate = () => (
-  <div>
-    <MainPageHeader preTitle='Personal Project'>Climate</MainPageHeader>
+  <Project frontmatter={exports.frontmatter}>
     <div>
       <Section>
         <HeroImage>
@@ -82,7 +83,7 @@ const Climate = () => (
         </Grid>
       </Section>
     </div>
-  </div>
+  </Project>
 )
 
 export default Climate

@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import MainPageHeader from '../components/MainPageHeader'
 import styled from 'styled-components'
@@ -85,7 +86,12 @@ const WorkPage = ({
 }) => {
   return (
     <div>
-      <MainPageHeader>Work</MainPageHeader>
+      <Helmet>
+        <title>Work</title>
+      </Helmet>
+      <MainPageHeader>
+        <h1>Work</h1>
+      </MainPageHeader>
       <Grid>
         {allJavascriptFrontmatter.edges.map((project, index) =>
           <ProjectItem index={index} project={project} key={project.node.frontmatter.slug} />

@@ -2,13 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import MainPageHeader from '../../../components/MainPageHeader'
 import Section from '../../../components/Section'
-import Figure from '../../../components/Figure'
 import { FigCaption } from '../../../components/Figure'
 import PullQuote from '../../../components/PullQuote'
 import IpadPro from '../../../components/iPadPro'
 import { Media } from '../../../components/Media'
 import { Grid, Column } from '../../../components/ContentGrid'
 import HeroImage from '../../../components/HeroImage'
+import NewFigure from '../../../components/NewFigure'
+import Project from '../../../templates/Project'
 
 import heroIpad from "./shopify-pay-hero-ipad.png"
 import announcement from "./on-stage-announcement.jpg"
@@ -18,6 +19,7 @@ import landingPage from "./shopify-pay-landing-page.png"
 import video from "./shopify-pay-video-2.mp4"
 
 exports.frontmatter = {
+  company: "Shopify",
   title: "Shopify Pay Landing Page",
   image: './shopify-pay-thumb.png',
   date: '2017-05-01',
@@ -25,8 +27,7 @@ exports.frontmatter = {
 }
 
 const ShopifyPayLanding = () => (
-  <div>
-    <MainPageHeader preTitle='Shopify'>Shopify Pay Landing&nbsp;Page</MainPageHeader>
+  <Project frontmatter={exports.frontmatter}>
     <div>
       <Section>
         <HeroImage>
@@ -71,7 +72,9 @@ const ShopifyPayLanding = () => (
             <p><strong>A big question we had</strong> was “should we include the standard Shopify navigation?” While we all liked the consistency of including the same navigation as the rest of the website we ultimately decided to not include it. Why? Because the audience of this website are buyers, not merchants. Including things like our pricing page in the navigation here would’ve added more confusion than clarity. It’s a great example of how consistency is a not a goal in and of itself. In this case, consistency was working against our goal of creating a simple and clear message for our intended audience.</p>
           </Column>
           <Column start={1} width={3}>
-            <Figure src={sketch} isPortrait={true} />
+            <NewFigure isPortrait={true}>
+              <img src={sketch} />
+            </NewFigure>
           </Column>
         </Grid>
       </Section>
@@ -83,7 +86,7 @@ const ShopifyPayLanding = () => (
         </Grid>
       </Section>
     </div>
-  </div>
+  </Project>
 )
 
 export default ShopifyPayLanding

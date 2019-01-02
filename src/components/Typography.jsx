@@ -172,9 +172,19 @@ injectGlobal `
     }
   }
 
+  strong {
+    font-weight: 500;
+  }
+
   img, video {
     max-width: 100%;
     display: block;
+  }
+
+  h1 {
+    font-size: 1em;
+    margin: 0;
+    line-height: 1;
   }
 
   h2 {
@@ -192,11 +202,26 @@ injectGlobal `
   h3 {
     font-size: 20px;
     margin: 0;
+    margin-top: 2em;
     margin-bottom: 0.5em;
     font-weight: 500;
 
     ${Media.tablet`
       font-size: 24px;
     `}
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  h4 {
+    font-size: 1.17em;
+    margin: 2em 0 0.5em;
+    font-weight: 500;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 `

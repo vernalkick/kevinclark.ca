@@ -1,26 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
-import MainPageHeader from '../../../components/MainPageHeader'
+
 import Section from '../../../components/Section'
-import Figure from '../../../components/Figure'
 import {FigCaption} from '../../../components/Figure'
 import PullQuote from '../../../components/PullQuote'
 import { Media } from '../../../components/Media'
 import { Grid, Column } from '../../../components/ContentGrid'
 import HeroImage from '../../../components/HeroImage'
 import NewFigure from '../../../components/NewFigure'
+import Project from '../../../templates/Project'
 
 import hero from "./hero.png"
 import sketch from "./sketch.jpg"
 import gif from "./shopify-watch.gif"
 
-const Half = styled.div`
-  ${Media.desktop`
-    max-width: 55%;
-  `}
-`
-
 exports.frontmatter = {
+  company: 'Shopify',
   title: 'Shopify for Apple Watch',
   image: './shopify-watch-thumb.png',
   date: '2018-07-30',
@@ -28,8 +23,7 @@ exports.frontmatter = {
 }
 
 const ShopifyAppleWatch = () => (
-  <div>
-    <MainPageHeader preTitle='Shopify'>Shopify for Apple&nbsp;Watch</MainPageHeader>
+  <Project frontmatter={exports.frontmatter}>
     <div>
       <Section>
         <HeroImage>
@@ -44,10 +38,10 @@ const ShopifyAppleWatch = () => (
             <p>I pulled out my sketchbook and started sketching a few ideas for ways to display your store’s data in a way that is visually interesting and makes the most of the small display of the watch.</p>
           </Column>
           <Column start={1} width={3}>
-            <Figure src={sketch} caption={{
-              title: 'Initial sketching',
-              content: 'Pen and paper really force you to distill a problem to its essence.'
-            }} />
+            <NewFigure>
+              <img src={sketch} />
+              <FigCaption title='Initial sketching'>Pen and paper really force you to distill a problem to its essence.</FigCaption>
+            </NewFigure>
           </Column>
         </Grid>
       </Section>
@@ -74,8 +68,9 @@ const ShopifyAppleWatch = () => (
       <Section>
         <Grid>
           <Column width={3}>
-            <NewFigure isPortrait={true} background="#fff" caption={{ title: 'First Prototype', content: 'This is the first working prototype I was able to see in the Simulator. I was so happy.'}}>
+            <NewFigure isPortrait={true} background="#fff">
               <img src={gif} />
+              <FigCaption title='First prototype'>This is the first working prototype I was able to see in the Simulator. I was so happy.</FigCaption>
             </NewFigure>
           </Column>
           <Column start={5} width={4}>
@@ -86,7 +81,7 @@ const ShopifyAppleWatch = () => (
         </Grid>
       </Section>
     </div>
-  </div>
+  </Project>
 )
 
 export default ShopifyAppleWatch
