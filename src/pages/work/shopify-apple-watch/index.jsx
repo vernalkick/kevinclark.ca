@@ -8,7 +8,7 @@ import { Media } from '../../../components/Media'
 import { Grid, Column } from '../../../components/ContentGrid'
 import HeroImage from '../../../components/HeroImage'
 import NewFigure from '../../../components/NewFigure'
-import Project from '../../../templates/Project'
+import Project from '../../../templates/project'
 
 import hero from "./hero.png"
 import sketch from "./sketch.jpg"

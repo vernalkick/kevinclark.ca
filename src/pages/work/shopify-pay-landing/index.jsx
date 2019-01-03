@@ -9,7 +9,7 @@ import { Media } from '../../../components/Media'
 import { Grid, Column } from '../../../components/ContentGrid'
 import HeroImage from '../../../components/HeroImage'
 import NewFigure from '../../../components/NewFigure'
-import Project from '../../../templates/Project'
+import Project from '../../../templates/project'
 
 import heroIpad from "./shopify-pay-hero-ipad.png"
 import announcement from "./on-stage-announcement.jpg"

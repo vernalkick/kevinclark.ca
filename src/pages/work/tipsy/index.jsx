@@ -7,7 +7,7 @@ import { Grid, Column } from '../../../components/ContentGrid'
 import OffsetImage from '../../../components/OffsetImage'
 import { FigCaption } from '../../../components/Figure'
 import { Media } from '../../../components/Media'
-import Project from '../../../templates/Project'
+import Project from '../../../templates/project'
 
 import hero from './tipsy-hero-2.png'
 import code from './code.png'

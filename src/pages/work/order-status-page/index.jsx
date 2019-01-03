@@ -8,7 +8,7 @@ import {FigCaption} from '../../../components/Figure'
 import PullQuote from '../../../components/PullQuote'
 import FullWidthContainer from '../../../components/FullWidthContainer'
 import NewFigure from '../../../components/NewFigure'
-import Project from '../../../templates/Project'
+import Project from '../../../templates/project'
 
 import hero from './osp-hero.png'
 import customer_journey from './customer-journey.png'

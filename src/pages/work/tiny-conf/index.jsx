@@ -5,7 +5,7 @@ import Section from '../../../components/Section'
 import { Grid, Column } from '../../../components/ContentGrid'
 import { FigCaption } from '../../../components/Figure'
 import HeroImage from '../../../components/HeroImage'
-import Project from '../../../templates/Project'
+import Project from '../../../templates/project'
 
 import hero from './tiny-conf-hero.png'
 

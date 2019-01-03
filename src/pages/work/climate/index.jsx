@@ -7,7 +7,7 @@ import {Grid, Column} from '../../../components/ContentGrid'
 import {FigCaption} from '../../../components/Figure'
 import HeroImage from '../../../components/HeroImage'
 import FullWidthContainer from '../../../components/FullWidthContainer'
-import Project from '../../../templates/Project'
+import Project from '../../../templates/project'
 
 import hero from './climate-hero.png'
 import appleWeather from './apple-weather-app.png'
