@@ -90,7 +90,9 @@ class AboutPage extends React.Component {
             <Portrait>
               <NewFigure>
                 <img src={profilePicture} />
-                <FigCaption>Image by <a href="https://www.instagram.com/sweetyams/?hl=en">Willem Shepherd</a></FigCaption>
+                <FigCaption>
+                  Image by <a href="https://www.instagram.com/sweetyams/?hl=en">Willem Shepherd</a>
+                </FigCaption>
               </NewFigure>
             </Portrait>
             <p>As a Design Lead, I’ve been spending the last few years building product and design teams to make commerce better for everyone. A big part of my work is mentoring the designers I hire and helping them achieve their full potential. While mastery of design tools like Sketch and knowledge of HTML & CSS are what got me where I am today, leadership requires a whole new skill set. Helping others develop their skills really forces me to understand the deeper fundamentals behind the ways I work and the experience has been extremely rewarding so far. And I might be biased, but I truly think I have one of the best product design teams in the world right now.</p>
