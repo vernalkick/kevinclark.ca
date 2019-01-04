@@ -29,11 +29,16 @@ const ArticleHeader = styled.div`
 const PreTitle = styled.span`
   font-weight: 400;
   display: block;
+  margin-bottom: 0.25rem;
 `
 
 const ArticleWrapper = styled.div`
-  margin-top: 5rem;
+  margin-top: 2.25rem;
   margin-bottom: 5rem;
+  
+  ${Media.desktop`
+    margin-top: 5rem;
+  `}
 `
 
 const ArticleTitle = styled.h1`
@@ -50,11 +55,14 @@ const ArticleTitle = styled.h1`
 
 const DateLabel = styled.span`
   font-size: 18px;
+  margin-bottom: 0.25rem;
+  display: block;
 
   ${Media.desktop`
     position: absolute;
     bottom: 0.5rem;
     left: 0;
+    margin-bottom: 0;
   `}
 `
 
