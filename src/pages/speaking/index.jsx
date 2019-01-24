@@ -178,7 +178,7 @@ class SpeakingPage extends React.Component {
               </Column>
               <Column width={4}>
                 <h3>Defense Against The Dark Patterns</h3>
-                <p>As designers, we often seek certainty and control. When designing at scale, this is simply not possible. We must learn to thrive in unpredictability. Antifragile Design is about embracing constraints and using them to our advantage in order to create interfaces that adapt to a wide variety of different users, contexts and situations. It’s about managing complexity, so that the users of our products don’t have to.</p>
+                <p>What do you do when you realize you’ve accidentally created a Dark Pattern? This talk is my attempt to understand the systemic causes that lead the world’s most well intentioned teams to design interfaces that trick people. In order to do that, we learn to recognize the different types of dark patterns, understand why they were used and explore strategic ways to avoid them.</p>
                 <More href="#">View slides on Speaker Deck →</More>
               </Column>
             </Grid>
