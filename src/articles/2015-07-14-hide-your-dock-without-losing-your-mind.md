@@ -2,10 +2,6 @@
 title: Hide your Dock without Losing your Mind
 date: 2015-07-14
 published: true
-tags:
-  - Productivity
-  - Tip
-  - OS X
 ---
 
 ![](http://cl.ly/image/0A0h431Q3w1R/1)

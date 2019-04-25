@@ -1,6 +1,6 @@
 ---
 title: Lumia Gestures
-date: 2014-12-21 21:48 EST
+date: 2014-12-21
 published: true
 ---
 

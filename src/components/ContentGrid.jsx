@@ -1,6 +1,4 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { Media } from '../components/Media'
 
 export const Grid = styled.div`
@@ -35,17 +33,3 @@ export const Column = styled.div`
     align-self: ${props => props.align};
   `}
 `
-
-// class ContentGrid extends React.Component {
-//   static Column = Column
-//
-//   render() {
-//     const {children, columns} = this.props
-//
-//     return (
-//       <ContentGridElement columns={columns}>{children}</ContentGridElement>
-//     )
-//   }
-// }
-
-// export default ContentGrid

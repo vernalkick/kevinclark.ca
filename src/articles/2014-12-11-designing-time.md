@@ -1,6 +1,5 @@
 ---
 title: Designing Time
-tags: Wearables Android Google
 date: 2014-12-11
 published: true
 ---

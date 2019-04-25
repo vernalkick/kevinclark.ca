@@ -1,7 +1,7 @@
 ---
 title: The Journey to my First iOS App
 date: 2014-07-01
-tags: Objective-C Development iOS
+tags: Development
 published: true
 ---
 

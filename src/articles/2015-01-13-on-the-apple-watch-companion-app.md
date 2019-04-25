@@ -1,6 +1,6 @@
 ---
 title: On the Apple Watch Companion App
-date: 2015-01-13 21:33 EST
+date: 2015-01-13
 published: true
 ---
 ![The Apple Watch's homescreen looks awesome, but finding an app on it seems overly cumbersome.](http://blogs-images.forbes.com/anthonykosner/files/2014/10/apple-watch-selling-points.jpg)

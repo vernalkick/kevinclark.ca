@@ -1,6 +1,7 @@
 import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../layouts/layout'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
 import MainPageHeader from '../components/MainPageHeader'
 import styled from 'styled-components'
 import { Media } from '../components/Media'
@@ -79,13 +80,14 @@ export function gridposition() {
 }
 
 const WorkPage = ({
+  location,
   data: {
     allSitePage,
     allJavascriptFrontmatter
   },
 }) => {
   return (
-    <div>
+    <Layout location={location}>
       <Helmet>
         <title>Work</title>
       </Helmet>
@@ -97,7 +99,7 @@ const WorkPage = ({
           <ProjectItem index={index} project={project} key={project.node.frontmatter.slug} />
         )}
       </Grid>
-    </div>
+    </Layout>
   )
 };
 

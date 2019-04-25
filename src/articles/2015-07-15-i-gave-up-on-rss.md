@@ -2,8 +2,6 @@
 title: I Gave up on RSS
 date: 2015-07-15
 published: true
-tags:
-  - RSS
 ---
 
 As I'm typing this, I currently have 243 unread items sitting in my RSS app. It was too much. It's hard to pinpoint a specific time when it went from a good way to stay on top of news to feeling like a burden, but I feel like I spend way more time managing it than simply reading lately.

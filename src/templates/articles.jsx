@@ -1,4 +1,6 @@
 import React from "react"
+import { graphql } from 'gatsby'
+import Layout from '../layouts/layout'
 import styled from 'styled-components'
 import Helmet from 'react-helmet'
 import { Media } from '../components/Media'
@@ -35,7 +37,7 @@ const PreTitle = styled.span`
 const ArticleWrapper = styled.div`
   margin-top: 2.25rem;
   margin-bottom: 5rem;
-  
+
   ${Media.desktop`
     margin-top: 5rem;
   `}
@@ -72,11 +74,11 @@ const ArticleContainer = styled.div`
   `}
 `
 
-export default ({data}) => {
+export default ({location, data}) => {
   const post = data.markdownRemark
 
   return (
-    <div>
+    <Layout location={location}>
       <Helmet>
         <title>{post.frontmatter.title}</title>
       </Helmet>
@@ -92,7 +94,7 @@ export default ({data}) => {
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </ArticleContainer>
       </ArticleWrapper>
-    </div>
+    </Layout>
   );
 };
 

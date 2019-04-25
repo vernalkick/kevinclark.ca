@@ -2,10 +2,6 @@
 title: Custom Domains with Heroku
 date: 2015-07-11
 published: true
-tags:
-  - heroku
-  - domains
-  - websites
 ---
 
 I recently rewrote the [Montreal Dribbble Meetup website][meetup site] using Sinatra. The previous version was simply static HTML and CSS files, so hosting and using a custom domain name was easy.

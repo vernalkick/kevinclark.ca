@@ -52,7 +52,7 @@ const Number = styled.span`
 class ProjectItem extends React.Component {
   render() {
     const { index, project } = this.props;
-    const { frontmatter, excerpt, fields } = project.node;
+    const { frontmatter } = project.node;
     const { image, slug, title } = frontmatter;
     const url = '/work/' + slug
 

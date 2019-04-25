@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import MainPageHeader from '../../../components/MainPageHeader'
 import Section from '../../../components/Section'
 import PullQuote from '../../../components/PullQuote'
 import { Grid, Column } from '../../../components/ContentGrid'
@@ -12,7 +11,7 @@ import Project from '../../../templates/project'
 import hero from './tipsy-hero-2.png'
 import code from './code.png'
 
-exports.frontmatter = {
+export const frontmatter = {
   company: 'Personal Project',
   title: "Tipsy",
   image: "./tipsy-thumb.png",
@@ -52,8 +51,8 @@ const MainContent = styled.div`
   `}
 `
 
-const Tipsy = () => (
-  <Project frontmatter={exports.frontmatter}>
+const Tipsy = ({location}) => (
+  <Project frontmatter={frontmatter} location={location}>
     <HalfHeader>
       <MainImage>
         <img src={hero} alt="Mockup of the Tipsy app on an iPhone 6" />

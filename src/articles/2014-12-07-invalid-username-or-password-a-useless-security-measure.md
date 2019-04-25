@@ -1,6 +1,6 @@
 ---
 title: "Invalid Username or Password: a useless security measure"
-date: 2014-12-07 16:27 EST
+date: 2014-12-07
 published: true
 ---
 

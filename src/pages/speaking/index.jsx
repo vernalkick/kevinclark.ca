@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
+import Layout from '../../layouts/layout'
 import MainPageHeader from '../../components/MainPageHeader'
 import ButtonLink from '../../components/ButtonLink'
 import Event from '../../components/Event'
@@ -119,7 +119,7 @@ const events = [
 class SpeakingPage extends React.Component {
   render() {
     return (
-      <div>
+      <Layout location={this.props.location}>
         <Helmet>
           <title>Speaking</title>
         </Helmet>
@@ -193,7 +193,7 @@ class SpeakingPage extends React.Component {
             </EventList>
           </Section>
         </Content>
-      </div>
+      </Layout>
     )
   }
 }

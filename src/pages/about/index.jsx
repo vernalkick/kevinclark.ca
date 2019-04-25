@@ -1,6 +1,6 @@
 import React from 'react'
+import Layout from '../../layouts/layout'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
 import styled from 'styled-components'
 import { Media } from '../../components/Media'
 import MainPageHeader from '../../components/MainPageHeader'
@@ -77,7 +77,7 @@ const Items = styled.div`
 class AboutPage extends React.Component {
   render() {
     return (
-      <div>
+      <Layout location={this.props.location}>
         <Helmet>
           <title>About</title>
         </Helmet>
@@ -89,7 +89,7 @@ class AboutPage extends React.Component {
           <MainColumn>
             <Portrait>
               <NewFigure>
-                <img src={profilePicture} />
+                <img src={profilePicture} alt="Kevin Clark" />
                 <FigCaption>
                   Image by <a href="https://www.instagram.com/sweetyams/?hl=en">Willem Shepherd</a>
                 </FigCaption>
@@ -102,7 +102,7 @@ class AboutPage extends React.Component {
 
 
             <p>I’m also the founder of the <a href="https://mtldesign.club">Montréal Design Club</a>: an event series and community for designers of all kind in Montreal. Each month, <a href="https://www.instagram.com/p/BqVx6W9Aa9Z/">my team and I</a> put together an event featuring two speakers with a unique perspective who can teach us something new. While it started small, we now have over 200+ people that are actively engaged in the community. It’s incredibly rewarding to see people come back each time and tell all of their friends.</p>
-            
+
             <h4>About this website</h4>
             <p>This website is powered by <a href="https://www.gatsbyjs.org">Gatsby</a> and hosted on <a href="https://www.netlify.com">Netlify</a>. The type is set in <a href="https://commercialtype.com/catalog/graphik">Graphik by Commercial Type</a> and <a href="https://www.grillitype.com/typeface/gt-pressura">GT Pressura Mono by Grilli Type</a>.</p>
 
@@ -131,7 +131,7 @@ class AboutPage extends React.Component {
             </InfoBlock>
           </Sidebar>
         </ContentContainer>
-      </div>
+      </Layout>
     )
   }
 }

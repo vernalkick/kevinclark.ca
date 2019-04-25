@@ -1,6 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
-import MainPageHeader from '../../../components/MainPageHeader'
 import Section from '../../../components/Section'
 import { Grid, Column } from '../../../components/ContentGrid'
 import { FigCaption } from '../../../components/Figure'
@@ -9,7 +7,7 @@ import Project from '../../../templates/project'
 
 import hero from './tiny-conf-hero.png'
 
-exports.frontmatter = {
+export const frontmatter = {
   company: 'Personal Project',
   title: "Tiny Conf",
   image: './tiny-conf-thumb.png',
@@ -17,12 +15,12 @@ exports.frontmatter = {
   slug: 'tiny-conf'
 }
 
-const TinyConf = () => (
-  <Project frontmatter={exports.frontmatter}>
+const TinyConf = ({location}) => (
+  <Project frontmatter={frontmatter} location={location}>
     <div>
       <Section>
         <HeroImage>
-          <img src={hero} />
+          <img src={hero} alt="Tiny Conf" />
         </HeroImage>
         <h2>A few months ago, a couple of coworkers decided to organize a conference. At the time, they weren’t really sure how the conference would evolve, but they knew a few things: they wanted an intimate conference that would inspire people instead of focusing on technical challenges.</h2>
         <Grid>

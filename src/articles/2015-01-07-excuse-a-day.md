@@ -1,6 +1,6 @@
 ---
 title: Excuse-A-Day
-date: 2015-01-07 08:12 EST
+date: 2015-01-07
 published: true
 ---
 

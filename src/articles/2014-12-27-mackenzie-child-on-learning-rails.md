@@ -1,6 +1,6 @@
 ---
 title: Mackenzie Child on Learning Rails
-date: 2014-12-27 21:31 EST
+date: 2014-12-27
 published: true
 ---
 

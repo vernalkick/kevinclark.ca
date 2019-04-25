@@ -1,6 +1,6 @@
 ---
 title: Firewatch-Themed Desktop & Text Editor
-date: 2016-02-13 13:54 EDT
+date: 2016-02-13
 published: true
 ---
 

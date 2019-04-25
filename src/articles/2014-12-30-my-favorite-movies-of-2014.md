@@ -1,6 +1,6 @@
 ---
 title: My Favorite Movies of 2014
-date: 2014-12-30 12:49 EST
+date: 2014-12-30
 ---
 
 As we approach the end of 2014, I thought it'd be a good idea to list out the movies I have watched this year that I've enjoyed the most. This is by no means an exhaustive list and it's ranked in no particular order.

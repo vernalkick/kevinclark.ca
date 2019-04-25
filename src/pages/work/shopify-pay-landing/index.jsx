@@ -1,24 +1,18 @@
 import React from 'react'
-import styled from 'styled-components'
-import MainPageHeader from '../../../components/MainPageHeader'
 import Section from '../../../components/Section'
 import { FigCaption } from '../../../components/Figure'
 import PullQuote from '../../../components/PullQuote'
 import IpadPro from '../../../components/iPadPro'
-import { Media } from '../../../components/Media'
 import { Grid, Column } from '../../../components/ContentGrid'
 import HeroImage from '../../../components/HeroImage'
 import NewFigure from '../../../components/NewFigure'
 import Project from '../../../templates/project'
 
-import heroIpad from "./shopify-pay-hero-ipad.png"
-import announcement from "./on-stage-announcement.jpg"
 import unite from "./unite-images.png"
 import sketch from "./sketch-blob.png"
-import landingPage from "./shopify-pay-landing-page.png"
 import video from "./shopify-pay-video-2.mp4"
 
-exports.frontmatter = {
+export const frontmatter = {
   company: "Shopify",
   title: "Shopify Pay Landing Page",
   image: './shopify-pay-thumb.png',
@@ -26,8 +20,8 @@ exports.frontmatter = {
   slug: 'shopify-pay-landing'
 }
 
-const ShopifyPayLanding = () => (
-  <Project frontmatter={exports.frontmatter}>
+const ShopifyPayLanding = ({location}) => (
+  <Project frontmatter={frontmatter} location={location}>
     <div>
       <Section>
         <HeroImage>
@@ -62,7 +56,7 @@ const ShopifyPayLanding = () => (
             </ol>
           </Column>
           <Column start={5} width={4}>
-            <img src={unite} />
+            <img src={unite} alt="Unite announcement" />
           </Column>
         </Grid>
       </Section>
@@ -73,7 +67,7 @@ const ShopifyPayLanding = () => (
           </Column>
           <Column start={1} width={3}>
             <NewFigure isPortrait={true}>
-              <img src={sketch} />
+              <img src={sketch} alt="Sketches of the page" />
             </NewFigure>
           </Column>
         </Grid>

@@ -1,6 +1,6 @@
 ---
 title: The Teehan+Lax Partners Are Joining Facebook
-date: 2015-01-16 21:08 EST
+date: 2015-01-16
 published: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Every App is a Communications App
-date: 2014-12-15 08:24 EST
+date: 2014-12-15
 published: true
 ---
 

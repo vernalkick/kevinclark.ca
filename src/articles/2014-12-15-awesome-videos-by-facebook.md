@@ -1,6 +1,6 @@
 ---
 title: Awesome New Videos from Facebook
-date: 2014-12-15 18:20 EST
+date: 2014-12-15
 published: true
 ---
 

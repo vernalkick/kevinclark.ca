@@ -1,6 +1,5 @@
 import React from 'react'
 import styled, {keyframes} from 'styled-components'
-import MainPageHeader from '../../../components/MainPageHeader'
 import Section from '../../../components/Section'
 import HeroImage from '../../../components/HeroImage'
 import {Grid, Column} from '../../../components/ContentGrid'
@@ -23,7 +22,7 @@ import iphone from './silver-iphone-frame.png'
 import mobile from './mobile.gif'
 import plan from './plan.png'
 
-exports.frontmatter = {
+export const frontmatter = {
   company: 'Shopify',
   title: "Order Status Page",
   image: './osp-hero.png',
@@ -85,12 +84,12 @@ const IphoneScreen = styled.img`
 `
 
 
-const OrderStatusPage = () => (
-  <Project frontmatter={exports.frontmatter}>
+const OrderStatusPage = ({location}) => (
+  <Project frontmatter={frontmatter} location={location}>
     <div>
       <Section>
         <HeroImage>
-          <img src={hero} />
+          <img src={hero} alt="Order status page" />
         </HeroImage>
         <Grid>
           <Column width={6}>
@@ -102,7 +101,7 @@ const OrderStatusPage = () => (
         <Grid>
           <Column width={3} start={1}>
             <NewFigure>
-              <img src={customer_journey} />
+              <img src={customer_journey} alt="Customer journey map" />
               <FigCaption>Thanks to <a href="https://twitter.com/cynthiasavard">Cynthia Savard Saucier</a> for introducing me to this method and leading the session.</FigCaption>
             </NewFigure>
           </Column>
@@ -123,7 +122,7 @@ const OrderStatusPage = () => (
         <Grid>
           <Column width={3} start={6}>
             <NewFigure>
-              <img src={user_research} />
+              <img src={user_research} alt="User research" />
               <FigCaption>Shout out to <a href="http://delshimy.com">Dalia El-Shimy</a> for creating this amazing poster with all of the research findings.</FigCaption>
             </NewFigure>
           </Column>
@@ -146,7 +145,7 @@ const OrderStatusPage = () => (
             <p>We also came up with a series of design principles that would help us determine if the project was successful:</p>
           </Column>
           <Column width={4}>
-            <img src={plan} />
+            <img src={plan} alt="Plan" />
           </Column>
         </Grid>
         <Grid>
@@ -198,7 +197,7 @@ const OrderStatusPage = () => (
             <p>The more I worked on it, the more I realized that the full history didn’t matter that much. Most people care about where their shipment is right now, not two weeks ago. It also raised a lot of questions around where should the most recent content appear, at the top or at the bottom of the page? So I decided to move on to a different concept.</p>
           </Column>
           <Column width={4} start={5}>
-            <img src={timeline} />
+            <img src={timeline} alt="Timeline exploration" />
           </Column>
         </Grid>
       </Section>
@@ -258,7 +257,7 @@ const OrderStatusPage = () => (
             <p>Putting all of these pieces together really helped us get a better sense of how the entire process would be like from beginning to end and how the different flows branched out.</p>
           </Column>
           <Column width={4} start={5}>
-            <img src={flow} />
+            <img src={flow} alt="Flow chart" />
             <FigCaption><a href={full_flow}>View the full flow</a></FigCaption>
           </Column>
         </Grid>

@@ -1,6 +1,6 @@
 ---
 title: Ev Williams on Metrics
-date: 2015-01-05 23:06 EST
+date: 2015-01-05
 published: true
 ---
 

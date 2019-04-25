@@ -1,6 +1,6 @@
 ---
 title: Jonnie Hallman on Refactoring Code
-date: 2015-01-06 21:02 EST
+date: 2015-01-06
 published: true
 ---
 

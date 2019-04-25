@@ -1,6 +1,6 @@
 ---
 title: That Time One of My Tweets Reached 33K Retweets
-date: 2016-12-10 14:43 EDT
+date: 2016-12-10
 published: true
 ---
 

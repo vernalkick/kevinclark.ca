@@ -2,10 +2,6 @@
 title: Antifragile Design at CocoaHeads MTL
 date: 2015-07-30
 published: true
-tags:
-  - Design
-  - Speaking
-  - Montreal
 ---
 
 ![](http://cl.ly/image/191c2O3W290v/1)

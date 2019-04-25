@@ -1,6 +1,6 @@
 ---
 title: Interview Saturation
-date: 2015-01-07 20:42 EST
+date: 2015-01-07
 published: true
 ---
 

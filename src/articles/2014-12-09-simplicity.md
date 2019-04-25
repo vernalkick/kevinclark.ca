@@ -1,7 +1,6 @@
 ---
 title: Simplicity
 date: 2014-12-09
-tags: Thoughts
 ---
 
 [We][shopify] were shooting an internal video this week and I got asked to talk about one of our core values: simplicity.

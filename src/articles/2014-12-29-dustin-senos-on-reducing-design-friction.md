@@ -1,6 +1,6 @@
 ---
 title: Dustin Senos on Reducing Design Friction
-date: 2014-12-29 23:04 EST
+date: 2014-12-29
 published: true
 ---
 

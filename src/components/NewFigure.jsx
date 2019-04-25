@@ -1,7 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import media from "styled-media-query"
-import {FigCaption} from './Figure'
 
 const Container = styled.figure`
   margin: 0;
@@ -34,13 +33,13 @@ const ImageContainer = styled.div`
 `
 
 const NewFigure = ({caption, children, isPortrait, background}) => {
-  var caption = []
+  var captionArray = []
   var newChildren = []
 
   React.Children.forEach(children, (child, i) => {
     console.log(child.type.name)
     if (child.type.name === 'FigCaption') {
-      caption.push(child)
+      captionArray.push(child)
     } else {
       newChildren.push(child)
     }
@@ -52,7 +51,7 @@ const NewFigure = ({caption, children, isPortrait, background}) => {
         {newChildren}
       </ImageContainer>
 
-      {caption}
+      {captionArray}
     </Container>
   )
 }

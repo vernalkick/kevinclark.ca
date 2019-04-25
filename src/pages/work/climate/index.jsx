@@ -1,6 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
-import MainPageHeader from '../../../components/MainPageHeader'
 import Section from '../../../components/Section'
 import PullQuote from '../../../components/PullQuote'
 import {Grid, Column} from '../../../components/ContentGrid'
@@ -14,7 +12,7 @@ import appleWeather from './apple-weather-app.png'
 import breakdown from './climate-breakdown-new.png'
 import complication from './climate-complication.jpg'
 
-exports.frontmatter = {
+export const frontmatter = {
   company: 'Personal Project',
   title: "Climate",
   image: './climate-hero.png',
@@ -22,19 +20,19 @@ exports.frontmatter = {
   slug: 'climate'
 }
 
-const Climate = () => (
-  <Project frontmatter={exports.frontmatter}>
+const Climate = ({location}) => (
+  <Project frontmatter={frontmatter} location={location}>
     <div>
       <Section>
         <HeroImage>
-          <img src={hero} alt="" />
+          <img src={hero} alt="Climate screenshots" />
         </HeroImage>
         <h2>After getting the Apple Watch, I noticed that in my usage the most useful apps were the ones that presented me with information quickly and let me go along with my day. Apps like Calendar, Activity and Weather were the apps that really worked well on the watch. There was one major problem with that: the 1st-party weather app for the Apple Watch leaves a lot to be desired.</h2>
       </Section>
       <Section>
         <Grid>
           <Column width={8}>
-            <img src={appleWeather} />
+            <img src={appleWeather} alt="Apple's Weather app" />
           </Column>
         </Grid>
         <Grid>
@@ -64,13 +62,13 @@ const Climate = () => (
       </Section>
       <Section>
         <FullWidthContainer>
-          <img src={complication} />
+          <img src={complication} alt="Complications" />
         </FullWidthContainer>
       </Section>
       <Section>
         <Grid>
           <Column width={4} start={5}>
-            <img src={breakdown} alt=""/>
+            <img src={breakdown} alt="Breakdown"/>
           </Column>
           <Column width={4} start={1}>
             <h2>Here’s a breakdown of the sections of the app</h2>

@@ -33,7 +33,7 @@ class OffsetImage extends React.Component {
 
   render() {
     const { src, direction } = this.props
-    const oppositeDirection = direction == 'left' ? 'right' : 'left'
+    const oppositeDirection = direction === 'left' ? 'right' : 'left'
 
     return (
       <ImageContainer direction={oppositeDirection}>

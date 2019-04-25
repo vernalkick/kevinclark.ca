@@ -1,4 +1,4 @@
-import styled, {injectGlobal} from 'styled-components'
+import {injectGlobal} from 'styled-components'
 import { Media } from '../components/Media'
 
 import graphikRegular2 from '../assets/fonts/Graphik-Regular.woff2'

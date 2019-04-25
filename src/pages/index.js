@@ -1,4 +1,6 @@
 import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../layouts/layout'
 import styled from 'styled-components'
 import MainPageHeader from '../components/MainPageHeader'
 import PostItem from '../components/PostItem'
@@ -52,12 +54,13 @@ const SectionTitle = styled.h2`
 `
 
 const IndexPage = ({
+  location,
   data: {
     allMarkdownRemark
   },
 }) => {
   return (
-    <div>
+    <Layout location={location}>
       <HomeHeaderContainer>
         <MainPageHeader>
           <h1>
@@ -75,7 +78,7 @@ const IndexPage = ({
       <PostList>
         {allMarkdownRemark.edges.map(edge => <PostItem post={edge.node} key={edge.node.fields.slug} />)}
       </PostList>
-    </div>
+    </Layout>
   )
 };
 

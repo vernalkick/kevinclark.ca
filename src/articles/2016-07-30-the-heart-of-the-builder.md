@@ -1,6 +1,6 @@
 ---
 title: "The Heart of the Builder"
-date: "2016-07-30"
+date: 2016-07-30
 published: true
 ---
 

@@ -1,6 +1,7 @@
 import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../layouts/layout'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
 import PostItem from '../components/PostItem'
 import MainPageHeader from '../components/MainPageHeader'
 import styled from 'styled-components'
@@ -46,6 +47,7 @@ const PostYear = styled.h2`
 `
 
 const ArticlesPage = ({
+  location,
   data: {
     allMarkdownRemark
   },
@@ -63,7 +65,7 @@ const ArticlesPage = ({
   );
 
   return(
-    <div>
+    <Layout location={location}>
       <Helmet>
         <title>Articles</title>
       </Helmet>
@@ -73,7 +75,7 @@ const ArticlesPage = ({
       <div>
         {Posts}
       </div>
-    </div>
+    </Layout>
   )
 };
 

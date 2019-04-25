@@ -1,4 +1,5 @@
 import React from 'react'
+import Layout from '../layouts/layout'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import MainPageHeader from '../components/MainPageHeader'
@@ -14,13 +15,14 @@ const PreTitle = styled.span`
   `}
 `
 
-export default ({ frontmatter, children }) => {
+export default ({ location, frontmatter, data, children }) => {
+  // eslint-disable-next-line
   String.prototype.prettify = function() {
     return this.replace(/ (?=[^ ]*$)/i, "\u00A0")
   }
 
   return (
-    <div>
+    <Layout location={location}>
       <Helmet>
         <title>{frontmatter.title}</title>
       </Helmet>
@@ -31,6 +33,6 @@ export default ({ frontmatter, children }) => {
       </MainPageHeader>
 
       {children}
-    </div>
+    </Layout>
   )
 }

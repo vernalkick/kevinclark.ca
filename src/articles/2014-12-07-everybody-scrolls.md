@@ -1,7 +1,7 @@
 ---
 title: Everybody Scrolls
 tags: UX Design Research
-date: 2014-12-07 13:27 EST
+date: 2014-12-07
 published: true
 ---
 

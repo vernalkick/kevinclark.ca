@@ -1,18 +1,17 @@
 import React from 'react'
-import styled from 'styled-components'
-import MainPageHeader from '../../../components/MainPageHeader'
+import Project from '../../../templates/project'
 
-exports.frontmatter = {
-  title: "Shopify Gift Cards",
+export const frontmatter = {
+  company: "Shopify",
+  title: "Gift Cards",
   image: './gift-cards-thumb.png',
-  date: '2018-05-01',
+  date: '2016-05-01',
   slug: 'shopify-gift-cards'
 }
 
-const GiftCards = () => (
-  <div>
-    <MainPageHeader preTitle='Shopify'>Gift Cards</MainPageHeader>
-  </div>
+const GiftCards = ({location}) => (
+  <Project frontmatter={frontmatter} location={location}>
+  </Project>
 )
 
 export default GiftCards

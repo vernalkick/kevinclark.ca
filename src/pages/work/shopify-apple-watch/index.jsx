@@ -1,10 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
-
 import Section from '../../../components/Section'
 import {FigCaption} from '../../../components/Figure'
 import PullQuote from '../../../components/PullQuote'
-import { Media } from '../../../components/Media'
 import { Grid, Column } from '../../../components/ContentGrid'
 import HeroImage from '../../../components/HeroImage'
 import NewFigure from '../../../components/NewFigure'
@@ -14,7 +11,7 @@ import hero from "./hero.png"
 import sketch from "./sketch.jpg"
 import gif from "./shopify-watch.gif"
 
-exports.frontmatter = {
+export const frontmatter = {
   company: 'Shopify',
   title: 'Shopify for Apple Watch',
   image: './shopify-watch-thumb.png',
@@ -22,8 +19,8 @@ exports.frontmatter = {
   slug: 'shopify-apple-watch'
 }
 
-const ShopifyAppleWatch = () => (
-  <Project frontmatter={exports.frontmatter}>
+const ShopifyAppleWatch = ({location}) => (
+  <Project frontmatter={frontmatter} location={location}>
     <div>
       <Section>
         <HeroImage>
@@ -39,7 +36,7 @@ const ShopifyAppleWatch = () => (
           </Column>
           <Column start={1} width={3}>
             <NewFigure>
-              <img src={sketch} />
+              <img src={sketch} alt="Initial sketch" />
               <FigCaption title='Initial sketching'>Pen and paper really force you to distill a problem to its essence.</FigCaption>
             </NewFigure>
           </Column>
@@ -69,7 +66,7 @@ const ShopifyAppleWatch = () => (
         <Grid>
           <Column width={3}>
             <NewFigure isPortrait={true} background="#fff">
-              <img src={gif} />
+              <img src={gif} alt="First prototype" />
               <FigCaption title='First prototype'>This is the first working prototype I was able to see in the Simulator. I was so happy.</FigCaption>
             </NewFigure>
           </Column>
