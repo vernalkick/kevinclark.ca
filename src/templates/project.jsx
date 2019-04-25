@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import MainPageHeader from '../components/MainPageHeader'
 import {Media} from '../components/Media'
+import RelatedProjects from '../components/RelatedProjects'
 
 const PreTitle = styled.span`
   font-size: 20px;
@@ -33,6 +34,8 @@ export default ({ location, frontmatter, data, children }) => {
       </MainPageHeader>
 
       {children}
+
+      <RelatedProjects />
     </Layout>
   )
 }
