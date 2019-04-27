@@ -1,4 +1,4 @@
-import {injectGlobal} from 'styled-components'
+import {createGlobalStyle} from 'styled-components'
 import { Media } from '../components/Media'
 
 import graphikRegular2 from '../assets/fonts/Graphik-Regular.woff2'
@@ -13,7 +13,7 @@ import graphikMedium from '../assets/fonts/Graphik-Medium.woff'
 import gtPressuraMono2 from '../assets/fonts/GTPressuraMonoTrial-Regular.woff2'
 import gtPressuraMono from '../assets/fonts/GTPressuraMonoTrial-Regular.woff'
 
-injectGlobal `
+export const GlobalStyle = createGlobalStyle `
   @font-face {
     font-family: 'Graphik';
     src: url('${graphikRegular2}') format('woff2'),

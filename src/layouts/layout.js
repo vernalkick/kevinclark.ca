@@ -6,6 +6,7 @@ import Wrap from '../components/Wrap'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import '../layouts/styles.css'
+import {GlobalStyle} from '../components/Typography'
 
 const Layout = ({ location, children }) => (
   <StaticQuery
@@ -20,6 +21,7 @@ const Layout = ({ location, children }) => (
     `}
     render={data => (
       <div>
+        <GlobalStyle />
         <Helmet
           defaultTitle={data.site.siteMetadata.title}
           titleTemplate={`%s — ${data.site.siteMetadata.title}`}
@@ -28,6 +30,7 @@ const Layout = ({ location, children }) => (
             { name: 'keywords', content: 'sample, something' },
           ]}
         />
+
         <Wrap>
           <Header siteTitle={data.site.siteMetadata.title} pathName={location.pathname} />
           {children}
