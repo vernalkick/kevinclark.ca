@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import Helmet from 'react-helmet'
 import { Media } from '../components/Media'
 import '../components/Typography'
+import RelatedArticles from '../components/RelatedArticles'
 
 const offset = `45%`
 
@@ -94,6 +95,7 @@ export default ({location, data}) => {
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </ArticleContainer>
       </ArticleWrapper>
+      <RelatedArticles />
     </Layout>
   );
 };
