@@ -16,7 +16,7 @@ const TextContainer = styled.div`
 `
 
 const Title = styled.span`
-  display: block;
+  display: inline-block;
   font-size: 18px;
   border-bottom: 2px solid var(--subdued-elements-color);
 `
