@@ -5,7 +5,7 @@ import {Media} from '../components/Media'
 import PostItem from '../components/PostItem'
 
 const Container = styled.div`
-  border-top: 2px solid #fff;
+  border-top: 2px solid var(--subdued-elements-color);
   padding-top: 3rem;
   margin-top: 5rem;
   ${Media.desktop`

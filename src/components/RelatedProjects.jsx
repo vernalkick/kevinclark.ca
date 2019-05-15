@@ -5,7 +5,7 @@ import {Media} from '../components/Media'
 import ProjectItem from '../components/Project'
 
 const Container = styled.div`
-  border-top: 2px solid #fff;
+  border-top: 2px solid var(--subdued-elements-color);
   padding-top: 3rem;
   margin-top: 5rem;
 `
@@ -48,7 +48,7 @@ function shuffle(array) {
   return array;
 }
 
-export default () => {
+export default ({currentProjectSlug}) => {
   return (
     <StaticQuery
       query={graphql`
@@ -70,8 +70,14 @@ export default () => {
         }
       `}
       render={data => {
-          var projects = shuffle(data.allJavascriptFrontmatter.edges)
-              projects = projects.slice(0,2)
+          var projects = data.allJavascriptFrontmatter.edges
+              projects = projects.filter(el => el.node.frontmatter.slug !== currentProjectSlug)
+              projects = shuffle(projects).slice(0,2)
+          //     // pros = pros.filter(el => el.project.frontmatter.slug != 'shopify-apple-watch')
+          //     console.log(pros)
+          //
+          // var projects = shuffle(data.allJavascriptFrontmatter.edges)
+          //     projects = projects.slice(0,2)
 
           return (
             <Container>

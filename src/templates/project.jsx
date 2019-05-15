@@ -35,7 +35,7 @@ export default ({ location, frontmatter, data, children }) => {
 
       {children}
 
-      <RelatedProjects />
+      <RelatedProjects currentProjectSlug={frontmatter.slug} />
     </Layout>
   )
 }

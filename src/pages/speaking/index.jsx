@@ -23,7 +23,7 @@ const Lead = styled.p`
   font-weight: 600;
   line-height: 1.3;
   hyphens: none;
-
+  color: var(--primary-text-color);
   margin-top: 1rem;
   margin: 0;
 

@@ -7,6 +7,16 @@ import styled from 'styled-components'
 import { Media } from '../components/Media'
 import ProjectItem from '../components/Project'
 
+// const order = {
+//   'tipsy',
+//   'tiny-conf',
+//   'shopify-pay-landing',
+//   'shopify-gift-cards',
+//   'shopify-apple-watch',
+//   'order-status-page',
+//   'climate'
+// }
+
 const Grid = styled.div`
   margin-top: 1.5rem;
   ${Media.desktop`

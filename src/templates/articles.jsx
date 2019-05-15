@@ -22,7 +22,7 @@ const ArticleHeader = styled.div`
     height: 10000px;
     display: block;
     position: absolute;
-    bottom: 1rem;
+    bottom: 1.3rem;
     left: -10000px;
     right: -10000px;
     z-index: -1;
@@ -50,6 +50,7 @@ const ArticleTitle = styled.h1`
   margin: 0;
   margin-bottom: 3rem;
   color: var(--main-text-color);
+  line-height: 1.2;
 
   ${Media.desktop`
     margin-bottom: 7.5rem;
@@ -63,7 +64,7 @@ const DateLabel = styled.span`
 
   ${Media.desktop`
     position: absolute;
-    bottom: 0.5rem;
+    bottom: 0.6rem;
     left: 0;
     margin-bottom: 0;
   `}
@@ -78,6 +79,11 @@ const ArticleContainer = styled.div`
 export default ({location, data}) => {
   const post = data.markdownRemark
 
+  // eslint-disable-next-line
+  String.prototype.prettify = function() {
+    return this.replace(/ (?=[^ ]*$)/i, "\u00A0")
+  }
+
   return (
     <Layout location={location}>
       <Helmet>
@@ -88,7 +94,7 @@ export default ({location, data}) => {
           <DateLabel>{post.frontmatter.date}</DateLabel>
           <ArticleTitle>
             <PreTitle>{post.frontmatter.pretitle}</PreTitle>
-            {post.frontmatter.title}
+            {post.frontmatter.title.prettify()}
           </ArticleTitle>
         </ArticleHeader>
         <ArticleContainer>

@@ -26,6 +26,7 @@ const Paragraph = styled.p`
   font-weight: 500;
   line-height: 1.4;
   margin: 0;
+  color: var(--primary-text-color);
 
   ${Media.tablet`
     font-size: 32px;

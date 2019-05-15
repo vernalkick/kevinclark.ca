@@ -49,17 +49,21 @@ export const GlobalStyle = createGlobalStyle `
   :root {
     --base-font: 'Graphik', -apple-system;
     --secondary-font: 'GT Pressura Mono', monospace;
+    --paragraph-text-color: #333;
     --primary-text-color: #333;
     --secondary-text-color: #777;
     --subdued-elements-color: #fff;
+    --really-subdued-elements-color: #fff;
     --top-background-color: #fff;
     --bottom-background-color: #F1F1F1;
   }
 
   // :root {
+  //   --paragraph-text-color: #ccc;
   //   --primary-text-color: #fff;
   //   --secondary-text-color: #999;
   //   --subdued-elements-color: rgba(255, 255, 255, 0.25);
+  //   --really-subdued-elements-color: rgba(255, 255, 255, 0.08);
   //   --top-background-color: #111;
   //   --bottom-background-color: #222;
   // }
@@ -82,6 +86,7 @@ export const GlobalStyle = createGlobalStyle `
     line-height: 1.7;
     font-size: 18px;
     margin: 0;
+    color: var(--paragraph-text-color);
 
     & + &,
     blockquote + & {
@@ -90,7 +95,7 @@ export const GlobalStyle = createGlobalStyle `
   }
 
   a {
-    color: inherit;
+    color: var(--primary-text-color);
     text-decoration: none;
   }
 
@@ -99,7 +104,7 @@ export const GlobalStyle = createGlobalStyle `
     font-weight: 500;
 
     &:hover {
-      background: #fff;
+      background: var(--subdued-elements-color);
     }
   }
 

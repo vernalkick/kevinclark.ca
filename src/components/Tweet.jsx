@@ -16,7 +16,7 @@ const TweetImage = styled.img`
 `
 
 const TweetContainer = styled.div`
-  background: #fff;
+  background: var(--top-background-color);
   padding: 2rem;
   box-shadow: 0 18px 43px -10px rgba(0,0,0,0.15);
 

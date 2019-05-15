@@ -47,6 +47,7 @@ const SectionTitle = styled.h2`
   font-size: 24px;
   font-weight: 600;
   line-height: 1.2;
+  margin-bottom: 3rem;
 
   ${Media.desktop`
     font-size: 36px;

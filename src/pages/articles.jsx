@@ -35,8 +35,8 @@ const PostGroup = styled.div`
 const PostYear = styled.h2`
   position: absolute;
   font-size: 6rem;
-  color: var(--subdued-elements-color);
-  top: 0;
+  color: var(--really-subdued-elements-color);
+  top: -35px;
   right: 0;
   margin: 0;
   font-weight: 500;

@@ -63,6 +63,7 @@ const Lead = styled.p`
   font-weight: 600;
   line-height: 1.5;
   margin-bottom: 1rem;
+  color: var(--primary-text-color);
 
   ${Media.desktop`
     font-size: 36px;
