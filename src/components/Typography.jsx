@@ -58,15 +58,19 @@ export const GlobalStyle = createGlobalStyle `
     --bottom-background-color: #F1F1F1;
   }
 
-  // :root {
-  //   --paragraph-text-color: #ccc;
-  //   --primary-text-color: #fff;
-  //   --secondary-text-color: #999;
-  //   --subdued-elements-color: rgba(255, 255, 255, 0.25);
-  //   --really-subdued-elements-color: rgba(255, 255, 255, 0.08);
-  //   --top-background-color: #111;
-  //   --bottom-background-color: #222;
-  // }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --base-font: 'Graphik', -apple-system;
+    --secondary-font: 'GT Pressura Mono', monospace;
+    --paragraph-text-color: #ccc;
+    --primary-text-color: #fff;
+    --secondary-text-color: #999;
+    --subdued-elements-color: rgba(255, 255, 255, 0.25);
+    --really-subdued-elements-color: rgba(255, 255, 255, 0.08);
+    --top-background-color: #111;
+    --bottom-background-color: #000;
+  }
+}
 
   html {
     height: 100%;
@@ -80,6 +84,7 @@ export const GlobalStyle = createGlobalStyle `
     color: var(--primary-text-color);
     margin: 0;
     min-height: 100vh;
+    transition: .3s ease-in-out all;
   }
 
   p, ol > li {

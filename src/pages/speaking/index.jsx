@@ -179,7 +179,7 @@ class SpeakingPage extends React.Component {
               <Column width={4}>
                 <h3>Defense Against The Dark Patterns</h3>
                 <p>What do you do when you realize you’ve accidentally created a Dark Pattern? This talk is my attempt to understand the systemic causes that lead the world’s most well intentioned teams to design interfaces that trick people. In order to do that, we learn to recognize the different types of dark patterns, understand why they were used and explore strategic ways to avoid them.</p>
-                <More href="#">View slides on Speaker Deck →</More>
+                <More href="https://speakerdeck.com/vernalkick/defense-against-the-dark-patterns">View slides on Speaker Deck →</More>
               </Column>
             </Grid>
           </Section>

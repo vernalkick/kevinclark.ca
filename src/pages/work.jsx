@@ -7,15 +7,15 @@ import styled from 'styled-components'
 import { Media } from '../components/Media'
 import ProjectItem from '../components/Project'
 
-// const order = {
-//   'tipsy',
-//   'tiny-conf',
-//   'shopify-pay-landing',
-//   'shopify-gift-cards',
-//   'shopify-apple-watch',
-//   'order-status-page',
-//   'climate'
-// }
+const projects = [
+  'shopify-pay-landing',
+  'order-status-page',
+  'shopify-apple-watch',
+  'climate',
+  'tipsy',
+  'tiny-conf',
+  'shopify-gift-cards'
+]
 
 const Grid = styled.div`
   margin-top: 1.5rem;
@@ -96,6 +96,14 @@ const WorkPage = ({
     allJavascriptFrontmatter
   },
 }) => {
+
+  Array.prototype.objectWithSlug = function(slug) {
+    return this.filter(obj => { return obj.node.frontmatter.slug === slug})[0]
+  }
+  // allJavascriptFrontmatter.edges.filter(obj => { return obj.node.frontmatter.title === 'tipsy'})[0]
+
+  console.log(allJavascriptFrontmatter.edges.objectWithSlug('tipsy').node.frontmatter.title)
+
   return (
     <Layout location={location}>
       <Helmet>
@@ -105,8 +113,8 @@ const WorkPage = ({
         <h1>Work</h1>
       </MainPageHeader>
       <Grid>
-        {allJavascriptFrontmatter.edges.map((project, index) =>
-          <ProjectItem index={index} project={project} key={project.node.frontmatter.slug} />
+        {projects.map((slug, index) =>
+          <ProjectItem index={index} project={allJavascriptFrontmatter.edges.objectWithSlug(slug)} key={allJavascriptFrontmatter.edges.objectWithSlug(slug).node.frontmatter.slug} />
         )}
       </Grid>
     </Layout>

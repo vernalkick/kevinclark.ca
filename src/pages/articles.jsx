@@ -36,13 +36,14 @@ const PostYear = styled.h2`
   position: absolute;
   font-size: 6rem;
   color: var(--really-subdued-elements-color);
-  top: -35px;
+  top: -20px;
   right: 0;
   margin: 0;
   font-weight: 500;
 
   ${Media.desktop`
     font-size: 15rem;
+    top: -35px;
   `}
 `
 
