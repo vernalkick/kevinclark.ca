@@ -56,6 +56,7 @@ export const GlobalStyle = createGlobalStyle `
     --really-subdued-elements-color: #fff;
     --top-background-color: #fff;
     --bottom-background-color: #F1F1F1;
+    --dark-tiles: #333;
   }
 
 @media (prefers-color-scheme: dark) {
@@ -65,10 +66,11 @@ export const GlobalStyle = createGlobalStyle `
     --paragraph-text-color: #ccc;
     --primary-text-color: #fff;
     --secondary-text-color: #999;
-    --subdued-elements-color: rgba(255, 255, 255, 0.25);
+    --subdued-elements-color: rgba(255, 255, 255, 0.15);
     --really-subdued-elements-color: rgba(255, 255, 255, 0.08);
-    --top-background-color: #111;
+    --top-background-color: #161616;
     --bottom-background-color: #000;
+    --dark-tiles: #222;
   }
 }
 
@@ -148,7 +150,7 @@ export const GlobalStyle = createGlobalStyle `
 
   hr {
     height: 2px;
-    background: #fff;
+    background: var(--subdued-elements-color);
     border: none;
     margin: 3rem 0;
     max-width: 9rem;
@@ -164,7 +166,7 @@ export const GlobalStyle = createGlobalStyle `
     padding: 0 2em 0 3em;
     color: #777;
     font-size: 14px;
-    border-left: 2px solid #fff;
+    border-left: 2px solid var(--subdued-elements-color);
 
     // &:before {
     //   content: "“";

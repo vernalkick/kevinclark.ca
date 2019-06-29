@@ -8,6 +8,7 @@ const Container = styled.div`
   border-top: 2px solid var(--subdued-elements-color);
   padding-top: 3rem;
   margin-top: 5rem;
+
   ${Media.desktop`
     display: grid;
     grid-template-columns: 45% 55%;
@@ -17,13 +18,14 @@ const Container = styled.div`
 const Grid = styled.ul`
   list-style-type: none;
   margin: 0;
-  padding: 0 0 2rem 0;
+  padding: 1rem 0 0;
+  display: grid;
+  grid-gap: 2.5rem;
 
   ${Media.desktop`
-    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 126px 246px;
-    grid-column-gap: 2.5rem;
+    padding: 0 0 2rem 0;
   `}
 `
 

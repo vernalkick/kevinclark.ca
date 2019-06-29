@@ -54,7 +54,11 @@ const ArticlesPage = ({
   },
 }) => {
 
-  const Posts = allMarkdownRemark.group.reverse().map(group =>
+  const articles = allMarkdownRemark.group.sort(function(a, b) {
+    return (a.fieldValue < b.fieldValue) ? 1 : -1
+  })
+
+  const Posts = articles.map(group =>
     <PostGroup key={group.fieldValue}>
       <PostYear>{group.fieldValue}</PostYear>
       <PostList>

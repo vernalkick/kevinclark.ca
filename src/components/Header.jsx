@@ -19,13 +19,14 @@ const MainHeader = styled.header`
 `
 
 const Logo = styled(Link)`
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.3;
   margin-bottom: 1.5rem;
   display: block;
   padding-right: 5rem;
 
   ${Media.desktop`
+    font-size: 18px;
     min-width: 45%;
     padding-right: 0;
   `}

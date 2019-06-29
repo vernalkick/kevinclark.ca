@@ -2,8 +2,14 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
-const PostLink = styled(Link)`
+const Item = styled.li`
+  /* & + & {
+    margin-top: 3rem;
+  } */
+`
 
+const PostLink = styled(Link)`
+  display: block;
 `
 
 const PostTitle = styled.h2`
@@ -36,13 +42,13 @@ class PostItem extends React.Component {
     }
 
     return (
-      <li>
+      <Item>
         <PostLink to={fields.slug}>
           <PostTitle>{frontmatter.title.prettify()}</PostTitle>
           <PostExcerpt>{excerpt}</PostExcerpt>
           <More>Read more →</More>
         </PostLink>
-      </li>
+      </Item>
     )
   }
 }

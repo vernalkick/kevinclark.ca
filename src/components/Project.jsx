@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 const Project = styled(Link)`
-  background: #333;
+  background: var(--dark-tiles);
   overflow: hidden;
   position: relative;
   padding-left: 120px;
