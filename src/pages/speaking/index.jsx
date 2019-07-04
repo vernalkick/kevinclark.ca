@@ -145,7 +145,7 @@ class SpeakingPage extends React.Component {
           </Section>
 
           <Section>
-            <Title>What people say about my talks</Title>
+            <Title>What people say about&nbsp;my&nbsp;talks</Title>
             <Grid>
               <Column width={4}>
                 <Tweet image={slide1} profile={robert} name="Robert Stulle" username="@robertstulle">

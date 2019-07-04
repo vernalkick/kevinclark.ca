@@ -123,6 +123,7 @@ class AboutPage extends React.Component {
             <InfoBlock>
               <h4>Featured in</h4>
               <Items>
+                <AboutItem title="Rooki.Design" description="Interview" url="https://www.rooki.design/interviews/kevin-clark" />
                 <AboutItem title="Infopresse 30 under 30" description="Award" url="https://www.infopresse.com/dossier/2016/10/24/kevin-clark-redefinir-le-monde-du-commerce" />
                 <AboutItem title="Design Details" description="Episode 196" url="https://spec.fm/podcasts/design-details/68532" />
                 <AboutItem title="The Artboard" description="Episode 3" url="http://www.theartboard.net/episodes/2015/5/26/03-managing-side-projects-with-kevin-clark" />
