@@ -8,7 +8,7 @@ import Twitter from '../assets/twitter.svg'
 
 const MainHeader = styled.header`
   display: block;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   position: relative;
 
   ${Media.tablet`
@@ -21,7 +21,7 @@ const MainHeader = styled.header`
 const Logo = styled(Link)`
   font-size: 16px;
   line-height: 1.3;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   display: block;
   padding-right: 5rem;
 

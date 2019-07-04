@@ -28,9 +28,9 @@ const Layout = ({ location, children }) => (
           meta={[
             { name: 'description', content: 'Sample' },
             { name: 'keywords', content: 'sample, something' },
+            { name: 'viewport', content: 'initial-scale=1, viewport-fit=cover'}
           ]}
         />
-
         <Wrap>
           <Header siteTitle={data.site.siteMetadata.title} pathName={location.pathname} />
           {children}

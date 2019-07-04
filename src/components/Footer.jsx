@@ -7,11 +7,15 @@ import Twitter from '../assets/twitter.svg'
 
 const FooterContainer = styled.div`
   border-top: 2px solid var(--subdued-elements-color);
-  font-size: 16px;
+  font-size: 15px;
   display: flex;
   flex-wrap: wrap;
-  padding: 2rem 0 2rem;
+  padding: 2rem 0 calc(2rem + env(safe-area-inset-bottom));
   margin-top: 5rem;
+
+  ${Media.tablet`
+    font-size: 16px;
+  `}
 
   ${Media.desktop`
     padding-bottom: 4rem;

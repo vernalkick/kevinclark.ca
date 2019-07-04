@@ -193,6 +193,16 @@ export const GlobalStyle = createGlobalStyle `
     display: block;
   }
 
+  .gatsby-resp-image-wrapper {
+    margin-left: -1rem !important;
+    width: calc(100% + 2rem);
+
+    ${Media.tablet`
+      width: 100%;
+      margin-left: auto !important;
+    `}
+  }
+
   h1 {
     font-size: 1em;
     margin: 0;

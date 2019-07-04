@@ -90,7 +90,7 @@ export const homeArticlesQuery = graphql`
     allMarkdownRemark(
       filter: {fileAbsolutePath: { regex: "/articles/"}},
       sort: { order: DESC, fields: [frontmatter___date] },
-      limit: 3
+      limit: 6
     ) {
       edges {
         node {
