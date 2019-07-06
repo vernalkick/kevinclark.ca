@@ -4,10 +4,7 @@ import styled from 'styled-components'
 import { Media } from '../components/Media'
 
 const NavListItem = styled.li`
-  /* flex-grow: 1; */
-  /* margin-right: 1rem; */
-
-  ${Media.desktop`
+  ${Media.tablet`
     flex-grow: 0;
     margin-right: 2.5rem;
   `}

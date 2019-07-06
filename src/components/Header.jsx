@@ -7,28 +7,27 @@ import Instagram from '../assets/instagram.svg'
 import Twitter from '../assets/twitter.svg'
 
 const MainHeader = styled.header`
-  display: block;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-row-gap: 2rem;
+  align-items: center;
   margin-top: 2rem;
-  position: relative;
 
   ${Media.tablet`
-    display: flex;
-    flex-wrap: wrap;
     margin: 10vw 0 0 0;
+    grid-template-columns: 45% auto 70px;
   `}
 `
 
 const Logo = styled(Link)`
   font-size: 16px;
   line-height: 1.3;
-  margin-bottom: 2rem;
   display: block;
-  padding-right: 5rem;
+  grid-column: 1/3;
 
   ${Media.desktop`
     font-size: 18px;
-    min-width: 45%;
-    padding-right: 0;
+    grid-column: 1/2;
   `}
 `
 
@@ -50,21 +49,31 @@ const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  grid-row-start: 2;
+  grid-column: 1/4;
+
+  ${Media.tablet`
+    grid-column-end: 3;
+    justify-content: flex-start;
+  `}
 
   ${Media.desktop`
-    justify-content: flex-start;
+
+    grid-row-start: 1;
+    grid-column: 2/3;
   `}
 `
 
 const Social = styled.div`
-  position: absolute;
-  right: 0;
-  top: 1rem;
+  text-align: right;
 
   ${Media.tablet`
-    position: relative;
-    top: 0.5rem;
-    margin-left: 2rem;
+    grid-row-start: 2;
+  `}
+
+  ${Media.desktop`
+    grid-row-start: 1;
+    grid-column: 3/4;
   `}
 `
 const SocialLink = styled(Link)`

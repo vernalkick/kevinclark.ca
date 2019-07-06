@@ -7,10 +7,6 @@ const Wrap = styled.div`
   padding: 0 1rem;
 
   ${Media.tablet`
-    padding: 0 10%;
-  `}
-
-  ${Media.desktop`
     padding: 0 5%;
   `}
 `

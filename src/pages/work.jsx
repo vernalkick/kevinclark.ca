@@ -27,12 +27,7 @@ const Grid = styled.div`
   `}
 
   > * {
-    height: 200px;
-    margin-top: 1rem;
-
     ${Media.desktop`
-      height: auto;
-      margin-top: 0;
       ${gridposition()}
     `}
   }

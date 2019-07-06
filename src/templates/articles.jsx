@@ -32,7 +32,6 @@ const ArticleHeader = styled.div`
 const PreTitle = styled.span`
   font-weight: 400;
   display: block;
-  margin-bottom: 0.25rem;
 `
 
 const ArticleWrapper = styled.div`
