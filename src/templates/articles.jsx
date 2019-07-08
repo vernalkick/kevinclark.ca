@@ -7,10 +7,15 @@ import { Media } from '../components/Media'
 import '../components/Typography'
 import RelatedArticles from '../components/RelatedArticles'
 
+const tabletOffset = `25%`
 const offset = `45%`
 
 const ArticleHeader = styled.div`
   position: relative;
+
+  ${Media.tablet`
+    padding-left: ${tabletOffset};
+  `}
 
   ${Media.desktop`
     padding-left: ${offset};
@@ -38,7 +43,7 @@ const ArticleWrapper = styled.div`
   margin-top: 2.25rem;
   margin-bottom: 5rem;
 
-  ${Media.desktop`
+  ${Media.tablet`
     margin-top: 5rem;
   `}
 `
@@ -61,7 +66,7 @@ const DateLabel = styled.span`
   margin-bottom: 0.25rem;
   display: block;
 
-  ${Media.desktop`
+  ${Media.tablet`
     position: absolute;
     bottom: 0.6rem;
     left: 0;
@@ -70,6 +75,10 @@ const DateLabel = styled.span`
 `
 
 const ArticleContainer = styled.div`
+  ${Media.tablet`
+    padding-left: ${tabletOffset};
+  `}
+
   ${Media.desktop`
     padding-left: ${offset};
   `}

@@ -8,14 +8,25 @@ import Twitter from '../assets/twitter.svg'
 
 const MainHeader = styled.header`
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: 45% auto 70px;
   grid-row-gap: 2rem;
+  grid-template-areas:
+    "logo logo social"
+    "nav nav nav";
   align-items: center;
   margin-top: 2rem;
 
   ${Media.tablet`
-    margin: 10vw 0 0 0;
-    grid-template-columns: 45% auto 70px;
+    margin-top: 5vw;
+    grid-template-areas:
+      "logo logo logo"
+      "nav nav social";
+  `}
+
+  ${Media.desktop`
+    margin-top: 10vw;
+    grid-template-areas:
+      "logo nav social";
   `}
 `
 
@@ -23,11 +34,10 @@ const Logo = styled(Link)`
   font-size: 16px;
   line-height: 1.3;
   display: block;
-  grid-column: 1/3;
+  grid-area: logo;
 
   ${Media.desktop`
     font-size: 18px;
-    grid-column: 1/2;
   `}
 `
 
@@ -49,32 +59,16 @@ const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  grid-row-start: 2;
-  grid-column: 1/4;
+  grid-area: nav;
 
   ${Media.tablet`
-    grid-column-end: 3;
     justify-content: flex-start;
-  `}
-
-  ${Media.desktop`
-
-    grid-row-start: 1;
-    grid-column: 2/3;
   `}
 `
 
 const Social = styled.div`
   text-align: right;
-
-  ${Media.tablet`
-    grid-row-start: 2;
-  `}
-
-  ${Media.desktop`
-    grid-row-start: 1;
-    grid-column: 3/4;
-  `}
+  grid-area: social;
 `
 const SocialLink = styled(Link)`
   margin-right: 1rem;
