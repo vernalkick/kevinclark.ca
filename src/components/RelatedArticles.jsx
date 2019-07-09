@@ -6,27 +6,27 @@ import PostItem from '../components/PostItem'
 
 const Container = styled.div`
   border-top: 2px solid var(--subdued-elements-color);
-  padding-top: 3rem;
+  padding-top: 4rem;
   margin-top: 5rem;
+  display: grid;
+  grid-row-gap: 1.5em;
+
+  ${Media.tablet`
+    grid-template-columns: 25% auto;
+  `}
 
   ${Media.desktop`
-    display: grid;
-    grid-template-columns: 45% 55%;
+    grid-template-columns: 45% auto;
   `}
 `
 
 const Grid = styled.ul`
   list-style-type: none;
   margin: 0;
-  padding: 1rem 0 0;
+  padding: 0;
   display: grid;
   grid-gap: 2.5rem;
-
-  ${Media.desktop`
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 126px 246px;
-    padding: 0 0 2rem 0;
-  `}
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 `
 
 function shuffle(array) {

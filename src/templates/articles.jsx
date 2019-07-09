@@ -7,19 +7,38 @@ import { Media } from '../components/Media'
 import '../components/Typography'
 import RelatedArticles from '../components/RelatedArticles'
 
-const tabletOffset = `25%`
-const offset = `45%`
-
-const ArticleHeader = styled.div`
-  position: relative;
+const ArticleWrapper = styled.div`
+  margin-top: 2.25rem;
+  margin-bottom: 5rem;
 
   ${Media.tablet`
-    padding-left: ${tabletOffset};
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 25% auto;
+    grid-template-areas:
+      "date title"
+      ". content";
   `}
 
   ${Media.desktop`
-    padding-left: ${offset};
+    grid-template-columns: 45% auto;
   `}
+`
+
+const PreTitle = styled.span`
+  font-weight: 400;
+  display: block;
+`
+
+const ArticleTitle = styled.h1`
+  font-size: 2.25rem;
+  font-weight: 500;
+  margin: 0;
+  color: var(--main-text-color);
+  line-height: 1.2;
+  grid-area: title;
+  position: relative;
+  padding-right: 7%;
 
   &:before {
     content: '';
@@ -34,53 +53,24 @@ const ArticleHeader = styled.div`
   }
 `
 
-const PreTitle = styled.span`
-  font-weight: 400;
-  display: block;
-`
-
-const ArticleWrapper = styled.div`
-  margin-top: 2.25rem;
-  margin-bottom: 5rem;
-
-  ${Media.tablet`
-    margin-top: 5rem;
-  `}
-`
-
-const ArticleTitle = styled.h1`
-  font-size: 2.25rem;
-  font-weight: 500;
-  margin: 0;
-  margin-bottom: 3rem;
-  color: var(--main-text-color);
-  line-height: 1.2;
-
-  ${Media.desktop`
-    margin-bottom: 7.5rem;
-  `}
-`
-
 const DateLabel = styled.span`
   font-size: 18px;
   margin-bottom: 0.25rem;
   display: block;
+  grid-area: date;
+  align-self: end;
 
   ${Media.tablet`
-    position: absolute;
-    bottom: 0.6rem;
-    left: 0;
-    margin-bottom: 0;
+    margin-bottom: 0.6rem;
   `}
 `
 
 const ArticleContainer = styled.div`
-  ${Media.tablet`
-    padding-left: ${tabletOffset};
-  `}
+  grid-area: content;
+  margin-top: 3rem;
 
   ${Media.desktop`
-    padding-left: ${offset};
+    margin-top: 7.5rem;
   `}
 `
 
@@ -98,13 +88,11 @@ export default ({location, data}) => {
         <title>{post.frontmatter.title}</title>
       </Helmet>
       <ArticleWrapper>
-        <ArticleHeader>
-          <DateLabel>{post.frontmatter.date}</DateLabel>
-          <ArticleTitle>
-            <PreTitle>{post.frontmatter.pretitle}</PreTitle>
-            {post.frontmatter.title.prettify()}
-          </ArticleTitle>
-        </ArticleHeader>
+        <DateLabel>{post.frontmatter.date}</DateLabel>
+        <ArticleTitle>
+          <PreTitle>{post.frontmatter.pretitle}</PreTitle>
+          {post.frontmatter.title.prettify()}
+        </ArticleTitle>
         <ArticleContainer>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </ArticleContainer>
