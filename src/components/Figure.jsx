@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import { css } from 'styled-components';
-import { Media } from '../components/Media'
+import { device } from '../components/Media'
 
 const Container = styled.figure`
   margin: 0;
@@ -17,12 +17,12 @@ const ImageContainer = styled.div`
     background: ${props.background};
   `}
 
-  ${Media.tablet`
+  @media ${device.tabletUp} {
     padding: 0;
     background: transparent;
     margin-left: 0;
     width: auto;
-  `}
+  }
 `
 
 const Image = styled.img`
@@ -36,7 +36,7 @@ const Image = styled.img`
     margin: 0 auto;
   `};
 
-  ${Media.tablet`
+  @media ${device.tabletUp} {
     max-width: 100%;
     max-height: none;
 
@@ -44,22 +44,20 @@ const Image = styled.img`
       width: 60%;
       padding-left: 40%;
     `};
-  `}
+  }
 `
 
 const Caption = styled.figcaption`
-  /* margin-top: 1rem; */
-
   * + & {
     margin-top: 1.5rem;
   }
 
-  ${Media.desktop`
+  @media ${device.desktopUp} {
     ${props => props.overlap && css`
       margin-top: -3rem;
       width: 65%;
     `}
-  `}
+  }
 `
 
 const CaptionTitle = styled.span`

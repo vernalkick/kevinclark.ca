@@ -1,19 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Media} from '../components/Media'
+import {device} from '../components/Media'
 
 const HeaderContainer = styled.header`
   position: relative;
   font-size: 50px;
   margin-top: 0.63em;
 
-  ${Media.tablet`
+  @media ${device.tabletUp} {
+    margin-top: 0.75em;
     font-size: 85px;
-  `}
+  }
 
-  ${Media.desktop`
+  @media ${device.desktopUp} {
+    margin-top: 1.25em;
     font-size: 120px;
-  `}
+  }
 
   &:before {
     content: '';
@@ -26,17 +28,15 @@ const HeaderContainer = styled.header`
     right: -10000px;
     z-index: -1;
 
-    ${Media.tablet`
+    @media ${device.tabletUp} {
       bottom: 2.5rem;
-    `}
+    }
 
-    ${Media.desktop`
+    @media ${device.desktopUp} {
       bottom: 3.5rem;
-    `}
+    }
   }
 `
-
-
 
 
 class MainPageHeader extends React.Component {

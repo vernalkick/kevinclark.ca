@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../layouts/layout'
 import styled from 'styled-components'
 import Helmet from 'react-helmet'
-import { Media } from '../components/Media'
+import { device } from '../components/Media'
 import '../components/Typography'
 import RelatedArticles from '../components/RelatedArticles'
 
@@ -11,18 +11,18 @@ const ArticleWrapper = styled.div`
   margin-top: 2.25rem;
   margin-bottom: 5rem;
 
-  ${Media.tablet`
+  @media ${device.mobileLargeUp} {
     margin-top: 5rem;
     display: grid;
     grid-template-columns: 25% auto;
     grid-template-areas:
       "date title"
       ". content";
-  `}
+  }
 
-  ${Media.desktop`
+  @media ${device.desktopUp} {
     grid-template-columns: 45% auto;
-  `}
+  }
 `
 
 const PreTitle = styled.span`
@@ -60,18 +60,18 @@ const DateLabel = styled.span`
   grid-area: date;
   align-self: end;
 
-  ${Media.tablet`
+  @media ${device.mobileLargeUp} {
     margin-bottom: 0.6rem;
-  `}
+  }
 `
 
 const ArticleContainer = styled.div`
   grid-area: content;
   margin-top: 3rem;
 
-  ${Media.desktop`
+  @media ${device.desktopUp} {
     margin-top: 7.5rem;
-  `}
+  }
 `
 
 export default ({location, data}) => {

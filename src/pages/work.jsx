@@ -4,7 +4,7 @@ import Layout from '../layouts/layout'
 import Helmet from 'react-helmet'
 import MainPageHeader from '../components/MainPageHeader'
 import styled from 'styled-components'
-import { Media } from '../components/Media'
+import { device } from '../components/Media'
 import ProjectItem from '../components/Project'
 
 const projects = [
@@ -14,75 +14,97 @@ const projects = [
   'climate',
   'tipsy',
   'tiny-conf',
-  'shopify-gift-cards'
+  'shopify-gift-cards',
+  'shopify-apple-watch',
 ]
 
 const Grid = styled.div`
   margin-top: 1.5rem;
-  ${Media.desktop`
-    display: grid;
-    grid-template-columns: 3.78% 12.28% 22.08% 9.59% 2.03% 8.12% 31.55% 4.71% 5.82%;
-    grid-auto-rows: 273px 201px 191px 45px 89px 385px 120px 94px 71px 321px 215px;
-    margin-top: -7rem;
-  `}
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  --spacing-multiplier: 0.5;
 
-  > * {
-    ${Media.desktop`
-      ${gridposition()}
-    `}
+  > *:nth-child(6n + 1) {
+    padding-bottom: 72%;
+    margin-left: 10%;
+  }
+
+  > *:nth-child(6n + 2) {
+    padding-bottom: 100%;
+    margin-right: 40%;
+  }
+
+  > *:nth-child(6n + 3) {
+    padding-bottom: 90%;
+    margin-left: 25%;
+  }
+
+  > *:nth-child(6n + 4) {
+    padding-bottom: 78%;
+  }
+
+  > *:nth-child(6n + 5) {
+    padding-bottom: 100%;
+    margin-left: 30%;
+    margin-right: 10%;
+  }
+
+  > *:nth-child(6n + 6) {
+    margin-right: 30%;
+    padding-bottom: 100%;
+  }
+
+  @media ${device.tabletUp} {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0;
+    margin-top: -6rem;
+
+    > *:nth-child(6n + 1) {
+      margin-top: 50%;
+      padding-bottom: 76%;
+    }
+
+    > *:nth-child(6n + 2) {
+      margin-bottom: 35%;
+      margin-left: calc(20% * var(--spacing-multiplier));
+      margin-right: calc(20% * var(--spacing-multiplier));
+      padding-bottom: 72%;
+    }
+
+    > *:nth-child(6n + 3) {
+      margin-top: 20%;
+      margin-left: calc(40% * var(--spacing-multiplier));
+      padding-bottom: 68%;
+    }
+
+    > *:nth-child(6n + 4) {
+      margin-top: 5%;
+      margin-left: calc(20% * var(--spacing-multiplier));
+      margin-bottom: 30%;
+      padding-bottom: 75%;
+    }
+
+    > *:nth-child(6n + 5) {
+      margin-top: 30%;
+      margin-right: calc(30% * var(--spacing-multiplier));
+      padding-bottom: 80%;
+    }
+
+    > *:nth-child(6n + 6) {
+      margin-right: calc(20% * var(--spacing-multiplier));
+      margin-top: 20%;
+      margin-bottom: 40%;
+      padding-bottom: 65%;
+    }
+  }
+
+
+  @media ${device.desktop} {
+    margin-top: -10rem;
+    --spacing-multiplier: 1;
   }
 `
-
-export function gridposition() {
-  let css = ""
-  for (let index = 0; index < 5; index++) {
-    css += `
-    &:nth-child(${1 + 6 * index}) {
-      grid-column-start: 1;
-      grid-column-end: span 4;
-      grid-row-start: ${2 + 11 * index};
-      grid-row-end: span 2;
-    }
-
-    &:nth-child(${2 + 6 * index}) {
-      grid-column-start: 7;
-      grid-column-end: span 1;
-      grid-row-start: ${1 + 11 * index};
-      grid-row-end: span 2;
-    }
-
-    &:nth-child(${3 + 6 * index}) {
-      grid-column-start: 3;
-      grid-column-end: span 2;
-      grid-row-start: ${6 + 11 * index};
-      grid-row-end: span 2;
-    }
-
-    &:nth-child(${4 + 6 * index}) {
-      grid-column-start: 7;
-      grid-column-end: span 3;
-      grid-row-start: ${5 + 11 * index};
-      grid-row-end: span 2;
-    }
-
-    &:nth-child(${5 + 6 * index}) {
-      grid-column-start: 2;
-      grid-column-end: span 2;
-      grid-row-start: ${10 + 11 * index};
-      grid-row-end: span 2;
-    }
-
-    &:nth-child(${6 + 6 * index}) {
-      grid-column-start: 6;
-      grid-column-end: span 3;
-      grid-row-start: ${9 + 11 * index};
-      grid-row-end: span 2;
-    }
-    `
-  }
-
-  return css
-}
 
 const WorkPage = ({
   location,

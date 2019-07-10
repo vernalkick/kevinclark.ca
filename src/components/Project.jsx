@@ -1,11 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
-import { Media } from '../components/Media'
 
 const Project = styled(Link)`
-  height: 200px;
-  margin-top: 1rem;
   background: var(--dark-tiles);
   overflow: hidden;
   position: relative;
@@ -21,11 +18,6 @@ const Project = styled(Link)`
       transform: scale(1.075);
     }
   }
-
-  ${Media.desktop`
-    height: auto;
-    margin-top: 0;
-  `}
 `
 
 const Title = styled.span`
@@ -40,11 +32,14 @@ const Title = styled.span`
 `
 
 const Image = styled.img`
-  float: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
   height: 100%;
+  width: calc(100% - 140px);
   object-fit: cover;
   object-position: 0 50%;
-  width: calc(100% - 30px);
   transition: transform 1s ease-out;
 `
 

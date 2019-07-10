@@ -5,7 +5,7 @@ import MainPageHeader from '../../components/MainPageHeader'
 import ButtonLink from '../../components/ButtonLink'
 import Event from '../../components/Event'
 import styled from 'styled-components'
-import { Media } from '../../components/Media'
+import { device } from '../../components/Media'
 import { Grid, Column } from '../../components/ContentGrid'
 import Tweet from '../../components/Tweet'
 import Section from '../../components/Section'
@@ -27,9 +27,9 @@ const Lead = styled.p`
   margin-top: 1rem;
   margin: 0;
 
-  ${Media.desktop`
+  @media ${device.desktopUp} {
     font-size: 36px;
-  `}
+  }
 `
 
 const TalkImage = styled.img`
@@ -42,9 +42,9 @@ const Title = styled.h2`
   line-height: 1.2;
   margin-bottom: 1em;
 
-  ${Media.desktop`
+  @media ${device.desktopUp} {
     font-size: 36px;
-  `}
+  }
 `
 
 const Hero = styled.div`
@@ -53,27 +53,27 @@ const Hero = styled.div`
   width: calc(100% + 2rem);
   overflow: hidden;
 
-  ${Media.tablet`
+  @media ${device.tabletUp} {
     max-width: 100%;
     margin-left: 0;
     width: auto;
-  `}
+  }
 
-  ${Media.desktop`
+  @media ${device.desktopUp} {
     overflow: visible;
-  `}
+  }
 `
 
 const HeroImage = styled.img`
   margin-top: -25%;
   margin-bottom: -40%;
 
-  ${Media.desktop`
+  @media ${device.desktopUp} {
     max-width: none;
     width: 150%;
     margin-top: -9rem;
     margin-bottom: 0;
-  `}
+  }
 `
 
 const More = styled.a`
@@ -84,11 +84,11 @@ const More = styled.a`
 `
 
 const EventList = styled.div`
-  ${Media.desktop`
+  @media ${device.desktopUp} {
     display: grid;
     grid-gap: 40px;
     grid-template-columns: 1fr 1fr 1fr;
-  `}
+  }
 `
 
 const Content = styled.div`

@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import Twitter from '../assets/twitter.svg'
-import { Media } from '../components/Media'
+import { device } from '../components/Media'
 
 const TweetWrapper = styled.div`
   position: relative;
 
-  ${Media.tablet`
+  @media ${device.tabletUp} {
     margin-bottom: 4rem;
-  `}
+  }
 `
 
 const TweetImage = styled.img`
@@ -20,12 +20,12 @@ const TweetContainer = styled.div`
   padding: 2rem;
   box-shadow: 0 18px 43px -10px rgba(0,0,0,0.15);
 
-  ${Media.tablet`
+  @media ${device.tabletUp} {
     position: absolute;
     bottom: -4rem;
     left: 4rem;
     right: 0;
-  `}
+  }
 `
 
 const Profile = styled.div`

@@ -5,7 +5,7 @@ import PullQuote from '../../../components/PullQuote'
 import { Grid, Column } from '../../../components/ContentGrid'
 import OffsetImage from '../../../components/OffsetImage'
 import { FigCaption } from '../../../components/Figure'
-import { Media } from '../../../components/Media'
+import { device } from '../../../components/Media'
 import Project from '../../../templates/project'
 
 import hero from './tipsy-hero-2.png'
@@ -22,11 +22,11 @@ export const frontmatter = {
 const HalfHeader = styled.div`
   margin-bottom: 3rem;
 
-  ${Media.desktop`
+  @media ${device.desktopUp} {
     width: 45%;
     margin-bottom: 6rem;
     position: relative;
-  `}
+  }
 `
 
 const MainImage = styled.div`
@@ -34,21 +34,21 @@ const MainImage = styled.div`
   margin-left: -15%;
   width: 130%;
 
-  ${Media.desktop`
+  @media ${device.desktopUp} {
     position: absolute;
     margin: 0;
     left: 105%;
     width: 150%;
     top: -12rem;
-  `}
+  }
 `
 
 const MainContent = styled.div`
   margin-top: 1.5rem;
 
-  ${Media.desktop`
+  @media ${device.desktopUp} {
     margin-top: 3rem;
-  `}
+  }
 `
 
 const Tipsy = ({location}) => (

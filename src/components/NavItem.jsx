@@ -1,22 +1,22 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
-import { Media } from '../components/Media'
+import { device } from '../components/Media'
 
 const NavListItem = styled.li`
-  ${Media.tablet`
+  @media ${device.tabletUp} {
     flex-grow: 0;
     margin-right: 2.5rem;
-  `}
+  }
 `
 
 const NavLink = styled(Link)`
   font-size: 16px;
   font-weight: ${props => props.selected ? '500' : 'normal'};
 
-  ${Media.desktop`
+  @media ${device.desktopUp} {
     font-size: 18px;
-  `}
+  }
 `
 
 class NavItem extends React.Component {

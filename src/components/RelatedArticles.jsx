@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
-import {Media} from '../components/Media'
+import { device } from '../components/Media'
 import PostItem from '../components/PostItem'
 
 const Container = styled.div`
@@ -11,13 +11,13 @@ const Container = styled.div`
   display: grid;
   grid-row-gap: 1.5em;
 
-  ${Media.tablet`
+  @media ${device.mobileLargeUp} {
     grid-template-columns: 25% auto;
-  `}
+  }
 
-  ${Media.desktop`
+  @media ${device.desktopUp} {
     grid-template-columns: 45% auto;
-  `}
+  }
 `
 
 const Grid = styled.ul`

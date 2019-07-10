@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Media } from '../components/Media'
+import { device } from '../components/Media'
 
 const Quote = styled.blockquote`
   padding: 0;
@@ -28,9 +28,9 @@ const Paragraph = styled.p`
   margin: 0;
   color: var(--primary-text-color);
 
-  ${Media.tablet`
+  @media ${device.tabletUp} {
     font-size: 32px;
-  `}
+  }
 `
 
 const Source = styled.p`

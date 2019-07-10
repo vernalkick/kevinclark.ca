@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
-import { Media } from '../components/Media'
+import { device } from '../components/Media'
 import Instagram from '../assets/instagram.svg'
 import Twitter from '../assets/twitter.svg'
 
@@ -13,13 +13,13 @@ const FooterContainer = styled.div`
   padding: 2rem 0 calc(2rem + env(safe-area-inset-bottom));
   margin-top: 5rem;
 
-  ${Media.tablet`
+  @media ${device.tabletUp} {
     font-size: 16px;
-  `}
+  }
 
-  ${Media.desktop`
+  @media ${device.desktopUp} {
     padding-bottom: 4rem;
-  `}
+  }
 `
 
 const Copyright = styled.span`
@@ -27,18 +27,18 @@ const Copyright = styled.span`
   margin-right: 1rem;
   flex-grow: 1;
 
-  ${Media.tablet`
+  @media ${device.tabletUp} {
     flex-grow: 0;
-  `}
+  }
 `
 
 const Contact = styled.div`
   flex-grow: 1;
   display: none;
 
-  ${Media.tablet`
+  @media ${device.tabletUp} {
     display: block;
-  `}
+  }
 `
 
 const SocialLink = styled(Link)`

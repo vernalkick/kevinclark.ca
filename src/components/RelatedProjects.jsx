@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
-import {Media} from '../components/Media'
+import {device} from '../components/Media'
 import ProjectItem from '../components/Project'
 
 const Container = styled.div`
@@ -11,22 +11,23 @@ const Container = styled.div`
 `
 
 const Grid = styled.div`
-  ${Media.desktop`
+  @media ${device.tabletUp} {
     display: grid;
     grid-template-columns: 5fr 8fr;
     grid-auto-rows: 126px 246px;
     grid-column-gap: 2.5rem;
+    grid-template-areas:
+      ". firstProject"
+      "secondProject firstProject";
 
     > *:nth-child(1) {
-      grid-row-start: 2;
-      grid-row-end: span 1;
+      grid-area: firstProject;
     }
 
     > *:nth-child(2) {
-      grid-row-start: 1;
-      grid-row-end: span 2;
+      grid-area: secondProject;
     }
-  `}
+  }
 `
 
 function shuffle(array) {
@@ -73,11 +74,6 @@ export default ({currentProjectSlug}) => {
           var projects = data.allJavascriptFrontmatter.edges
               projects = projects.filter(el => el.node.frontmatter.slug !== currentProjectSlug)
               projects = shuffle(projects).slice(0,2)
-          //     // pros = pros.filter(el => el.project.frontmatter.slug != 'shopify-apple-watch')
-          //     console.log(pros)
-          //
-          // var projects = shuffle(data.allJavascriptFrontmatter.edges)
-          //     projects = projects.slice(0,2)
 
           return (
             <Container>

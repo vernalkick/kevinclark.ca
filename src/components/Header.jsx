@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components';
-import { Media } from '../components/Media'
+import { device } from '../components/Media'
 import NavItem from '../components/NavItem'
 import Instagram from '../assets/instagram.svg'
 import Twitter from '../assets/twitter.svg'
@@ -16,18 +16,18 @@ const MainHeader = styled.header`
   align-items: center;
   margin-top: 2rem;
 
-  ${Media.tablet`
+  @media ${device.tabletUp} {
     margin-top: 5vw;
     grid-template-areas:
       "logo logo logo"
       "nav nav social";
-  `}
+  }
 
-  ${Media.desktop`
+  @media ${device.desktopUp} {
     margin-top: 10vw;
     grid-template-areas:
       "logo nav social";
-  `}
+  }
 `
 
 const Logo = styled(Link)`
@@ -36,9 +36,9 @@ const Logo = styled(Link)`
   display: block;
   grid-area: logo;
 
-  ${Media.desktop`
+  @media ${device.desktopUp} {
     font-size: 18px;
-  `}
+  }
 `
 
 const Name = styled.span`
@@ -61,9 +61,9 @@ const List = styled.ul`
   justify-content: space-between;
   grid-area: nav;
 
-  ${Media.tablet`
+  @media ${device.tabletUp} {
     justify-content: flex-start;
-  `}
+  }
 `
 
 const Social = styled.div`

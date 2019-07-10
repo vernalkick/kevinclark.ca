@@ -1,5 +1,5 @@
 import {createGlobalStyle} from 'styled-components'
-import { Media } from '../components/Media'
+import { device } from '../components/Media'
 
 import graphikRegular2 from '../assets/fonts/Graphik-Regular.woff2'
 import graphikRegular from '../assets/fonts/Graphik-Regular.woff'
@@ -87,6 +87,7 @@ export const GlobalStyle = createGlobalStyle `
     margin: 0;
     min-height: 100vh;
     transition: .3s ease-in-out all;
+    -webkit-text-size-adjust: 100%;
   }
 
   p, ol > li {
@@ -197,10 +198,10 @@ export const GlobalStyle = createGlobalStyle `
     margin-left: -1rem !important;
     width: calc(100% + 2rem);
 
-    ${Media.tablet`
+    @media ${device.mobileLargeUp} {
       width: 100%;
       margin-left: auto !important;
-    `}
+    }
   }
 
   h1 {
@@ -216,9 +217,9 @@ export const GlobalStyle = createGlobalStyle `
     margin: 0;
     margin-bottom: 0.5em;
 
-    ${Media.tablet`
+    @media ${device.tabletUp} {
       font-size: 32px;
-    `}
+    }
   }
 
   h3 {
@@ -228,9 +229,9 @@ export const GlobalStyle = createGlobalStyle `
     margin-bottom: 0.5em;
     font-weight: 500;
 
-    ${Media.tablet`
+    @media ${device.tabletUp} {
       font-size: 24px;
-    `}
+    }
 
     &:first-child {
       margin-top: 0;

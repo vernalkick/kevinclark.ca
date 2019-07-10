@@ -3,7 +3,7 @@ import Layout from '../layouts/layout'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import MainPageHeader from '../components/MainPageHeader'
-import {Media} from '../components/Media'
+import { device } from '../components/Media'
 import RelatedProjects from '../components/RelatedProjects'
 
 const PreTitle = styled.span`
@@ -11,9 +11,9 @@ const PreTitle = styled.span`
   margin-bottom: 1rem;
   display: block;
 
-  ${Media.desktop`
+  @media ${device.desktopUp} {
     font-size: 24px;
-  `}
+  }
 `
 
 export default ({ location, frontmatter, data, children }) => {

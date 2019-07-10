@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import media from "styled-media-query"
+import { device } from "../components/Media"
 
 const Container = styled.figure`
   margin: 0;
@@ -13,7 +13,7 @@ const Container = styled.figure`
 `
 
 const ImageContainer = styled.div`
-  ${media.lessThan("medium")`
+  @media ${device.tabletUp} {
     margin-left: -1rem;
     width: calc(100% + 2rem);
 
@@ -29,7 +29,7 @@ const ImageContainer = styled.div`
         margin: 0 auto;
       }
     `};
-  `}
+  }
 `
 
 const NewFigure = ({caption, children, isPortrait, background}) => {

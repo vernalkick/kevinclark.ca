@@ -4,7 +4,7 @@ import Layout from '../layouts/layout'
 import styled from 'styled-components'
 import MainPageHeader from '../components/MainPageHeader'
 import PostItem from '../components/PostItem'
-import { Media } from '../components/Media'
+import { device } from '../components/Media'
 import Twitter from '../assets/twitter.svg'
 
 import profilePicture from '../assets/images/profile.jpg'
@@ -19,9 +19,9 @@ const PostList = styled.ul`
   z-index: 2;
   position: relative;
 
-  ${Media.desktop`
+  @media ${device.desktop} {
     grid-gap: 4.5rem;
-  `}
+  }
 `
 
 const TwitterLink = styled.a`
@@ -49,9 +49,9 @@ const SectionTitle = styled.h2`
   line-height: 1.2;
   margin-bottom: 3rem;
 
-  ${Media.desktop`
+  @media ${device.desktop} {
     font-size: 36px;
-  `}
+  }
 `
 
 const IndexPage = ({

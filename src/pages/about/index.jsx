@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../../layouts/layout'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import { Media } from '../../components/Media'
+import { device } from '../../components/Media'
 import MainPageHeader from '../../components/MainPageHeader'
 import NewFigure from '../../components/NewFigure'
 import {FigCaption} from '../../components/Figure'
@@ -19,20 +19,20 @@ const Portrait = styled.div`
   display: block;
   margin-bottom: 1.5rem;
 
-  ${Media.desktop`
+  @media ${device.desktopUp} {
     width: 65%;
     float: right;
     margin: 0 -15% 2rem 2rem;
-  `}
+  }
 `
 
 const ContentContainer = styled.div`
-  ${Media.desktop`
+  @media ${device.desktopUp} {
     display: grid;
     grid-auto-flow: dense;
     grid-template-columns: 2fr 3fr;
     grid-gap: 5rem;
-  `}
+  }
 `
 
 const Sidebar = styled.div`
@@ -41,17 +41,17 @@ const Sidebar = styled.div`
   padding-top: 2rem;
   margin-top: 2rem;
 
-  ${Media.desktop`
+  @media ${device.desktopUp} {
     margin: 0;
     padding: 0;
     border: none;
-  `}
+  }
 `
 
 const InfoBlock = styled.div`
-  ${Media.desktop`
+  @media ${device.desktopUp} {
     max-width: 320px;
-  `}
+  }
 
   & + & {
     margin-top: 3rem;
@@ -65,10 +65,10 @@ const Lead = styled.p`
   margin-bottom: 1rem;
   color: var(--primary-text-color);
 
-  ${Media.desktop`
+  @media ${device.desktopUp} {
     font-size: 36px;
     margin-bottom: 4rem;
-  `}
+  }
 `
 
 const Items = styled.div`

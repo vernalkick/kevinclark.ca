@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import PostItem from '../components/PostItem'
 import MainPageHeader from '../components/MainPageHeader'
 import styled from 'styled-components'
-import { Media } from '../components/Media'
+import { device } from '../components/Media'
 
 const PostList = styled.ul`
   list-style-type: none;
@@ -17,9 +17,9 @@ const PostList = styled.ul`
   z-index: 2;
   position: relative;
 
-  ${Media.desktop`
+  @media ${device.desktop} {
     grid-gap: 4.5rem;
-  `}
+  }
 `
 
 const PostGroup = styled.div`
@@ -27,9 +27,9 @@ const PostGroup = styled.div`
   padding-top: 3rem;
   padding-bottom: 4rem;
 
-  ${Media.desktop`
+  @media ${device.desktop} {
     padding-top: 8rem;
-  `}
+  }
 `
 
 const PostYear = styled.h2`
@@ -41,10 +41,10 @@ const PostYear = styled.h2`
   margin: 0;
   font-weight: 500;
 
-  ${Media.desktop`
+  @media ${device.desktop} {
     font-size: 15rem;
     top: -35px;
-  `}
+  }
 `
 
 const ArticlesPage = ({

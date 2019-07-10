@@ -1,25 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Media } from '../components/Media'
+import { device } from '../components/Media'
 
 const ImageContainer = styled.div`
-  ${Media.desktop`
+  @media ${device.desktopUp} {
     height: 100%;
     position: absolute;
     ${props => props.direction}: 0;
-  `}
+  }
 `
 
 const Image = styled.img`
   filter: drop-shadow(0 15px 20px rgba(0,0,0,.6));
 
-  ${Media.desktop`
+  @media ${device.desktopUp} {
     max-width: none;
     height: 100%;
     position: absolute;
     ${props => props.direction}: 0;
-  `}
+  }
 `
 
 class OffsetImage extends React.Component {
