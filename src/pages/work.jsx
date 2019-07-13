@@ -25,34 +25,36 @@ const Grid = styled.div`
   grid-gap: 2rem;
   --spacing-multiplier: 0.5;
 
-  > *:nth-child(6n + 1) {
-    padding-bottom: 72%;
-    margin-left: 10%;
-  }
+  @media ${device.mobileLargeDown} {
+    > *:nth-child(6n + 1) {
+      padding-bottom: 72%;
+      margin-left: 10%;
+    }
 
-  > *:nth-child(6n + 2) {
-    padding-bottom: 100%;
-    margin-right: 40%;
-  }
+    > *:nth-child(6n + 2) {
+      padding-bottom: 100%;
+      margin-right: 40%;
+    }
 
-  > *:nth-child(6n + 3) {
-    padding-bottom: 90%;
-    margin-left: 25%;
-  }
+    > *:nth-child(6n + 3) {
+      padding-bottom: 90%;
+      margin-left: 25%;
+    }
 
-  > *:nth-child(6n + 4) {
-    padding-bottom: 78%;
-  }
+    > *:nth-child(6n + 4) {
+      padding-bottom: 78%;
+    }
 
-  > *:nth-child(6n + 5) {
-    padding-bottom: 100%;
-    margin-left: 30%;
-    margin-right: 10%;
-  }
+    > *:nth-child(6n + 5) {
+      padding-bottom: 100%;
+      margin-left: 30%;
+      margin-right: 10%;
+    }
 
-  > *:nth-child(6n + 6) {
-    margin-right: 30%;
-    padding-bottom: 100%;
+    > *:nth-child(6n + 6) {
+      margin-right: 30%;
+      padding-bottom: 100%;
+    }
   }
 
   @media ${device.tabletUp} {
