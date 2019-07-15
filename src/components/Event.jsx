@@ -5,16 +5,6 @@ import { device } from '../components/Media'
 const Link = styled.a`
   display: block;
   position: relative;
-
-  & + & {
-    margin-top: 3rem;
-  }
-
-  @media ${device.desktopUp} {
-    & + & {
-      margin-top: 0;
-    }
-  }
 `
 
 const Title = styled.h3`

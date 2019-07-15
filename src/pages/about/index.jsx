@@ -58,15 +58,11 @@ const InfoBlock = styled.div`
   }
 `
 
-const Lead = styled.p`
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.5;
+const Lead = styled.h2`
+  margin-top: 1rem;
   margin-bottom: 1rem;
-  color: var(--primary-text-color);
 
   @media ${device.desktopUp} {
-    font-size: 36px;
     margin-bottom: 4rem;
   }
 `

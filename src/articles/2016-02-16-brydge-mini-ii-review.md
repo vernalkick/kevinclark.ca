@@ -43,7 +43,7 @@ The on/off switch has a good placement, right in front of the device and feels g
 ### Battery life
 I’ve had it for a couple of weeks and I still haven’t had the need to charge it up, so I’d say it’s pretty good on that front. I wish it showed the battery status in the status bar and in Notification Center like some Bluetooth headphones do, this way I’d be able to know wether or not I should charge my keyboard before going to work in the morning. That being said, since the battery lasts so long, that's not a big issue.
 
-## Conclusion
+### Conclusion
 Overall, this is a well-built, high quality keyboard that makes the most out of the incredibly small size that the iPad Mini requires. There’s still room for improvement though. It’s as thick as the iPad itself and a good bit heavier, I’d love it if it used Lightning instead of Micro USB and I wish it had better integration with the system.
 
 Nevertheless, I find myself using my iPad a lot more because of this keyboard. I use it to write emails and blog posts, tweak my website, work on slides for a talk. Having a keyboard really completes the iPad and makes it even more of a productivity device than it was before. I’m excited to see more keyboard optimizations coming to iOS in the future. In the meantime, I'm using this keyboard every day and I love the fact that it turns my iPad into a mini typewriter.

@@ -17,10 +17,11 @@ const TweetImage = styled.img`
 
 const TweetContainer = styled.div`
   background: var(--top-background-color);
-  padding: 2rem;
+  padding: 1.5rem;
   box-shadow: 0 18px 43px -10px rgba(0,0,0,0.15);
 
-  @media ${device.tabletUp} {
+  @media ${device.desktopUp} {
+    padding: 2rem;
     position: absolute;
     bottom: -4rem;
     left: 4rem;

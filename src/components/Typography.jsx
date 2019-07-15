@@ -90,13 +90,18 @@ export const GlobalStyle = createGlobalStyle `
     -webkit-text-size-adjust: 100%;
   }
 
-  p, ol > li {
+  code {
+    font-family: var(--secondary-font);
+  }
+
+  p, ol > li, ul > li {
     line-height: 1.7;
     font-size: 18px;
     margin: 0;
     color: var(--paragraph-text-color);
 
     & + &,
+    figure + &,
     blockquote + & {
       margin-top: 2.5rem;
     }
@@ -157,6 +162,10 @@ export const GlobalStyle = createGlobalStyle `
     max-width: 9rem;
   }
 
+  figure {
+    margin: 0;
+  }
+
   strong {
     font-weight: 600;
   }
@@ -213,12 +222,13 @@ export const GlobalStyle = createGlobalStyle `
   h2 {
     font-size: 24px;
     font-weight: 500;
-    line-height: 1.4;
+    line-height: 1.3;
     margin: 0;
     margin-bottom: 0.5em;
+    color: var(--primary-text-color);
 
     @media ${device.tabletUp} {
-      font-size: 32px;
+      font-size: 36px;
     }
   }
 

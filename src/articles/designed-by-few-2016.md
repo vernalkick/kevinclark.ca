@@ -8,17 +8,13 @@ published: true
   <img src="/assets/articles/designed-by-few-2016/dxf.png" alt="">
 </figure>
 
-
-
 Last week I had the chance to do something I’ve never done before: take part in a design competition where I (along with 2 other talented designers) were given 2 hours to design something for a charity in front of hundreds of other designers. Suffice to say, it was stressful. Good stressful. To add to the fun, this all took place during the [Made By Few][mxf] Halloween party.
 
 <figure class="figure--right">
   <img src="/assets/articles/designed-by-few-2016/photo-booth.png" alt="">
 </figure>
 
-So, armed with my Kylo Ren mask and my lightsaber, I hooked up my MacBook to the projector still waiting to hear what we would have to design in front of this big crowd. I was really hoping for it not to be designing a logo. Logos really aren’t my strong suit and it’s always a painful experience for me, so I had my fingers crossed.
-
-## So we’d like you to design a logo for Art Feeds Day!
+So, armed with my Kylo Ren mask and my lightsaber, I hooked up my MacBook to the projector still waiting to hear what we would have to design in front of this big crowd. I was really hoping for it not to be designing a logo. Logos really aren’t my strong suit and it’s always a painful experience for me, so I had my fingers crossed. That's when they said: "the challenge is redesigning a logo for Art Feeds Day"
 
 <aside class="figure--left">
   <h4>About Art Feeds</h4>
@@ -48,7 +44,7 @@ Before I knew it, I had a pretty good brand system in place. I put the last few 
   <figcaption>This is the final piece I created in the two hours we were given. My goal was to refresh the brand, without losing the fun and creative nature of the event.</figcaption>
 </figure>
 
-## The reveal
+### The reveal
 We then all presented our design to the whole crowd. It was really fun seeing people’s reaction to our explanations. I was excited to see the Amy’s and Daniel’s designs and I'm happy I waited. They did a fantastic job. It was really cool to see that everyone of us had taken things into a totally different direction.
 
 After some deliberation, the judges named the winner: **Daniel Herron!** 🎉
