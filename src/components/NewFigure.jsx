@@ -13,7 +13,7 @@ const Container = styled.figure`
 `
 
 const ImageContainer = styled.div`
-  @media ${device.tabletUp} {
+  @media ${device.mobileLargeDown} {
     margin-left: -1rem;
     width: calc(100% + 2rem);
 

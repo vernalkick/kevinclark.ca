@@ -19,7 +19,7 @@ const Portrait = styled.div`
   display: block;
   margin-bottom: 1.5rem;
 
-  @media ${device.desktopUp} {
+  @media ${device.mobileLargeUp} {
     width: 65%;
     float: right;
     margin: 0 -15% 2rem 2rem;
@@ -27,9 +27,14 @@ const Portrait = styled.div`
 `
 
 const ContentContainer = styled.div`
-  @media ${device.desktopUp} {
+  @media ${device.tabletUp} {
     display: grid;
     grid-auto-flow: dense;
+    grid-template-columns: 3fr 6fr;
+    grid-gap: 3rem;
+  }
+
+  @media ${device.desktopUp} {
     grid-template-columns: 2fr 3fr;
     grid-gap: 5rem;
   }
@@ -37,14 +42,11 @@ const ContentContainer = styled.div`
 
 const Sidebar = styled.div`
   grid-column: 1;
-  border-top: 2px solid var(--subdued-elements-color);
-  padding-top: 2rem;
-  margin-top: 2rem;
 
-  @media ${device.desktopUp} {
-    margin: 0;
-    padding: 0;
-    border: none;
+  @media ${device.mobileLargeDown} {
+    border-top: 2px solid var(--subdued-elements-color);
+    padding-top: 2rem;
+    margin-top: 2rem;
   }
 `
 
@@ -61,6 +63,10 @@ const InfoBlock = styled.div`
 const Lead = styled.h2`
   margin-top: 1rem;
   margin-bottom: 1rem;
+
+  @media ${device.tabletUp} {
+    margin-bottom: 2rem;
+  }
 
   @media ${device.desktopUp} {
     margin-bottom: 4rem;
@@ -88,7 +94,7 @@ class AboutPage extends React.Component {
               <NewFigure>
                 <img src={profilePicture} alt="Kevin Clark" />
                 <FigCaption>
-                  Image by <a href="https://www.instagram.com/sweetyams/?hl=en">Willem Shepherd</a>
+                  Photo by <a href="https://www.instagram.com/sweetyams/?hl=en">Willem Shepherd</a>
                 </FigCaption>
               </NewFigure>
             </Portrait>
