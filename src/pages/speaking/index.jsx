@@ -82,6 +82,24 @@ const Content = styled.div`
 
 const events = [
   {
+    title: 'Montreal Design Club',
+    year: '2019',
+    description: "A monthly event series highlighting some of the best designers of Montreal.",
+    url: 'https://mtldesign.club'
+  },
+  {
+    title: 'UXDX',
+    year: '2019',
+    description: "The conference that bridges the gap between UX, UI, Dev and Product.",
+    url: 'https://2017.mobxcon.com/'
+  },
+  {
+    title: 'Shopify Summit',
+    year: '2019',
+    description: "Shopify's yearly internal conference, livestreamed across the world. This conference sets the tone for the direction of the company.",
+    url: 'https://2017.mobxcon.com/'
+  },
+  {
     title: 'MOBX Mobile UX Summit',
     year: '2017',
     description: "MOBX is Europe's premier annual conference for mobile User Experience, modern Interaction Design, usable interfaces and successful Product Design.",

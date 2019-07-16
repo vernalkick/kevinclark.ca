@@ -11,11 +11,17 @@ const Container = styled.div`
 `
 
 const Grid = styled.div`
+  display: grid;
+  grid-auto-rows: 246px;
+  grid-gap: 1rem;
+  margin-top: 1.5rem;
+
   @media ${device.tabletUp} {
+    margin-top: 0;
     display: grid;
     grid-template-columns: 5fr 8fr;
     grid-auto-rows: 126px 246px;
-    grid-column-gap: 2.5rem;
+    grid-gap: 2.5rem;
     grid-template-areas:
       ". firstProject"
       "secondProject firstProject";
