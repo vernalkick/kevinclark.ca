@@ -43,6 +43,11 @@ const ContentContainer = styled.div`
 const Sidebar = styled.div`
   grid-column: 1;
 
+  @media ${device.mobileLarge} {
+    column-count: 2;
+    column-gap: 3rem;
+  }
+
   @media ${device.mobileLargeDown} {
     border-top: 2px solid var(--subdued-elements-color);
     padding-top: 2rem;
@@ -51,6 +56,8 @@ const Sidebar = styled.div`
 `
 
 const InfoBlock = styled.div`
+  break-inside: avoid;
+
   @media ${device.desktopUp} {
     max-width: 320px;
   }
@@ -94,7 +101,7 @@ class AboutPage extends React.Component {
               <NewFigure>
                 <img src={profilePicture} alt="Kevin Clark" />
                 <FigCaption>
-                  Photo by <a href="https://www.instagram.com/sweetyams/?hl=en">Willem Shepherd</a>
+                  Photoor by <a href="https://www.instagram.com/sweetyams/?hl=en">Willem Shepherd</a>
                 </FigCaption>
               </NewFigure>
             </Portrait>
