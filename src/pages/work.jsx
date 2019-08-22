@@ -1,22 +1,11 @@
 import React from 'react'
-import { graphql } from 'gatsby'
 import Layout from '../layouts/layout'
 import Helmet from 'react-helmet'
 import MainPageHeader from '../components/MainPageHeader'
+import useProjectListQuery from '../components/ProjectQuery'
 import styled from 'styled-components'
 import { device } from '../components/Media'
 import ProjectItem from '../components/Project'
-
-const projects = [
-  'shopify-pay-landing',
-  'order-status-page',
-  'shopify-apple-watch',
-  'climate',
-  'tipsy',
-  'tiny-conf',
-  'shopify-gift-cards',
-  'shopify-apple-watch',
-]
 
 const Grid = styled.div`
   margin-top: 1.5rem;
@@ -108,20 +97,8 @@ const Grid = styled.div`
   }
 `
 
-const WorkPage = ({
-  location,
-  data: {
-    allSitePage,
-    allJavascriptFrontmatter
-  },
-}) => {
-
-  Array.prototype.objectWithSlug = function(slug) {
-    return this.filter(obj => { return obj.node.frontmatter.slug === slug})[0]
-  }
-  // allJavascriptFrontmatter.edges.filter(obj => { return obj.node.frontmatter.title === 'tipsy'})[0]
-
-  console.log(allJavascriptFrontmatter.edges.objectWithSlug('tipsy').node.frontmatter.title)
+export default ({location}) => {
+  const projects = useProjectListQuery()
 
   return (
     <Layout location={location}>
@@ -132,40 +109,10 @@ const WorkPage = ({
         <h1>Work</h1>
       </MainPageHeader>
       <Grid>
-        {projects.map((slug, index) =>
-          <ProjectItem index={index} project={allJavascriptFrontmatter.edges.objectWithSlug(slug)} key={allJavascriptFrontmatter.edges.objectWithSlug(slug).node.frontmatter.slug} />
+        {projects.map((project, index) =>
+          <ProjectItem index={index} project={project} key={index} />
         )}
       </Grid>
     </Layout>
   )
 };
-
-export default WorkPage;
-
-export const workQuery = graphql`
-  query WorkQuery {
-    allSitePage(filter: {path: { regex: "/work\/./" }}) {
-      edges {
-        node {
-          path
-        }
-      }
-    }
-
-    allJavascriptFrontmatter(filter: {fileAbsolutePath: { regex: "/work\/./" }}, sort: { order: DESC, fields: [frontmatter___date] }) {
-      edges {
-        node {
-          fileAbsolutePath
-          frontmatter {
-            title
-            slug
-            image {
-              publicURL
-            }
-          }
-        }
-      }
-    }
-
-  }
-`;

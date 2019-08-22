@@ -15,7 +15,7 @@ import video from "./shopify-pay-video-2.mp4"
 export const frontmatter = {
   company: "Shopify",
   title: "Shopify Pay Landing Page",
-  image: './shopify-pay-thumb.png',
+  image: './shopify-pay-hero-ipad.png',
   date: '2017-05-01',
   slug: 'shopify-pay-landing'
 }

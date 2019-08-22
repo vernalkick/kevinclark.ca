@@ -55,6 +55,12 @@ const Sidebar = styled.div`
   }
 `
 
+const SidebarContent = styled.div`
+  position: sticky;
+  top: 3rem;
+`
+
+
 const InfoBlock = styled.div`
   break-inside: avoid;
 
@@ -121,25 +127,27 @@ class AboutPage extends React.Component {
             <p>Growing up, I couldn’t help but integrate design into every part of my life without realizing it. I would carefully typeset my essays (and always ignore the requirement of using Times New Roman for everything) and I was notorious for my intensive usage of animations in keynote for my presentations. I even had a radio show in High School for which I designed countless posters (that’s how I learned Illustrator). At one point, a friend of mine showed me a service that let you make simple websites using their WYSIWYG interface. It sounds a bit silly now, but I was blown away that something I made on my computer could be seen by anyone in the world. From that point on, all I could think about was making websites. That’s what got me into design and programming. I would read every article I could find, watch every video I could get my hands on and buy every book I could afford. I got my first real paid gig after convincing my boss at the restaurant I worked for that their website sucked and that it would be a better use of their money to pay me to redesign it. It worked. They gave me a chance and I delivered. After that, word of mouth started spreading and I started to get freelance projects. Nothing fancy, but I treated every project like my life depended on it. Did a few more projects, learned more about running a business, did some contract work for agencies, helped a few startups. Eventually, someone from Shopify asked me if I wanted to join them on this crazy adventure.</p> */}
           </MainColumn>
           <Sidebar>
-            <InfoBlock>
-              <h4>Contact</h4>
-              <p>If you'd like to talk about anything, please don't hesitate to <a href="mailto:kevin@kevinclark.ca">email me</a>. </p>
-            </InfoBlock>
-            <InfoBlock>
-              <h4>Work Inquiries</h4>
-              <p>I’m not currently taking any new work at the moment.</p>
-            </InfoBlock>
-            <InfoBlock>
-              <h4>Featured in</h4>
-              <Items>
-                <AboutItem title="Rooki.Design" description="Interview" url="https://www.rooki.design/interviews/kevin-clark" />
-                <AboutItem title="Infopresse 30 under 30" description="Award" url="https://www.infopresse.com/dossier/2016/10/24/kevin-clark-redefinir-le-monde-du-commerce" />
-                <AboutItem title="Design Details" description="Episode 196" url="https://spec.fm/podcasts/design-details/68532" />
-                <AboutItem title="The Artboard" description="Episode 3" url="http://www.theartboard.net/episodes/2015/5/26/03-managing-side-projects-with-kevin-clark" />
-                <AboutItem title="Typekit blog" description="Feature" url="https://blog.typekit.com/2014/08/01/sites-we-like-kevin-clark-evan-kerrigan-isaac-paavola/" />
-                <AboutItem title="Typ.io" description="Feature" url="http://typ.io/s/4cmb" />
-              </Items>
-            </InfoBlock>
+            <SidebarContent>
+              <InfoBlock>
+                <h4>Contact</h4>
+                <p>If you'd like to talk about anything, please don't hesitate to <a href="mailto:kevin@kevinclark.ca">email me</a>. </p>
+              </InfoBlock>
+              <InfoBlock>
+                <h4>Work Inquiries</h4>
+                <p>I’m not currently taking any new work at the moment.</p>
+              </InfoBlock>
+              <InfoBlock>
+                <h4>Featured in</h4>
+                <Items>
+                  <AboutItem title="Rooki.Design" description="Interview" url="https://www.rooki.design/interviews/kevin-clark" />
+                  <AboutItem title="Infopresse 30 under 30" description="Award" url="https://www.infopresse.com/dossier/2016/10/24/kevin-clark-redefinir-le-monde-du-commerce" />
+                  <AboutItem title="Design Details" description="Episode 196" url="https://spec.fm/podcasts/design-details/68532" />
+                  <AboutItem title="The Artboard" description="Episode 3" url="http://www.theartboard.net/episodes/2015/5/26/03-managing-side-projects-with-kevin-clark" />
+                  <AboutItem title="Typekit blog" description="Feature" url="https://blog.typekit.com/2014/08/01/sites-we-like-kevin-clark-evan-kerrigan-isaac-paavola/" />
+                  <AboutItem title="Typ.io" description="Feature" url="http://typ.io/s/4cmb" />
+                </Items>
+              </InfoBlock>
+            </SidebarContent>
           </Sidebar>
         </ContentContainer>
       </Layout>

@@ -4,8 +4,12 @@ import Layout from '../layouts/layout'
 import styled from 'styled-components'
 import MainPageHeader from '../components/MainPageHeader'
 import PostItem from '../components/PostItem'
+import ProjectItem from '../components/Project'
 import { device } from '../components/Media'
 import Twitter from '../assets/twitter.svg'
+import FeaturedContentSection from '../components/FeaturedContentSection'
+import HomeProfilePicture from '../components/HomeProfilePicture'
+import useProjectListQuery from '../components/ProjectQuery'
 
 import profilePicture from '../assets/images/profile.jpg'
 
@@ -27,30 +31,70 @@ const PostList = styled.ul`
 const TwitterLink = styled.a`
   font-size: 20px;
   font-weight: 500;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   display: inline-block;
+
+  @media ${device.tabletUp} {
+    margin-top: 3rem;
+  }
 `
 
 const HomeHeaderContainer = styled.div`
   position: relative;
-  margin-bottom: 6.5rem;
+  margin-bottom: 2.5rem;
+
+  @media ${device.tabletUp} {
+    margin-bottom: 6.5rem;
+  }
 `
 
-const HomeAvatar = styled.img`
+const ProfilePictureContainer = styled.div`
   position: absolute;
   left: 70%;
-  top: 6em;
+  top: 4em;
   width: 45%;
+
+  @media ${device.mobileLargeDown} {
+    display: none;
+  }
 `
 
-const SectionTitle = styled.h2`
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.2;
-  margin-bottom: 3rem;
+const ProjectContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0.5rem;
 
-  @media ${device.desktop} {
-    font-size: 36px;
+  > * {
+    padding-bottom: 50%;
+  }
+
+  @media ${device.mobileLargeDown} {
+    margin-left: -1em;
+    width: calc(100% + 2em);
+  }
+
+  @media ${device.mobileLargeUp} {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1.5rem;
+
+    > :nth-child(1) {
+      grid-column-end: span 2;
+      padding-bottom: 50%;
+    }
+
+    > :nth-child(2) {
+      padding-bottom: 50%;
+      margin-bottom: 15%;
+    }
+
+    > :nth-child(3) {
+      padding-bottom: 92%;
+    }
+  }
+
+  @media ${device.desktopUp} {
+    grid-gap: 3rem;
   }
 `
 
@@ -60,6 +104,8 @@ const IndexPage = ({
     allMarkdownRemark
   },
 }) => {
+  const projects = useProjectListQuery(3)
+
   return (
     <Layout location={location}>
       <HomeHeaderContainer>
@@ -72,13 +118,25 @@ const IndexPage = ({
           </h1>
         </MainPageHeader>
         <TwitterLink href="https://twitter.com/vernalkick"><Twitter /> Follow me on Twitter</TwitterLink>
-        <HomeAvatar src={profilePicture} alt=""/>
+
+        <ProfilePictureContainer>
+          <HomeProfilePicture src={profilePicture} />
+        </ProfilePictureContainer>
       </HomeHeaderContainer>
 
-      <SectionTitle>Latest articles</SectionTitle>
-      <PostList>
-        {allMarkdownRemark.edges.map(edge => <PostItem post={edge.node} key={edge.node.fields.slug} />)}
-      </PostList>
+      <FeaturedContentSection title="Selected Projects" url="/work">
+        <ProjectContainer>
+          {projects.map((project, index) =>
+            <ProjectItem index={index} project={project} key={index} />
+          )}
+        </ProjectContainer>
+      </FeaturedContentSection>
+
+      <FeaturedContentSection title="Latest Articles" url="/articles">
+        <PostList>
+          {allMarkdownRemark.edges.map(edge => <PostItem post={edge.node} key={edge.node.fields.slug} />)}
+        </PostList>
+      </FeaturedContentSection>
     </Layout>
   )
 };
@@ -105,5 +163,24 @@ export const homeArticlesQuery = graphql`
         }
       }
     }
+
+    allJavascriptFrontmatter(
+      filter: { fileAbsolutePath: { regex: "/work\/./" } },
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
+      edges {
+        node {
+          fileAbsolutePath
+          frontmatter {
+            title
+            slug
+            image {
+              publicURL
+            }
+          }
+        }
+      }
+    }
+
   }
 `;

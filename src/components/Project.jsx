@@ -37,7 +37,7 @@ const Image = styled.img`
   top: 0;
   bottom: 0;
   height: 100%;
-  width: calc(100% - 140px);
+  width: calc(100% - 180px);
   object-fit: cover;
   object-position: 0 50%;
   transition: transform 1s ease-out;
