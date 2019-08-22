@@ -196,6 +196,7 @@ export const GlobalStyle = createGlobalStyle `
 
   strong {
     font-weight: 500;
+    color: var(--primary-text-color);
   }
 
   img, video {

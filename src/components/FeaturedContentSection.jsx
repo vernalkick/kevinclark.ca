@@ -57,7 +57,7 @@ const FeaturedContentSection = ({title, url, children}) => (
     <Content>
       {children}
     </Content>
-    <ViewMoreButton to={url}>View All</ViewMoreButton>
+    <ViewMoreButton href={url} icon="plus">View All</ViewMoreButton>
   </Container>
 )
 
