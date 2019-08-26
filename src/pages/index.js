@@ -117,7 +117,7 @@ const IndexPage = ({
             Developer.<br/>
           </h1>
         </MainPageHeader>
-        <TwitterLink href="https://twitter.com/vernalkick"><Twitter /> Follow me on Twitter</TwitterLink>
+        <TwitterLink href="https://twitter.com/vernalkick"><Twitter /> Follow me on Twitter →</TwitterLink>
 
         <ProfilePictureContainer>
           <HomeProfilePicture src={profilePicture} />
