@@ -7,8 +7,6 @@ const projectList = [
   'climate',
   'tipsy',
   'tiny-conf',
-  'shopify-gift-cards',
-  'shopify-apple-watch',
 ]
 
 const projectWithSlug = (array, slug) => {

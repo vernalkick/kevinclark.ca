@@ -22,7 +22,7 @@ const Container = styled.div`
 const SectionTitle = styled.h1`
   grid-area: title;
   color: var(--subdued-elements-color);
-  font-size: 50px;
+  font-size: 60px;
   line-height: 0.9;
   margin-bottom: -0.2em;
 

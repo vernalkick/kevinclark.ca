@@ -81,18 +81,18 @@ const Content = styled.div`
 `
 
 const events = [
-  {
-    title: 'Montreal Design Club',
-    year: '2019',
-    description: "A monthly event series highlighting some of the best designers of Montreal.",
-    url: 'https://mtldesign.club'
-  },
-  {
-    title: 'UXDX',
-    year: '2019',
-    description: "The conference that bridges the gap between UX, UI, Dev and Product.",
-    url: 'https://2017.mobxcon.com/'
-  },
+  // {
+  //   title: 'Montreal Design Club',
+  //   year: '2019',
+  //   description: "A monthly event series highlighting some of the best designers of Montreal.",
+  //   url: 'https://mtldesign.club'
+  // },
+  // {
+  //   title: 'UXDX',
+  //   year: '2019',
+  //   description: "The conference that bridges the gap between UX, UI, Dev and Product.",
+  //   url: 'https://2017.mobxcon.com/'
+  // },
   {
     title: 'Shopify Summit',
     year: '2019',

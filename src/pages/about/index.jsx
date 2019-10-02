@@ -107,7 +107,7 @@ class AboutPage extends React.Component {
               <NewFigure>
                 <img src={profilePicture} alt="Kevin Clark" />
                 <FigCaption>
-                  Photoor by <a href="https://www.instagram.com/sweetyams/?hl=en">Willem Shepherd</a>
+                  Picture by <a href="https://www.instagram.com/sweetyams/?hl=en">Willem Shepherd</a>
                 </FigCaption>
               </NewFigure>
             </Portrait>
