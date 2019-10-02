@@ -26,6 +26,13 @@ const PostList = styled.ul`
   @media ${device.desktop} {
     grid-gap: 4.5rem;
   }
+
+  /* > *:first-child {
+    background: #333;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    padding: 1.5em;
+  } */
 `
 
 const TwitterLink = styled.a`

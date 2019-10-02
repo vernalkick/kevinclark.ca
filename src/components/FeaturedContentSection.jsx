@@ -43,8 +43,16 @@ const SectionTitle = styled.h1`
 `
 
 const ViewMoreButton = styled(Button)`
-  grid-area: button;
-  align-self: end;
+
+`
+
+const ButtonContainer = styled.div`
+  position: relative;
+  z-index: 2;
+
+  @media ${device.mobileLargeDown} {
+    margin-top: 1.5rem !important;
+  }
 `
 
 const Content = styled.div`
@@ -57,7 +65,9 @@ const FeaturedContentSection = ({title, url, children}) => (
     <Content>
       {children}
     </Content>
-    <ViewMoreButton href={url} icon="plus">View All</ViewMoreButton>
+    <ButtonContainer>
+      <ViewMoreButton href={url} icon="plus">View All</ViewMoreButton>
+    </ButtonContainer>
   </Container>
 )
 
