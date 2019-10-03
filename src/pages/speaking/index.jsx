@@ -53,8 +53,6 @@ const HeroImage = styled.img`
   }
 `
 
-
-
 const TweetList = styled.div`
   display: grid;
   grid-gap: 40px;
@@ -64,6 +62,7 @@ const TweetList = styled.div`
 const EventList = styled.div`
   display: grid;
   grid-gap: 40px;
+  grid-row-gap: 60px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 `
 
@@ -80,19 +79,22 @@ const Content = styled.div`
 
 `
 
+const upcomingEvents = [
+  {
+    title: 'Montreal Design Club',
+    year: '2019',
+    description: "A monthly event series highlighting some of the best designers of Montreal.",
+    url: 'https://mtldesign.club'
+  },
+  {
+    title: 'UXDX Conference',
+    year: '2019',
+    description: "The conference that bridges the gap between UX, UI, Dev and Product. I'll be talking about unconventional ideas I've learned on my quest for excellence.",
+    url: 'https://uxdxconf.com'
+  },
+]
+
 const events = [
-  // {
-  //   title: 'Montreal Design Club',
-  //   year: '2019',
-  //   description: "A monthly event series highlighting some of the best designers of Montreal.",
-  //   url: 'https://mtldesign.club'
-  // },
-  // {
-  //   title: 'UXDX',
-  //   year: '2019',
-  //   description: "The conference that bridges the gap between UX, UI, Dev and Product.",
-  //   url: 'https://2017.mobxcon.com/'
-  // },
   {
     title: 'Shopify Summit',
     year: '2019',
@@ -116,6 +118,30 @@ const events = [
     year: '2016',
     description: "Great Wide Open is a technical conference exploring open tech and the open web. Attendees can gain knowledge about a variety of topics including UI/UX design, front-end development and more.",
     url: 'http://greatwideopen.org/'
+  },
+  {
+    title: 'MacTech Conference',
+    year: '2015',
+    description: "MacTech Conference is a 3-day conference all about Apple. I'll be talking about the challenges of designing at scale and how being antifragile can help us deliver better experiences for people.",
+    url: 'http://conference.mactech.com/'
+  },
+  {
+    title: 'CocoaHeads MTL',
+    year: '2015',
+    description: "CocoaHeads Montréal brings together iOS and Mac developers every month for drinks and talks about anything Apple-related.",
+    url: 'http://cocoaheadsmtl.com/'
+  },
+  {
+    title: 'Shopify UX Summit 2015',
+    year: '2015',
+    description: "Shopify UX Summit is a design conference for shopifiers by shopifiers. I had the chance to talk about a subject that is very near and dear to my heart, Antifragile Design.",
+    url: 'https://speakerdeck.com/vernalkick/antifragile-design'
+  },
+  {
+    title: 'Behance Portfolio Reviews',
+    year: '2013',
+    description: "As a mentor for the Montreal Behance Portfolio Reviews, I decided to talk about what makes, in my eyes, a good portfolio and the pitfalls to look out for when designing one.",
+    url: 'https://www.behance.net/reviews'
   }
 ]
 
@@ -175,6 +201,15 @@ class SpeakingPage extends React.Component {
                 slides="https://speakerdeck.com/vernalkick/defense-against-the-dark-patterns"
               />
             </TalkList>
+          </Section>
+
+          <Section>
+            <Title>Upcoming events</Title>
+            <EventList>
+              {upcomingEvents.map(event =>
+                <Event title={event.title} description={event.description} url={event.url} year={event.year} />
+              )}
+            </EventList>
           </Section>
 
           <Section>
