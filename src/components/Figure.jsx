@@ -64,7 +64,7 @@ const CaptionTitle = styled.span`
   display: block;
   font-size: 18px;
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 `
 
 const CaptionText = styled.span`

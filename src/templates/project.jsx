@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import MainPageHeader from '../components/MainPageHeader'
 import { device } from '../components/Media'
 import RelatedProjects from '../components/RelatedProjects'
+import AppStore from '../assets/appstore.svg'
 
 const PreTitle = styled.span`
   font-size: 20px;
@@ -14,6 +15,20 @@ const PreTitle = styled.span`
   @media ${device.desktopUp} {
     font-size: 24px;
   }
+`
+
+const AppStoreLink = styled.a`
+  font-size: 18px;
+  margin: 0;
+  display: block;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+`
+
+const AppStoreIcon = styled(AppStore)`
+  margin-right: 0.5rem;
 `
 
 export default ({ location, frontmatter, data, children }) => {
@@ -31,8 +46,9 @@ export default ({ location, frontmatter, data, children }) => {
       <MainPageHeader preTitle={frontmatter.company}>
         <PreTitle><strong>{frontmatter.company}</strong> — {frontmatter.date.substring(0,4)}</PreTitle>
         <h1>{frontmatter.title.prettify()}</h1>
-      </MainPageHeader>
 
+      </MainPageHeader>
+      {frontmatter.appStoreLink && <AppStoreLink href={frontmatter.appStoreLink}><AppStoreIcon /> <span>Get it on the App Store →</span></AppStoreLink>}
       {children}
 
       <RelatedProjects currentProjectSlug={frontmatter.slug} />

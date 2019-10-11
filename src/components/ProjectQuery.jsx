@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby'
 
 const projectList = [
+  'weatherline',
   'shopify-pay-landing',
   'order-status-page',
   'shopify-apple-watch',
