@@ -4,7 +4,7 @@ import {device} from '../components/Media'
 
 const HeaderContainer = styled.header`
   position: relative;
-  font-size: 60px;
+  font-size: 50px;
   margin-top: 0.63em;
 
   @media ${device.tabletUp} {
