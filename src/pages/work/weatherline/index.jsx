@@ -45,7 +45,7 @@ const WeatherLine = ({location}) => (
         </Grid>
         <Grid>
           <Column width={6}>
-            <h2>The best weather app for iOS gets even better. Super Forecast lets you combine data from the #1 forecasting, rain, and radar services, a radar view and tons more.</h2>
+            <h2>The best weather app for iOS just got even better. Super Forecast lets you combine data from the #1 forecasting, rain, and radar services, adds a radar view and tons more.</h2>
           </Column>
         </Grid>
       </Section>
@@ -82,7 +82,7 @@ const WeatherLine = ({location}) => (
         </Grid>
         <Grid>
           <Column width={6}>
-            <h2>Built from the ground up to be themed. Who said weather apps should be boring? Not us. That’s why we took great care in designing themes that actually make you want to look at the weather.</h2>
+            <h2>We designed the app from the ground up to be themed. Who said weather apps should be boring? Not us. That’s why we took great care in designing themes that actually make you want to look at the weather.</h2>
           </Column>
         </Grid>
       </Section>

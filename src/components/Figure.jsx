@@ -100,6 +100,10 @@ export const FigCaption = ({title, children, decoration, overlap}) => (
   </Caption>
 )
 
+FigCaption.defaultProps = {
+  isFigCaption: true
+}
+
 
 const Figure = ({src, caption, alt, children, overlap, isPortrait, background}) => {
   return (

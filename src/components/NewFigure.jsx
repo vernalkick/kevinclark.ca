@@ -37,8 +37,8 @@ const NewFigure = ({caption, children, isPortrait, background}) => {
   var newChildren = []
 
   React.Children.forEach(children, (child, i) => {
-    console.log(child.type.name)
-    if (child.type.name === 'FigCaption') {
+    console.log(child.props)
+    if (child.props.isFigCaption === true) {
       captionArray.push(child)
     } else {
       newChildren.push(child)
