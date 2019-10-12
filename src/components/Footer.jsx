@@ -41,7 +41,7 @@ const Contact = styled.div`
   }
 `
 
-const SocialLink = styled(Link)`
+const SocialLink = styled.a`
   margin-right: 1rem;
 
   &:last-child {
@@ -49,7 +49,7 @@ const SocialLink = styled(Link)`
   }
 `
 
-const FooterLink = styled(a)`
+const FooterLink = styled.a`
   font-weight: 500;
 `
 
