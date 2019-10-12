@@ -70,7 +70,7 @@ const Social = styled.div`
   text-align: right;
   grid-area: social;
 `
-const SocialLink = styled(Link)`
+const SocialLink = styled(a)`
   margin-right: 1rem;
 
   &:last-child {
@@ -91,8 +91,8 @@ const Header = ({ siteTitle, pathName }) => (
       <NavItem url='/about' currentPath={pathName}>About</NavItem>
     </List>
     <Social>
-      <SocialLink to='http://instagram.com/vernalkick/'><Instagram /></SocialLink>
-      <SocialLink to='http://twitter.com/vernalkick'><Twitter /></SocialLink>
+      <SocialLink href='http://instagram.com/vernalkick/'><Instagram /></SocialLink>
+      <SocialLink href='http://twitter.com/vernalkick'><Twitter /></SocialLink>
     </Social>
   </MainHeader>
 )
