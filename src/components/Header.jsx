@@ -70,7 +70,7 @@ const Social = styled.div`
   text-align: right;
   grid-area: social;
 `
-const SocialLink = styled(a)`
+const SocialLink = styled.a`
   margin-right: 1rem;
 
   &:last-child {
