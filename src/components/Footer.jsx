@@ -49,7 +49,7 @@ const SocialLink = styled(Link)`
   }
 `
 
-const FooterLink = styled(Link)`
+const FooterLink = styled(a)`
   font-weight: 500;
 `
 
@@ -61,8 +61,8 @@ const Footer = () => (
     <Copyright>Copyright © {year} <FooterLink>Kevin Clark</FooterLink></Copyright>
     <Contact>Email me at <FooterLink to='mailto:kevin@kevinclark.ca'>kevin@kevinclark.ca</FooterLink></Contact>
     <div>
-      <SocialLink to='http://instagram.com/vernalkick/'><Instagram /></SocialLink>
-      <SocialLink to='http://twitter.com/vernalkick'><Twitter /></SocialLink>
+      <SocialLink href='http://instagram.com/vernalkick/'><Instagram /></SocialLink>
+      <SocialLink href='http://twitter.com/vernalkick'><Twitter /></SocialLink>
     </div>
   </FooterContainer>
 )
