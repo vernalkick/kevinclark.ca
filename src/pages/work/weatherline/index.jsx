@@ -64,7 +64,7 @@ const WeatherLine = ({location}) => (
       <Section>
         <Grid>
           <Column width={4}>
-            <NewFigure caption="hello world">
+            <NewFigure>
               <ImageBackground>
                 <img src={coral} alt="Coral theme" />
               </ImageBackground>
@@ -72,7 +72,7 @@ const WeatherLine = ({location}) => (
             </NewFigure>
           </Column>
           <Column width={4}>
-            <NewFigurep>
+            <NewFigure>
               <ImageBackground>
                 <img src={dracula} alt="Dracula theme" />
               </ImageBackground>
