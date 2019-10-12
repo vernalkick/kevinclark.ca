@@ -72,11 +72,11 @@ const WeatherLine = ({location}) => (
             </NewFigure>
           </Column>
           <Column width={4}>
-            <NewFigure caption="hello world">
+            <NewFigurep>
               <ImageBackground>
                 <img src={dracula} alt="Dracula theme" />
               </ImageBackground>
-              <FigCaption title="Dracula theme">Paired with the Coral iPhone XR</FigCaption>
+              <FigCaption title="Dracula theme">Paired with the Purple iPhone 11</FigCaption>
             </NewFigure>
           </Column>
         </Grid>
