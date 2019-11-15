@@ -5,7 +5,10 @@ date: 2019-11-06
 published: true
 ---
 
-![](./anotha.mov)
+
+<p>
+<video src="./anotha.mov" autoplay muted></video>
+</p>
 
 I'm so happy to finally be able to share with the world [Shopify Email](https://www.shopify.com/email-marketing). It's an email marketing tool built from the ground up for commerce. Even if there's tons of other marketing tools out there, we found that there was still a huge barrier to entry to email marketing. Why? Because it's hard to know where to start, it's time consuming and it's hard to get actionable feedback on how well your campaigns are doing. So we've decided we would tackle these problems head on. In order to do that, we had to unlearn everything we knew about email marketing and start from the ground up.
 
