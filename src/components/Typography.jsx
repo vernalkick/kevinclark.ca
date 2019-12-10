@@ -236,9 +236,10 @@ export const GlobalStyle = createGlobalStyle `
   h3 {
     font-size: 20px;
     margin: 0;
-    margin-top: 2em;
-    margin-bottom: 0.5em;
+    margin-top: 6rem;
+    margin-bottom: 2.5rem;
     font-weight: 500;
+    line-height: 1.4;
 
     @media ${device.tabletUp} {
       font-size: 24px;

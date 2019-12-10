@@ -43,6 +43,10 @@ module.exports = {
               backgroundColor: 'transparent'
             },
           },
+          {
+            resolve: "gatsby-remark-component",
+            options: { components: ["Figure", "FigCaption"] }
+          }
         ],
       },
     },
