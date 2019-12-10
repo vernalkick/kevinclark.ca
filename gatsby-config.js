@@ -28,6 +28,7 @@ module.exports = {
     },
     `gatsby-transformer-javascript-frontmatter`,
     'gatsby-plugin-sharp',
+    `gatsby-remark-images`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -42,12 +43,37 @@ module.exports = {
               linkImagesToOriginal: false,
               backgroundColor: 'transparent'
             },
-          },
-          {
-            resolve: "gatsby-remark-component",
-            options: { components: ["Figure", "FigCaption"] }
           }
         ],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-page-creator",
+      options: {
+        path: `${__dirname}/src/articles`,
+        defaultLayouts: {
+          default: require.resolve("./src/templates/articles-layout.js"),
+        },
+
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          "gatsby-remark-component",
+          `gatsby-remark-smartypants`,
+          `gatsby-remark-copy-linked-files`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1100,
+              linkImagesToOriginal: false,
+              backgroundColor: 'transparent'
+            },
+          }
+        ]
       },
     },
     {

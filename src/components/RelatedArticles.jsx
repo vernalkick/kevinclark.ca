@@ -53,7 +53,7 @@ export default () => {
     <StaticQuery
       query={graphql`
         query RelatedArticlesQuery {
-          allMarkdownRemark(
+          allMdx(
             filter: {fileAbsolutePath: { regex: "/articles/"}},
             sort: { order: DESC, fields: [frontmatter___date] }
           ) {

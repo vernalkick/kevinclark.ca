@@ -16,7 +16,7 @@ People from everywhere around the world were retweeting and sending me messages.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Brings back icy memories of first moving to Chicago! <a href="https://t.co/sntkkX9iIq">https://t.co/sntkkX9iIq</a></p>&mdash; DHH (@dhh) <a href="https://twitter.com/dhh/status/805851861932589056">December 5, 2016</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">At least nobody died, right?<br><br>...right? <a href="https://t.co/wir9LuaJPd">https://t.co/wir9LuaJPd</a></p>&mdash; Billy Kennedy (@BillyKennedy7) <a href="https://twitter.com/BillyKennedy7/status/805934316677120000">December 6, 2016</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">At least nobody died, right?<br/><br/>...right? <a href="https://t.co/wir9LuaJPd">https://t.co/wir9LuaJPd</a></p>&mdash; Billy Kennedy (@BillyKennedy7) <a href="https://twitter.com/BillyKennedy7/status/805934316677120000">December 6, 2016</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">This is the best slow-motion, snow-related transportation disaster I have ever seen. Watch the whole thing. Trust me <a href="https://t.co/FuzL0V2qtO">https://t.co/FuzL0V2qtO</a></p>&mdash; ɹoɹɹǝ (@SwiftOnSecurity) <a href="https://twitter.com/SwiftOnSecurity/status/805936076007362560">December 6, 2016</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 

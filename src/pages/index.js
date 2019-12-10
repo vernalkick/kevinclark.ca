@@ -108,7 +108,7 @@ const ProjectContainer = styled.div`
 const IndexPage = ({
   location,
   data: {
-    allMarkdownRemark
+    allMdx
   },
 }) => {
   const projects = useProjectListQuery(3)
@@ -141,7 +141,7 @@ const IndexPage = ({
 
       <FeaturedContentSection title="Latest Articles" url="/articles">
         <PostList>
-          {allMarkdownRemark.edges.map(edge => <PostItem post={edge.node} key={edge.node.fields.slug} />)}
+          {allMdx.edges.map(edge => <PostItem post={edge.node} key={edge.node.fields.slug} />)}
         </PostList>
       </FeaturedContentSection>
     </Layout>
@@ -152,7 +152,7 @@ export default IndexPage
 
 export const homeArticlesQuery = graphql`
   query HomeArticlesQuery {
-    allMarkdownRemark(
+    allMdx(
       filter: {fileAbsolutePath: { regex: "/articles/"}},
       sort: { order: DESC, fields: [frontmatter___date] },
       limit: 6

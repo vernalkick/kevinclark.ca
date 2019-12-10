@@ -7,16 +7,6 @@ import { device } from '../components/Media'
 import '../components/Typography'
 import RelatedArticles from '../components/RelatedArticles'
 
-import rehypeReact from "rehype-react"
-
-import {FigCaption} from '../components/Figure'
-import NewFigure from '../components/NewFigure'
-
-const renderAst = new rehypeReact({
-  createElement: React.createElement,
-  components: { "fig": NewFigure, "caption": FigCaption }
-}).Compiler
-
 const ArticleWrapper = styled.div`
   margin-top: 2.25rem;
   margin-bottom: 5rem;
@@ -104,7 +94,7 @@ export default ({location, data}) => {
           {post.frontmatter.title.prettify()}
         </ArticleTitle>
         <ArticleContainer>
-          <div>{renderAst(post.htmlAst)}</div>
+          <div dangerouslySetInnerHTML={{ __html: post.body }} />
         </ArticleContainer>
       </ArticleWrapper>
       <RelatedArticles />
@@ -114,9 +104,8 @@ export default ({location, data}) => {
 
 export const query = graphql`
   query BlogPostQuery($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      htmlAst
+    mdx(fields: { slug: { eq: $slug } }) {
+      body
       frontmatter {
         pretitle
         title

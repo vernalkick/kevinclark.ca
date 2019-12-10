@@ -5,7 +5,7 @@ published: true
 ---
 
 <figure class="figure--flush">
-  <img src="/assets/articles/our-best-meetup-so-far/meetup-banner.jpg" alt="">
+  <img src="/assets/articles/our-best-meetup-so-far/meetup-banner.jpg" alt="" />
 </figure>
 
 Last Tuesday we (Shopify) hosted the 6th [MTL Dribbble Meetup][meetup], but it was the first in our [brand new office space](https://www.flickr.com/photos/44922604@N03/albums/72157661314603955). Our lounge area was designed with events like this in mind, so it was great to see it fill up with lots of amazing people. Another thing that made this event special was the fact that we had two amazingly talented speakers take the stage for the first time:
@@ -14,7 +14,7 @@ Last Tuesday we (Shopify) hosted the 6th [MTL Dribbble Meetup][meetup], but it w
 - [Catherine Legros](https://twitter.com/catherinelegrs) talked about her experience living abroad and co-founding a startup while learning to become a better designer.
 
 <figure class="figure--extend-right">
-  <img src="/assets/articles/our-best-meetup-so-far/dribbble-meetup-photo-collage.jpg" alt="">
+  <img src="/assets/articles/our-best-meetup-so-far/dribbble-meetup-photo-collage.jpg" alt="" />
   <figcaption>You can find all the pictures I took during the event in this <a href="https://www.flickr.com/photos/44922604@N03/albums/72157661485084670">Flickr album</a>.</figcaption>
 </figure>
 

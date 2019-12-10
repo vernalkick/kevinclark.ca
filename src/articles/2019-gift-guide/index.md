@@ -4,6 +4,8 @@ date: 2019-12-07
 published: true
 ---
 
+import Button from "../../components/Button"
+
 I'm a notoriously difficult person to buy gifts for. With this holiday season coming up, I thought I'd take a stab at curating a list of gift ideas that you can buy for the Kevin in your life.
 
 
@@ -13,7 +15,7 @@ I'm a notoriously difficult person to buy gifts for. With this holiday season co
 
 The best gifts are experiences. The second best gifts are small luxuries that you wouldn't necessarily buy for yourself. An Aesop bottle elevates any space that it's in and the Mandarin Rind in this hand soap will make bring joy to something we do mechanically all the time. If you're not sure where to start with Aesop, this is the gateway drug.
 
-&rarr; [Buy at Aesop](https://www.aesop.com/ca/en/p/body-hand/hand/resurrection-aromatique-hand-wash/)&nbsp;&nbsp;&middot;&nbsp;&nbsp;$51
+<Button primary={true}>Buy at Aesop&ensp;&middot;&ensp;$51</Button>
 
 
 ### [Wallet Type 1](https://store.leibal.com/products/wallet-type1)

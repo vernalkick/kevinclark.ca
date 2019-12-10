@@ -50,11 +50,11 @@ const PostYear = styled.h2`
 const ArticlesPage = ({
   location,
   data: {
-    allMarkdownRemark
+    allMdx
   },
 }) => {
 
-  const articles = allMarkdownRemark.group.sort(function(a, b) {
+  const articles = allMdx.group.sort(function(a, b) {
     return (a.fieldValue < b.fieldValue) ? 1 : -1
   })
 
@@ -88,7 +88,7 @@ export default ArticlesPage
 
 export const articlesQuery = graphql`
   query ArticlesQuery {
-    allMarkdownRemark(
+    allMdx(
       filter: {fileAbsolutePath: { regex: "/articles/"}},
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
