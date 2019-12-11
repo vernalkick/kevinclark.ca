@@ -98,6 +98,7 @@ export default ({location, data}) => {
           <MDXRenderer>{post.body}</MDXRenderer>
         </ArticleContainer>
       </ArticleWrapper>
+      <RelatedArticles />
     </Layout>
   );
 };

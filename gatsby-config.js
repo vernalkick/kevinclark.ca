@@ -29,6 +29,10 @@ module.exports = {
     `gatsby-transformer-javascript-frontmatter`,
     'gatsby-plugin-sharp',
     `gatsby-remark-images`,
+    `gatsby-remark-smartypants`,
+    "gatsby-remark-component",
+    `gatsby-remark-custom-image-component`,
+    `gatsby-remark-copy-linked-files`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -72,7 +76,19 @@ module.exports = {
               linkImagesToOriginal: false,
               backgroundColor: 'transparent'
             },
-          }
+          },
+          {
+            resolve: `gatsby-remark-custom-image-component`,
+            options: {
+              // plugin options
+              componentName: 'Image',
+              imagePropName: 'src',
+              sharpMethod: 'fluid',
+              // fluid's arguments
+              quality: 50,
+              maxWidth: 800,
+            }
+          },
         ]
       },
     },
