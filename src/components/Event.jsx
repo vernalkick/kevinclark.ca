@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { device } from '../components/Media'
 
 const Link = styled.a`
   display: block;

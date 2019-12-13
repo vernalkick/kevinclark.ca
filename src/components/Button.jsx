@@ -38,7 +38,7 @@ export default ({ href, icon, primary, children }) => (
     <Inner>
       {icon &&
         <Icon>
-          {icon == "plus" &&
+          {icon === "plus" &&
             <PlusIcon />
           }
         </Icon>
