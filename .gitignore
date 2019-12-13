@@ -1,0 +1,13 @@
+packages/*/yarn.lock
+packages/*/package-lock.json
+
+.gatsby-context.js
+.DS_Store
+public/
+node_modules/
+.cache/
+.netlify
+
+# lock files
+yarn.lock
+package-lock.json
