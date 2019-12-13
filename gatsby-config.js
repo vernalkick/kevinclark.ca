@@ -85,7 +85,7 @@ module.exports = {
               imagePropName: 'src',
               sharpMethod: 'fluid',
               // fluid's arguments
-              quality: 50,
+              quality: 90,
               maxWidth: 800,
             }
           },

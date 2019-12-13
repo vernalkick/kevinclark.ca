@@ -7,17 +7,21 @@ const Container = styled.figure`
   position: relative;
 `
 
-const Caption = styled.figcaption`
-  * + & {
-    margin-top: 1.5rem;
+const ImageContainer = styled.div`
+  @media ${device.mobileLargeDown} {
+    margin-left: -1rem;
+    width: calc(100% + 2rem);
   }
+`
 
-  @media ${device.desktopUp} {
-    ${props => props.overlap && css`
-      margin-top: -3rem;
-      width: 65%;
-    `}
-  }
+const Image = styled.img`
+  display: block;
+  max-width: none;
+  width: 100%;
+`
+
+const Caption = styled.figcaption`
+  margin-top: 0.75rem;
 `
 
 const CaptionText = styled.span`
@@ -25,26 +29,13 @@ const CaptionText = styled.span`
   font-size: 16px;
   font-family: var(--secondary-font);
   line-height: 1.5;
-  display: block;
-  position: relative;
-
-  &:before {
-    content: "";
-    display: ${props => props.decoration ? 'block' : 'none'};
-    position: absolute;
-    height: 140px;
-    width: 2px;
-    background: var(--subdued-elements-color);
-    transform: rotate(45deg) translateY(15%);
-    bottom: -2rem;
-    right: 1rem;
-    z-index: -1;
-  }
 `
 
-export default ({ src, caption }) => (
+export default ({ src, srcSet, caption }) => (
   <Container>
-    <img src={src} />
+    <ImageContainer>
+      <Image src={src} srcSet={srcSet} />
+    </ImageContainer>
     <Caption>
       <CaptionText>{caption}</CaptionText>
     </Caption>

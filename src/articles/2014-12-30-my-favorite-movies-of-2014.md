@@ -5,25 +5,25 @@ date: 2014-12-30
 
 As we approach the end of 2014, I thought it'd be a good idea to list out the movies I have watched this year that I've enjoyed the most. This is by no means an exhaustive list and it's ranked in no particular order.
 
-## The Grand Budapest Hotel
+### The Grand Budapest Hotel
 
 ![](/assets/articles/my-favorite-movies-of-2014/the-grand-budapest-hotel.jpg)
 
 God I love this movie. Every shot has been carefully crafted by Wes Anderson to tell a wonderful story. While watching the movie, you can experience Anderson's universe and be a part of it for a moment.
 
-## Enemy
+### Enemy
 
 ![](/assets/articles/my-favorite-movies-of-2014/enemy.jpg)
 
 Upon first watch, this movie makes no sense, but the ending kept me thinking. I ended up watching this video on YouTube that explains the movie, and once you understand all the references, this movie is genius. A must watch.
 
-## Gone Girl
+### Gone Girl
 
 ![](/assets/articles/my-favorite-movies-of-2014/gone-girl.jpg)
 
 Fantastic movie that keeps you on the edge of your seat the whole time. The ending is beautifully unexpected and shows some great acting by Ben Affleck. I wish I could re-live the first time I watched this movie.
 
-## Guardians of the Galaxy
+### Guardians of the Galaxy
 
 ![](/assets/articles/my-favorite-movies-of-2014/guardians-of-the-galaxy.jpg)
 

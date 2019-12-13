@@ -36,7 +36,7 @@ const ArticleTitle = styled.h1`
   font-weight: 500;
   margin: 0;
   color: var(--main-text-color);
-  line-height: 1.2;
+  line-height: 1.3;
   grid-area: title;
   position: relative;
   padding-right: 7%;
