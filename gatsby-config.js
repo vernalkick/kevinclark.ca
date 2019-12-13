@@ -82,7 +82,7 @@ module.exports = {
             options: {
               // plugin options
               componentName: 'Image',
-              imagePropName: 'src',
+              imagePropName: 'source',
               sharpMethod: 'fluid',
               // fluid's arguments
               quality: 90,

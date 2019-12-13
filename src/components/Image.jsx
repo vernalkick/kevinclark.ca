@@ -31,10 +31,10 @@ const CaptionText = styled.span`
   line-height: 1.5;
 `
 
-export default ({ src, srcSet, caption }) => (
+export default ({ source, srcSet, caption }) => (
   <Container>
     <ImageContainer>
-      <ActualImage src={src} srcSet={srcSet} />
+      <ActualImage src={source} srcSet={srcSet} />
     </ImageContainer>
     <Caption>
       <CaptionText>{caption}</CaptionText>
