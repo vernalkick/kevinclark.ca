@@ -21,7 +21,7 @@ The best gifts are experiences. The second best gifts are small luxuries that yo
 
 
 ### [Wallet Type 1](https://store.leibal.com/products/wallet-type1)
-<Image src="./wallet-type-1.jpg" caption="Notice how this wallet doesn't have a single stitch." />
+<Image source="./wallet-type-1.jpg" caption="Notice how this wallet doesn't have a single stitch." />
 
 I first discovered this wallet on [Andrew Kim's Instagram](https://www.instagram.com/p/B1CYs7VgVKp/). But what sold me on it was the craftsmanship involved into making a wallet like this with no visible stitches. I've been using it for a few days and I'm absolutely in love with how it looks and functions as a practical object.
 
@@ -29,7 +29,7 @@ I first discovered this wallet on [Andrew Kim's Instagram](https://www.instagram
 
 
 ### [Beside Magazine](https://shop.beside.media/products/issue-07)
-<Image src="./beside.jpg" caption="Beside's covers always feature incredible photography." />
+<Image source="./beside.jpg" caption="Beside's covers always feature incredible photography." />
 
 Made in Montréal, this magazine brings together philosophers, artists, entrepreneurs, farmers, scientists and adventurers around one compelling question: what risks are we willing to bear? On top of being a fantastic read, this magazine is guaranteed to look fantastic on your coffee table.
 
