@@ -14,7 +14,7 @@ const ImageContainer = styled.div`
   }
 `
 
-const Image = styled.img`
+const ActualImage = styled.img`
   display: block;
   max-width: none;
   width: 100%;
@@ -34,7 +34,7 @@ const CaptionText = styled.span`
 export default ({ src, srcSet, caption }) => (
   <Container>
     <ImageContainer>
-      <Image src={src} srcSet={srcSet} />
+      <ActualImage src={src} srcSet={srcSet} />
     </ImageContainer>
     <Caption>
       <CaptionText>{caption}</CaptionText>
