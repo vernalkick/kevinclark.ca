@@ -56,7 +56,7 @@ module.exports = {
       options: {
         path: `${__dirname}/src/articles`,
         defaultLayouts: {
-          default: require.resolve("./src/templates/articles-layout.js"),
+          default: require.resolve("./src/templates/articles.jsx"),
         },
 
       },

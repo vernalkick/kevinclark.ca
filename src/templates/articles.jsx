@@ -6,6 +6,7 @@ import Helmet from 'react-helmet'
 import { device } from '../components/Media'
 import '../components/Typography'
 import RelatedArticles from '../components/RelatedArticles'
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const ArticleWrapper = styled.div`
   margin-top: 2.25rem;
@@ -35,7 +36,7 @@ const ArticleTitle = styled.h1`
   font-weight: 500;
   margin: 0;
   color: var(--main-text-color);
-  line-height: 1.2;
+  line-height: 1.3;
   grid-area: title;
   position: relative;
   padding-right: 7%;
@@ -75,7 +76,7 @@ const ArticleContainer = styled.div`
 `
 
 export default ({location, data}) => {
-  const post = data.markdownRemark
+  const post = data.mdx
 
   // eslint-disable-next-line
   String.prototype.prettify = function() {
@@ -94,7 +95,7 @@ export default ({location, data}) => {
           {post.frontmatter.title.prettify()}
         </ArticleTitle>
         <ArticleContainer>
-          <div dangerouslySetInnerHTML={{ __html: post.body }} />
+          <MDXRenderer>{post.body}</MDXRenderer>
         </ArticleContainer>
       </ArticleWrapper>
       <RelatedArticles />
@@ -103,7 +104,7 @@ export default ({location, data}) => {
 };
 
 export const query = graphql`
-  query BlogPostQuery($slug: String!) {
+  query NewBlogPostQuery($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       body
       frontmatter {

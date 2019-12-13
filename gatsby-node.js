@@ -28,7 +28,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: `type`,
-      value: `articles-layout`,
+      value: `articles`,
     })
 
     createNodeField({
@@ -60,7 +60,7 @@ exports.createPages = ({ graphql, actions }) => {
   result.data.allMdx.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
-      component: path.resolve(`./src/templates/${node.fields.type}.js`),
+      component: path.resolve(`./src/templates/${node.fields.type}.jsx`),
       context: {
         // Data passed to context is available in page queries as GraphQL variables.
         slug: node.fields.slug,
