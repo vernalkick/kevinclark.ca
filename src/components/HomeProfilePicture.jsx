@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import {device} from '../components/Media'
 import {CaptionText} from '../components/TextStyles'
 
 const Caption = styled.figcaption`
@@ -23,7 +22,7 @@ export default ({ src }) => (
     <Img src={src} />
     <Caption>
       <Description>↑ That’s me</Description>
-      <CaptionText>Picture by <a href="">Willem Shepherd</a></CaptionText>
+      <CaptionText>Picture by <a href="https://instagram.com/sweetyams">Willem Shepherd</a></CaptionText>
     </Caption>
   </figure>
 )

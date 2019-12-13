@@ -5,7 +5,7 @@ published: true
 ---
 
 <figure class="figure--flush">
-  <img src="http://d.pr/i/15fR5/4ENdFiLc+" alt="">
+  <img src="http://d.pr/i/15fR5/4ENdFiLc+" alt="" />
 </figure>
 
 Since getting my iPad Mini 4, I've been completely in love with it. I use it for reading, browsing Twitter, watching movies and TV shows, writing, keeping up with Slack, amongst many other things. Split-Screen and Picture-in-Picture really made the iPad a great productivity device for me. There was only one piece of the puzzle missing for me: a good bluetooth keyboard. So I did a bit of research and got what seemed like the best bluetooth keyboard available: the [Brydge Mini II bluetooth keyboard][Brydge].
@@ -32,7 +32,7 @@ Brydge has done a terrific job at scaling down a full-size keyboard into the wid
 ### The iPad holder
 
 <figure class="figure--half-right">
-  <img src="http://d.pr/i/1jkA4/sdUYKubr+" alt="">
+  <img src="http://d.pr/i/1jkA4/sdUYKubr+" alt="" />
 </figure>
 
 One of the defining features of this keyboard are the two little arms that hold your iPad and allow you to adjust the angle the way you want. That’s a nice idea in theory, but in my usage I found myself always using the iPad at the same angle, which was made more difficult by the fact that these little arms can move freely. You also need to be careful about adjusting the screen simply by pushing your iPad. I noticed that if the arms weren’t perfectly aligned with the sides of the iPad, it would press down on the screen and ripple the image, which didn’t seem like a good thing to do to your iPad. On top of that, the arms hold the iPad a bit too low compared to the keyboard, making it really hard to touch the bottom parts of the screen. I believe they had to do this in order to have the iPad sit flush with the case once closed, but I don’t think the tradeoff is worth it. A nice touch is that when you fold the iPad over the keyboard, the screen turn off automatically like it does with a Smart Cover. I’m not sure why, but I didn’t expect that when I first closed it and was pleasantly surprised.

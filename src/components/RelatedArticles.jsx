@@ -53,7 +53,7 @@ export default () => {
     <StaticQuery
       query={graphql`
         query RelatedArticlesQuery {
-          allMarkdownRemark(
+          allMdx(
             filter: {fileAbsolutePath: { regex: "/articles/"}},
             sort: { order: DESC, fields: [frontmatter___date] }
           ) {
@@ -73,7 +73,7 @@ export default () => {
         }
       `}
       render={data => {
-          var articles = shuffle(data.allMarkdownRemark.edges)
+          var articles = shuffle(data.allMdx.edges)
               articles = articles.slice(0,2)
 
           return (

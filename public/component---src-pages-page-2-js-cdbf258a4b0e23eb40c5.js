@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{140:function(e,t,n){"use strict";n.r(t),n.d(t,"frontmatter",function(){return l});var o=n(0),a=n.n(o),r=n(28),c=n.n(r),l={title:"Choropleth on d3v4",company:"Shopify"};t.default=function(){return a.a.createElement("div",null,a.a.createElement("h1",null,"Hi from the second page"),a.a.createElement("p",null,"Welcome to page 2"),a.a.createElement(c.a,{to:"/"},"Go back to the homepage"))}}}]);
-//# sourceMappingURL=component---src-pages-page-2-js-cdbf258a4b0e23eb40c5.js.map

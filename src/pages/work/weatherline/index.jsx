@@ -1,10 +1,7 @@
 import React from 'react'
 import Section from '../../../components/Section'
-import PullQuote from '../../../components/PullQuote'
 import {Grid, Column} from '../../../components/ContentGrid'
 import {FigCaption} from '../../../components/Figure'
-import HeroImage from '../../../components/HeroImage'
-import FullWidthContainer from '../../../components/FullWidthContainer'
 import Project from '../../../templates/project'
 import NewFigure from '../../../components/NewFigure'
 

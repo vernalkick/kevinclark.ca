@@ -28,6 +28,11 @@ module.exports = {
     },
     `gatsby-transformer-javascript-frontmatter`,
     'gatsby-plugin-sharp',
+    `gatsby-remark-images`,
+    `gatsby-remark-smartypants`,
+    "gatsby-remark-component",
+    `gatsby-remark-custom-image-component`,
+    `gatsby-remark-copy-linked-files`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -42,8 +47,49 @@ module.exports = {
               linkImagesToOriginal: false,
               backgroundColor: 'transparent'
             },
-          },
+          }
         ],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-page-creator",
+      options: {
+        path: `${__dirname}/src/articles`,
+        defaultLayouts: {
+          default: require.resolve("./src/templates/articles.jsx"),
+        },
+
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          "gatsby-remark-component",
+          `gatsby-remark-smartypants`,
+          `gatsby-remark-copy-linked-files`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1100,
+              linkImagesToOriginal: false,
+              backgroundColor: 'transparent'
+            },
+          },
+          {
+            resolve: `gatsby-remark-custom-image-component`,
+            options: {
+              // plugin options
+              componentName: 'Image',
+              imagePropName: 'source',
+              sharpMethod: 'fluid',
+              // fluid's arguments
+              quality: 90,
+              maxWidth: 800,
+            }
+          },
+        ]
       },
     },
     {

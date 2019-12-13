@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import styled from 'styled-components'
 import { device } from '../components/Media'
 import Instagram from '../assets/instagram.svg'

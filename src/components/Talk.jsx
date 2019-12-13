@@ -27,11 +27,15 @@ const More = styled.a`
 const Description = styled.div`
 `
 
+const Title = styled.h3`
+  margin-bottom: 0.5em;
+`
+
 const Talk = ({ image, title, description, slides }) => (
   <Container>
     <Image src={image} />
     <Description>
-      <h3>{title}</h3>
+      <Title>{title}</Title>
       <p>{description}</p>
       <More href={slides}>View slides on Speaker Deck →</More>
     </Description>

@@ -48,7 +48,7 @@ export const GlobalStyle = createGlobalStyle `
 
   :root {
     --base-font: 'Graphik', -apple-system;
-    --secondary-font: 'GT Pressura Mono', monospace;
+    --secondary-font: 'GT Pressura Mono', Menlo, monospace;
     --paragraph-text-color: #333;
     --primary-text-color: #333;
     --secondary-text-color: #777;
@@ -62,12 +62,12 @@ export const GlobalStyle = createGlobalStyle `
 @media (prefers-color-scheme: dark) {
   :root {
     --base-font: 'Graphik', -apple-system;
-    --secondary-font: 'GT Pressura Mono', monospace;
+    --secondary-font: 'GT Pressura Mono', 'Inconsolata', monospace;
     --paragraph-text-color: #ccc;
     --primary-text-color: #fff;
     --secondary-text-color: #999;
     --subdued-elements-color: rgba(255, 255, 255, 0.15);
-    --really-subdued-elements-color: rgba(255, 255, 255, 0.08);
+    --really-subdued-elements-color: rgba(255, 255, 255, 0.09);
     --top-background-color: #161616;
     --bottom-background-color: #000;
     --dark-tiles: #222;
@@ -231,14 +231,19 @@ export const GlobalStyle = createGlobalStyle `
     @media ${device.tabletUp} {
       font-size: 36px;
     }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   h3 {
     font-size: 20px;
     margin: 0;
-    margin-top: 2em;
-    margin-bottom: 0.5em;
+    margin-top: 6rem;
+    margin-bottom: 2.5rem;
     font-weight: 500;
+    line-height: 1.4;
 
     @media ${device.tabletUp} {
       font-size: 24px;
