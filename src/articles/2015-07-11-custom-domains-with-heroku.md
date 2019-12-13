@@ -8,19 +8,7 @@ I recently rewrote the [Montreal Dribbble Meetup website][meetup site] using Sin
 
 Since I moved to something dynamic (for various reasons), I decided to host the website on [Heroku][heroku] for simplicity reasons. Pushing something to [Heroku][heroku] is beautifully simple, but unfortunately looking at the [Heroku][heroku] documentation, I discovered that [Hover][hover], where I had my domain name doesn't support setting a `CNAME` for root domains. Bummer.
 
-<figure>
-  <blockquote class="twitter-tweet" lang="en">
-    <p lang="en" dir="ltr">Hover is great at everything except to use with Heroku. What are the cool kids using for custom domain names these days?</p>&mdash; Kevin Clark (@vernalkick) <a href="https://twitter.com/vernalkick/status/618216773037461505">July 7, 2015</a>
-  </blockquote>
-
-  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-  <figcaption>Asking around on Twitter, there didn't seem to be any consensus on what to use.</figcaption>
-</figure>
-
 Fortunately, [Heroku][heroku] provides a list of DNS services that support that feature. Looking at the list, the only two names that rang a bell were DNS Simple and [CloudFlare][cloudflare]. DNS Simple's pricing structure seems uh... anything but simple. So I went with [CloudFlare][cloudflare]. For my needs, the free [CloudFlare][cloudflare] plan was more than enough.
-
-![](http://cl.ly/image/052j1V2a1D3v/1)
 
 The setup process is surprisingly pretty seamless. You enter your domain name and they import your existing DNS records and tell you exactly what to replace in order to switch over to [Cloudflare][cloudflare]. Kudos for the amazingly simple onboarding experience.
 

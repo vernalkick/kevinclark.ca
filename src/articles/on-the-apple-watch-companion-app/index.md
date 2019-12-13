@@ -3,7 +3,7 @@ title: On the Apple Watch Companion App
 date: 2015-01-13
 published: true
 ---
-![The Apple Watch's homescreen looks awesome, but finding an app on it seems overly cumbersome.](http://blogs-images.forbes.com/anthonykosner/files/2014/10/apple-watch-selling-points.jpg)
+![](./watch-homescreen.jpg)
 
 Mark Gurman is on a roll with Apple leaks lately. [He recently published a piece on the purported Apple Watch companion app](http://9to5mac.com/2015/01/13/apple-watch-iphone-companion-app-revealed-with-new-watch-features-monograms/). I have a few initial thoughts on the information we got from his post:
 

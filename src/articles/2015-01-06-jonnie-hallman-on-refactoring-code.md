@@ -4,8 +4,6 @@ date: 2015-01-06
 published: true
 ---
 
-![](http://cushionapp.com/assets/2015-01-06-timeline.png)
-
 I love how Jonnie, aka [@destroytoday](https://twitter.com/destroytoday), has been writing a ton about his process as he's building Cushion. [This post on refactoring](http://cushionapp.com/journal/2015-01-06/) especially resonated with me.
 
 > I’m about halfway there because a few days in, I realized if I wanted to do this right, I would need to rewrite the schedule timeline. I originally wrote it for the budget, then made it work for scheduling, redesigned it a few times, added a few more elements, and rigged it to somehow work with invoices. I was left with a monster that looked nice, but felt like a long-running Jenga game.

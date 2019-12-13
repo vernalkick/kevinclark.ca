@@ -4,7 +4,7 @@ date: 2015-07-06
 published: true
 ---
 
-![](http://cl.ly/image/1Z0M0W0S3V1M/1)
+![](./her-story.jpeg)
 
 I [tweeted about it already](https://twitter.com/vernalkick/status/617362664403156993), but a single tweet isn't enough to express how much I enjoyed [this game][Her Story]. I'm not a gamer[^1]. I have very few games on my iPhone and I rarely download new ones, but if you're like me, you're going to love this one. Describing "[Her Story][Her Story]" as a game almost doesn't do it justice; it's much more like an interactive movie.
 

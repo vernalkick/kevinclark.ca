@@ -69,10 +69,6 @@ const DateLabel = styled.span`
 const ArticleContainer = styled.div`
   grid-area: content;
   margin-top: 3rem;
-
-  @media ${device.desktopUp} {
-    margin-top: 7.5rem;
-  }
 `
 
 export default ({location, data}) => {

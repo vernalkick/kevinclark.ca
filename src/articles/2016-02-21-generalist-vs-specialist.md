@@ -4,9 +4,7 @@ date: '2016-02-21'
 published: true
 ---
 
-Last week I asked people on Twitter if they considered themselves a generalist or a specialist. Here are the results:
-
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Good morning! Quick question: do you consider yourself a specialist or a generalist? [Twitter Poll]</p>&mdash; Kevin Clark (@vernalkick) <a href="https://twitter.com/vernalkick/status/700311311880744960">February 18, 2016</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+Last week I [asked people on Twitter](https://twitter.com/vernalkick/status/700311311880744960) if they considered themselves a generalist or a specialist. The results show that about 72% of people consider themselves a generalist.
 
 While I do think that there's no good answer, I think I'm more of a generalist as well. (Self selection maybe?) I get bored easily, so learning new stuff constantly keeps my brain engaged. A lot of interesting things happen [at the borderlands](http://www.frankchimero.com/writing/designing-in-the-borderlands/).
 

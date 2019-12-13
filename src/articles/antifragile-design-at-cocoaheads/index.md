@@ -4,7 +4,7 @@ date: 2015-07-30
 published: true
 ---
 
-![](http://cl.ly/image/191c2O3W290v/1)
+![](./antifragile.jpg)
 
 A few people asked me if I was doing my "Antifragile Design" talk somewhere in Montreal. The answer is yes! I've been asked by the good people at [CocoaHeads MTL](http://cocoaheadsmtl.com) to do an adapted version of the talk I wrote for the Shopify UX Summit (post about the whole experience coming soon). I'll talk about the challenges of designing at scale and how to adopt an antifragile process to be able to solve bigger problems. It's everything I wish I'd had known when I started.
 

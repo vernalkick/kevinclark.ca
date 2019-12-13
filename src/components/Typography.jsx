@@ -173,10 +173,15 @@ export const GlobalStyle = createGlobalStyle `
   blockquote {
     position: relative;
     margin: 0;
-    padding: 0 2em 0 3em;
+    padding: 0 3em 0 3em;
     color: #777;
     font-size: 14px;
     border-left: 2px solid var(--subdued-elements-color);
+
+    p {
+      font-size: 16px;
+      color: var(--secondary-text-color);
+    }
 
     // &:before {
     //   content: "“";
