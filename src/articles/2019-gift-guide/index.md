@@ -15,7 +15,7 @@ I'm a notoriously difficult person to buy gifts for. With this holiday season co
 
 <Image source="./aesop-hand-soap.jpg" caption="Aesop's packaging is simple and iconic." />
 
-The best gifts are experiences. The second best gifts are small luxuries that you wouldn't necessarily buy for yourself. An Aesop bottle elevates any space that it's in and the Mandarin Rind in this hand soap will make bring joy to something we do mechanically all the time. If you're not sure where to start with Aesop, this is the gateway drug.
+The best gifts are experiences. The second best gifts are small luxuries that you wouldn't necessarily buy for yourself. An Aesop bottle elevates any space that it's in and the Mandarin Rind in this hand soap will bring joy to something we do mechanically all the time. If you're not sure where to start with Aesop, this is the gateway drug.
 
 <Button primary={false} href="https://www.aesop.com/ca/en/p/body-hand/hand/resurrection-aromatique-hand-wash/">Buy at Aesop&ensp;&middot;&ensp;$51</Button>
 
