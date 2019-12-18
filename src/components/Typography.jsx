@@ -173,22 +173,18 @@ export const GlobalStyle = createGlobalStyle `
   blockquote {
     position: relative;
     margin: 0;
-    padding: 0 3em 0 3em;
+    padding: 0 1.5em;
     color: #777;
-    font-size: 14px;
     border-left: 2px solid var(--subdued-elements-color);
+
+    @media ${device.mobileLargeUp} {
+      padding: 0 3em;
+    }
 
     p {
       font-size: 16px;
       color: var(--secondary-text-color);
     }
-
-    // &:before {
-    //   content: "“";
-    //   position: absolute;
-    //   left: 0;
-    //   // font-size: 60px;
-    // }
 
     & + & {
       padding-top: 2.5rem;

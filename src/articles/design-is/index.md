@@ -4,7 +4,7 @@ date: 2014-07-30
 published: true
 ---
 
-<%= figure "/assets/articles/design-is/design-is.jpg", "A few of my favorite shots from the contest." %>
+![](./design-is.jpg)
 
 [We've][Shopify] recently teamed up with [Dribbble][Dribbble] for an [official playoff][Playoff] centered around the theme of "What Does Design Mean to You?" To choose the main shot we had an internal competition to determine who came up with the most interesting shot. I didn't win unfortunately, but Paul Pritchard wrote [an excellent article][Paul's article] about the design process behind his winning shot. Well worth a read.
 
