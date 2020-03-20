@@ -4,6 +4,7 @@ const projectList = [
   'weatherline',
   'shopify-pay-landing',
   'order-status-page',
+  'layout',
   'shopify-apple-watch',
   'climate',
   'tipsy',

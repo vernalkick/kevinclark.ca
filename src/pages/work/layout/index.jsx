@@ -14,7 +14,7 @@ import pictures from './pictures.png'
 export const frontmatter = {
   company: 'Personal Project',
   title: "Layout",
-  image: './climate-hero.png',
+  image: './thumbnail.png',
   date: '2015-10-27',
   slug: 'layout',
   websiteLink: "https://layout.fm"
