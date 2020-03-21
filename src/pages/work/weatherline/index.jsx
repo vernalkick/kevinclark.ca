@@ -23,7 +23,7 @@ export const frontmatter = {
   image: './wl-hero-dark.png',
   date: '2019-10-03',
   slug: 'weatherline',
-  appStoreLink: "https://itunes.apple.com/app/apple-store/id715319015?at=11ldjt&ct=weatherlineapp.com%2520app%2520store%2520button&pt=832321&mt=8"
+  link: "https://itunes.apple.com/app/apple-store/id715319015?at=11ldjt&ct=weatherlineapp.com%2520app%2520store%2520button&pt=832321&mt=8"
 }
 
 const WeatherLine = ({location}) => (

@@ -17,7 +17,7 @@ export const frontmatter = {
   image: './thumbnail.png',
   date: '2015-10-27',
   slug: 'layout',
-  websiteLink: "https://layout.fm"
+  link: "https://layout.fm"
 }
 
 const SecondColumn = styled(Column)`
