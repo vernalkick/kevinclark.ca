@@ -112,7 +112,8 @@ export const GlobalStyle = createGlobalStyle `
     text-decoration: none;
   }
 
-  p a {
+  p a,
+  li a {
     border-bottom: 2px solid var(--subdued-elements-color);
     font-weight: 500;
 
@@ -150,8 +151,9 @@ export const GlobalStyle = createGlobalStyle `
     }
   }
 
-  ol > li + li {
-    margin-top: 1.5em;
+  ol > li + li,
+  ul > li + li {
+    margin-top: 1em;
   }
 
   hr {
@@ -252,6 +254,11 @@ export const GlobalStyle = createGlobalStyle `
 
     &:first-child {
       margin-top: 0;
+    }
+    
+    & + & {
+      margin-top: -2.5rem;
+      color: rgba(255,255,255,0.5);
     }
   }
 

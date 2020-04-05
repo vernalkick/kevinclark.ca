@@ -4,6 +4,10 @@ import styled from 'styled-components'
 import { device } from '../components/Media'
 
 const NavListItem = styled.li`
+  & + & {
+    margin-top: 0;
+  }
+  
   @media ${device.tabletUp} {
     flex-grow: 0;
     margin-right: 2.5rem;
@@ -13,6 +17,12 @@ const NavListItem = styled.li`
 const NavLink = styled(Link)`
   font-size: 16px;
   font-weight: ${props => props.selected ? '500' : 'normal'};
+  color: var(--primary-text-color);
+  border: none;
+  
+  &:hover {
+    background: transparent;
+  }
 
   @media ${device.desktopUp} {
     font-size: 18px;

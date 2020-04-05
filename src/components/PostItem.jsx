@@ -3,13 +3,20 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 const Item = styled.li`
-  /* & + & {
-    margin-top: 3rem;
-  } */
+  & + & {
+    margin-top: 0;
+  }
 `
 
 const PostLink = styled(Link)`
   display: block;
+  border: none;
+  font-weight: normal;
+  
+  &:hover {
+    background: transparent;
+  }
+  
 `
 
 const PostTitle = styled.h2`
