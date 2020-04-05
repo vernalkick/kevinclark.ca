@@ -258,7 +258,7 @@ export const GlobalStyle = createGlobalStyle `
     
     & + & {
       margin-top: -2.5rem;
-      color: rgba(255,255,255,0.5);
+      color: var(--secondary-text-color);
     }
   }
 
