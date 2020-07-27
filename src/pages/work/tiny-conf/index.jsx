@@ -1,7 +1,7 @@
 import React from 'react'
 import Section from '../../../components/Section'
 import { Grid, Column } from '../../../components/ContentGrid'
-import { FigCaption } from '../../../components/Figure'
+import { CaptionTitle, Caption } from '../../../components/TextStyles'
 import HeroImage from '../../../components/HeroImage'
 import Project from '../../../templates/project'
 
@@ -29,7 +29,10 @@ const TinyConf = ({location}) => (
             <p>One of my favorite little details is when you subscribe to the newsletter, the lanyard flips over to reveal more information. It was my first time playing with perspective and 3D elements in CSS, so I learned a lot.</p>
           </Column>
           <Column start={1} width={2} align="end">
-            <FigCaption title="Note" decoration={true}>The conference never really happened, but we all had some fun thinking of how we would go about organizing the whole thing.</FigCaption>
+            <CaptionTitle>Note</CaptionTitle>
+            <Caption>
+              The conference never really happened, but we all had some fun thinking of how we would go about organizing the whole thing.
+            </Caption>
           </Column>
         </Grid>
       </Section>

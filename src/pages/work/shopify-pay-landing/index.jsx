@@ -1,6 +1,6 @@
 import React from 'react'
 import Section from '../../../components/Section'
-import { FigCaption } from '../../../components/Figure'
+import { CaptionTitle, Caption } from '../../../components/TextStyles'
 import PullQuote from '../../../components/PullQuote'
 import IpadPro from '../../../components/iPadPro'
 import { Grid, Column } from '../../../components/ContentGrid'
@@ -31,9 +31,8 @@ const ShopifyPayLanding = ({location}) => (
         </HeroImage>
         <Grid>
           <Column width={2}>
-            <FigCaption title="Photo Credit">
-             Thanks to Facebook for providing these hands to use in our designs
-            </FigCaption>
+            <CaptionTitle>Photo Credit</CaptionTitle>
+            <Caption>Thanks to Facebook for providing these hands to use in our designs</Caption>
           </Column>
           <Column start={4} width={5}>
             <h2>Shopify Pay is the first buyer-facing product Shopify created to simplify and streamline the tedious parts of shopping to let people focus on the parts that they love.</h2>

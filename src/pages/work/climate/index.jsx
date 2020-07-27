@@ -2,7 +2,7 @@ import React from 'react'
 import Section from '../../../components/Section'
 import PullQuote from '../../../components/PullQuote'
 import {Grid, Column} from '../../../components/ContentGrid'
-import {FigCaption} from '../../../components/Figure'
+import {CaptionTitle, Caption} from '../../../components/TextStyles'
 import HeroImage from '../../../components/HeroImage'
 import FullWidthContainer from '../../../components/FullWidthContainer'
 import Project from '../../../templates/project'
@@ -37,9 +37,8 @@ const Climate = ({location}) => (
         </Grid>
         <Grid>
           <Column width={3}>
-            <FigCaption title="Apple's Weather app">
-              The default Weather app, as pictured here, uses three different screens to present the day’s weather information. To switch between them you can either tap or force touch.
-            </FigCaption>
+            <CaptionTitle>Apple's Weather app</CaptionTitle>
+            <Caption>The default Weather app, as pictured here, uses three different screens to present the day’s weather information. To switch between them you can either tap or force touch.</Caption>
           </Column>
           <Column width={4} start={5}>
             <p>I decided that instead of complaining about it on Twitter, I’d do something a bit more productive: I’d make my own app. It seemed like an interesting challenge both from a design and development standpoint.</p>
