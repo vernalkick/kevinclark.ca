@@ -10,13 +10,12 @@ const Item = styled.li`
 
 const PostLink = styled(Link)`
   display: block;
-  border: none;
+  text-decoration: none;
   font-weight: normal;
   
   &:hover {
     background: transparent;
   }
-  
 `
 
 const PostTitle = styled.h2`
@@ -39,6 +38,15 @@ const More = styled.span`
   display: block;
 `
 
+const MoreArrow = styled.span`
+  display: inline-block;
+  transition: transform .2s ease-in-out;
+  
+  ${Item}:hover & {
+    transform: translateX(5px);
+  }
+`
+
 class PostItem extends React.Component {
   render() {
     const { frontmatter, excerpt, fields } = this.props.post;
@@ -53,7 +61,7 @@ class PostItem extends React.Component {
         <PostLink to={fields.slug}>
           <PostTitle>{frontmatter.title.prettify()}</PostTitle>
           <PostExcerpt>{excerpt}</PostExcerpt>
-          <More>Read more →</More>
+          <More>Read more <MoreArrow>→</MoreArrow></More>
         </PostLink>
       </Item>
     )

@@ -80,6 +80,10 @@ const Content = styled.div`
 `
 
 const upcomingEvents = [
+  
+]
+
+const events = [
   {
     title: 'Montreal Design Club',
     year: '2019',
@@ -92,9 +96,6 @@ const upcomingEvents = [
     description: "The conference that bridges the gap between UX, UI, Dev and Product. I'll be talking about unconventional ideas I've learned on my quest for excellence.",
     url: 'https://uxdxconf.com'
   },
-]
-
-const events = [
   {
     title: 'Shopify Summit',
     year: '2019',
@@ -203,14 +204,16 @@ class SpeakingPage extends React.Component {
             </TalkList>
           </Section>
 
-          <Section>
-            <Title>Upcoming events</Title>
-            <EventList>
-              {upcomingEvents.map(event =>
-                <Event title={event.title} description={event.description} url={event.url} year={event.year} />
-              )}
-            </EventList>
-          </Section>
+          {upcomingEvents.length > 0 &&
+            <Section>
+              <Title>Upcoming events</Title>
+              <EventList>
+                {upcomingEvents.map(event =>
+                  <Event title={event.title} description={event.description} url={event.url} year={event.year} />
+                )}
+              </EventList>
+            </Section>
+          }
 
           <Section>
             <Title>Past events</Title>

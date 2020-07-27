@@ -1,4 +1,4 @@
-
+import React from 'react'
 import styled from 'styled-components'
 
 export const CaptionText = styled.span`
@@ -25,4 +25,12 @@ export const CaptionText = styled.span`
   a {
     border-bottom: 2px solid var(--subdued-elements-color);
   }
+`
+
+export const Caption = styled.span`
+  display: block;
+  color: var(--secondary-text-color);
+  font-size: 16px;
+  font-family: var(--secondary-font);
+  line-height: 1.5;
 `

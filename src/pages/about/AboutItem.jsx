@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import {Caption} from '../../components/TextStyles'
 import Arrow from '../../assets/arrow.svg'
 
 const Container = styled.a`
@@ -17,15 +18,9 @@ const TextContainer = styled.div`
 
 const Title = styled.span`
   display: inline-block;
+  font-weight: 500;
   font-size: 18px;
   border-bottom: 2px solid var(--subdued-elements-color);
-`
-
-const Description = styled.span`
-  display: block;
-  font-family: var(--secondary-font);
-  color: var(--secondary-text-color);
-  margin-top: 0.25rem;
 `
 
 const AboutItem = ({ title, description, url }) => (
@@ -33,7 +28,7 @@ const AboutItem = ({ title, description, url }) => (
     <Arrow />
     <TextContainer>
       <Title>{title}</Title>
-      <Description>{description}</Description>
+      <Caption>{description}</Caption>
     </TextContainer>
   </Container>
 )

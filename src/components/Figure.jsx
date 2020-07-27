@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import { css } from 'styled-components';
 import { device } from '../components/Media'
+import { Caption } from '../components/TextStyles'
 
 const Container = styled.figure`
   margin: 0;
@@ -47,7 +48,7 @@ const Image = styled.img`
   }
 `
 
-const Caption = styled.figcaption`
+const CaptionContainer = styled.figcaption`
   * + & {
     margin-top: 1.5rem;
   }
@@ -67,12 +68,7 @@ const CaptionTitle = styled.span`
   margin-bottom: 0.5rem;
 `
 
-const CaptionText = styled.span`
-  color: var(--secondary-text-color);
-  font-size: 16px;
-  font-family: var(--secondary-font);
-  line-height: 1.5;
-  display: block;
+const CaptionText = styled(Caption)`
   position: relative;
 
   &:before {
@@ -94,10 +90,10 @@ const CaptionText = styled.span`
 `
 
 export const FigCaption = ({title, children, decoration, overlap}) => (
-  <Caption overlap={overlap}>
+  <CaptionContainer overlap={overlap}>
     {title ? <CaptionTitle>{title}</CaptionTitle> : ''}
     <CaptionText decoration={decoration}>{children}</CaptionText>
-  </Caption>
+  </CaptionContainer>
 )
 
 FigCaption.defaultProps = {
