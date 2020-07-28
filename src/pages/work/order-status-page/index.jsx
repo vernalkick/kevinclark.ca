@@ -107,7 +107,7 @@ const OrderStatusPage = ({location}) => (
     <div>
       <Section>
         <HeroImage>
-          {/* <img src={hero} alt="Order status page" /> */}
+          <img src={hero} alt="Order status page" loading="lazy" />
         </HeroImage>
         <Grid>
           <Column width={6}>
@@ -119,7 +119,7 @@ const OrderStatusPage = ({location}) => (
         <Grid>
           <Column width={3} start={1}>
             <NewFigure>
-              {/* <img src={customer_journey} alt="Customer journey map" /> */}
+              <img src={customer_journey} alt="Customer journey map" loading="lazy" />
               <Caption>Thanks to <a href="https://twitter.com/cynthiasavard">Cynthia Savard Saucier</a> for introducing me to this method and leading the session.</Caption>
             </NewFigure>
           </Column>
@@ -140,7 +140,7 @@ const OrderStatusPage = ({location}) => (
         <Grid>
           <Column width={3} start={6}>
             <NewFigure>
-              {/* <img src={user_research} alt="User research" /> */}
+              <img src={user_research} alt="User research" loading="lazy" />
               <Caption>Shout out to <a href="http://delshimy.com">Dalia El-Shimy</a> for creating this amazing poster with all of the research findings.</Caption>
             </NewFigure>
           </Column>
@@ -163,7 +163,7 @@ const OrderStatusPage = ({location}) => (
             <p>We also came up with a series of design principles that would help us determine if the project was successful:</p>
           </Column>
           <Column width={4}>
-            {/* <img src={plan} alt="Plan" /> */}
+            <img src={plan} alt="Plan" loading="lazy" />
           </Column>
         </Grid>
         <Grid>
@@ -221,7 +221,7 @@ const OrderStatusPage = ({location}) => (
             <p>The more I worked on it, the more I realized that the full history didn’t matter that much. Most people care about where their shipment is right now, not two weeks ago. It also raised a lot of questions around where should the most recent content appear, at the top or at the bottom of the page? So I decided to move on to a different concept.</p>
           </Column>
           <Column width={4} start={5}>
-            <img src={timeline} alt="Timeline exploration" />
+            <img src={timeline} alt="Timeline exploration" loading="lazy" />
           </Column>
         </Grid>
       </Section>
@@ -269,8 +269,8 @@ const OrderStatusPage = ({location}) => (
       <Section>
         <FullWidthContainer>
           <CardContainer>
-            {/* <CardsFirst src={card_explorations_image} /> */}
-            {/* <CardsSecond src={card_explorations_image} /> */}
+            <CardsFirst src={card_explorations_image} loading="lazy" />
+            <CardsSecond src={card_explorations_image} loading="lazy" />
           </CardContainer>
         </FullWidthContainer>
       </Section>
@@ -285,7 +285,7 @@ const OrderStatusPage = ({location}) => (
             <p>Putting all of these pieces together really helped us get a better sense of how the entire process would be like from beginning to end and how the different flows branched out.</p>
           </Column>
           <Column width={4} start={5}>
-            {/* <img src={flow} alt="Flow chart" /> */}
+            <img src={flow} alt="Flow chart" loading="lazy" />
             <Caption><a href={full_flow}>View the full flow</a></Caption>
           </Column>
         </Grid>
@@ -305,8 +305,8 @@ const OrderStatusPage = ({location}) => (
           <Column width={3}>
             <NewFigure isPortrait={true}>
               <IphoneContainer>
-                {/* <Iphone src={iphone} /> */}
-                {/* <IphoneScreen src={mobile} /> */}
+                <Iphone src={iphone} />
+                <IphoneScreen src={mobile} />
               </IphoneContainer>
             </NewFigure>
           </Column>

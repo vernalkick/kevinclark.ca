@@ -15,7 +15,7 @@ const projectWithSlug = (array, slug) => {
   return array.filter(obj => { return obj.node.frontmatter.slug === slug})[0]
 }
 
-const projectsQuery = () => {
+const ProjectsQuery = () => {
   const { allJavascriptFrontmatter } = useStaticQuery(graphql`
     query {
       allJavascriptFrontmatter(
@@ -42,7 +42,7 @@ const projectsQuery = () => {
 
 
 const useProjectListQuery = (quantity) => {
-  const {edges} = projectsQuery()
+  const {edges} = ProjectsQuery()
 
   var orderedProjects = projectList.map(name => {
     return projectWithSlug(edges, name)
