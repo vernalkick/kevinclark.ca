@@ -18,7 +18,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       createNodeField({
         node,
         name: `year`,
-        value: node.frontmatter.date.substring(0, 4),
+        value: String(node.frontmatter.date).substring(0, 4),
       })
     }
 

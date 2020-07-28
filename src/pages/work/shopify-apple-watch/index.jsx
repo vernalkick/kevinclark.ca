@@ -1,6 +1,6 @@
 import React from 'react'
 import Section from '../../../components/Section'
-import {FigCaption} from '../../../components/Figure'
+import { CaptionTitle, Caption } from '../../../components/TextStyles'
 import PullQuote from '../../../components/PullQuote'
 import { Grid, Column } from '../../../components/ContentGrid'
 import HeroImage from '../../../components/HeroImage'
@@ -37,7 +37,8 @@ const ShopifyAppleWatch = ({location}) => (
           <Column start={1} width={3}>
             <NewFigure>
               <img src={sketch} alt="Initial sketch" />
-              <FigCaption title='Initial sketching'>Pen and paper really force you to distill a problem to its essence.</FigCaption>
+              <CaptionTitle>Initial sketching</CaptionTitle>
+              <Caption>Pen and paper really force you to distill a problem to its essence.</Caption>
             </NewFigure>
           </Column>
         </Grid>
@@ -49,9 +50,8 @@ const ShopifyAppleWatch = ({location}) => (
             <p>Next, I decided to prototype some of this stuff. I wasn’t sure how long it would take me to wrap my head around WatchKit, so I figured that if I couldn’t have a live demo working, I could at least show a prototype. I compared the pros and cons of Framer, Origami and Form but quickly decided to go with Origami. It required the least time to get set up, had a way to display the app on an iPhone and interact with it in realtime and a great way to present. One thing I noticed is that it’s pretty good at prototyping single interactions or transitions, but more complex things like having different states required a huge amount of effort. All in all, in a day I went from an idea to a mostly working prototype of the functionality I wanted. Not bad.</p>
           </Column>
           <Column start={7} width={2}>
-            <FigCaption title="Aside" decoration={true}>
-              Apple has made available resources for designing for the Apple Watch, like the San Francisco font and a few Sketch files of the different parts of the UI.
-            </FigCaption>
+            <CaptionTitle>Aside</CaptionTitle>
+            <Caption>Apple has made available resources for designing for the Apple Watch, like the San Francisco font and a few Sketch files of the different parts of the UI.</Caption>
           </Column>
         </Grid>
       </Section>
@@ -67,7 +67,8 @@ const ShopifyAppleWatch = ({location}) => (
           <Column width={3}>
             <NewFigure isPortrait={true} background="#fff">
               <img src={gif} alt="First prototype" />
-              <FigCaption title='First prototype'>This is the first working prototype I was able to see in the Simulator. I was so happy.</FigCaption>
+              <CaptionTitle>First prototype</CaptionTitle>
+              <Caption>This is the first working prototype I was able to see in the Simulator. I was so happy.</Caption>
             </NewFigure>
           </Column>
           <Column start={5} width={4}>

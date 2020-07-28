@@ -18,7 +18,7 @@ const NavLink = styled(Link)`
   font-size: 16px;
   font-weight: ${props => props.selected ? '500' : 'normal'};
   color: var(--primary-text-color);
-  border: none;
+  text-decoration: none;
   
   &:hover {
     background: transparent;

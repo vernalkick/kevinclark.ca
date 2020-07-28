@@ -3,7 +3,7 @@ import styled, {keyframes} from 'styled-components'
 import Section from '../../../components/Section'
 import HeroImage from '../../../components/HeroImage'
 import {Grid, Column} from '../../../components/ContentGrid'
-import {FigCaption} from '../../../components/Figure'
+import {CaptionTitle, Caption} from '../../../components/TextStyles'
 import PullQuote from '../../../components/PullQuote'
 import FullWidthContainer from '../../../components/FullWidthContainer'
 import NewFigure from '../../../components/NewFigure'
@@ -43,22 +43,30 @@ const TimelineAnimation = styled.img`
   border-radius: 3%/16%;
 `
 
+const CardContainer = styled.div`
+  overflow: hidden;
+  position: relative;
+`
+
 const translate = keyframes`
   from {
-    background-position-x: 0;
+    transform: translateX(0%);
   }
-
+  
   to {
-    background-position-x: -2000px;
+    transform: translateX(-100%);
   }
 `;
 
-const CardExplorations = styled.div`
-  width: 100%;
-  padding-bottom: 50.64%;
-  background: url('${card_explorations_image}');
-  background-size: contain;
+const CardsFirst = styled.img`
   animation: ${translate} 80s infinite linear;
+`
+
+const CardsSecond = styled.img`
+  animation: ${translate} 80s infinite linear;
+  position: absolute;
+  top: 0;
+  left: 100%;
 `
 
 const IphoneContainer = styled.div`
@@ -89,7 +97,7 @@ const OrderStatusPage = ({location}) => (
     <div>
       <Section>
         <HeroImage>
-          <img src={hero} alt="Order status page" />
+          <img src={hero} alt="Order status page" loading="lazy" />
         </HeroImage>
         <Grid>
           <Column width={6}>
@@ -101,8 +109,8 @@ const OrderStatusPage = ({location}) => (
         <Grid>
           <Column width={3} start={1}>
             <NewFigure>
-              <img src={customer_journey} alt="Customer journey map" />
-              <FigCaption>Thanks to <a href="https://twitter.com/cynthiasavard">Cynthia Savard Saucier</a> for introducing me to this method and leading the session.</FigCaption>
+              <img src={customer_journey} alt="Customer journey map" loading="lazy" />
+              <Caption>Thanks to <a href="https://twitter.com/cynthiasavard">Cynthia Savard Saucier</a> for introducing me to this method and leading the session.</Caption>
             </NewFigure>
           </Column>
           <Column width={4} start={5}>
@@ -122,8 +130,8 @@ const OrderStatusPage = ({location}) => (
         <Grid>
           <Column width={3} start={6}>
             <NewFigure>
-              <img src={user_research} alt="User research" />
-              <FigCaption>Shout out to <a href="http://delshimy.com">Dalia El-Shimy</a> for creating this amazing poster with all of the research findings.</FigCaption>
+              <img src={user_research} alt="User research" loading="lazy" />
+              <Caption>Shout out to <a href="http://delshimy.com">Dalia El-Shimy</a> for creating this amazing poster with all of the research findings.</Caption>
             </NewFigure>
           </Column>
           <Column width={4} start={1}>
@@ -145,41 +153,47 @@ const OrderStatusPage = ({location}) => (
             <p>We also came up with a series of design principles that would help us determine if the project was successful:</p>
           </Column>
           <Column width={4}>
-            <img src={plan} alt="Plan" />
+            <img src={plan} alt="Plan" loading="lazy" />
           </Column>
         </Grid>
         <Grid>
           <Column width={2}>
-            <FigCaption title="Accuracy and consistency">
+            <CaptionTitle>Accuracy and consistency</CaptionTitle>
+            <Caption>
               Order status information should be consistent across any channels, internal or external, from which it may be retrieved.
-            </FigCaption>
+            </Caption>
           </Column>
           <Column width={2}>
-            <FigCaption title="Clarity and transparency">
+            <CaptionTitle>Clarity and transparency</CaptionTitle>
+            <Caption>
               Customers should be able to quickly glean the status of their order, and understand all pertinent information, both in a lexical and semantic sense.
-            </FigCaption>
+            </Caption>
           </Column>
           <Column width={2}>
-            <FigCaption title="Confidence">
+            <CaptionTitle>Confidence</CaptionTitle>
+            <Caption>
               Clear and transparent communication of the order status, from confirmation to shipment to receipt, should instill confidence in the online shopping process.
-            </FigCaption>
+            </Caption>
           </Column>
         </Grid>
         <Grid>
           <Column width={2}>
-            <FigCaption title="Positive affect">
+            <CaptionTitle>Positive affect</CaptionTitle>
+            <Caption>
               Customers should feel positive about progress in their order status. The availability of order status information should also help eliminate confusion, friction or frustration from the online shopping process.
-            </FigCaption>
+            </Caption>
           </Column>
           <Column width={2}>
-            <FigCaption title="Trust">
+            <CaptionTitle>Trust</CaptionTitle>
+            <Caption>
               Customers should trust that their order status information lives in a secure location.
-            </FigCaption>
+            </Caption>
           </Column>
           <Column width={2}>
-            <FigCaption title="Orientation">
+            <CaptionTitle>Orientation</CaptionTitle>
+            <Caption>
               Customers should be able to determine where order status information is located and arrive there efficiently.
-            </FigCaption>
+            </Caption>
           </Column>
         </Grid>
       </Section>
@@ -197,7 +211,7 @@ const OrderStatusPage = ({location}) => (
             <p>The more I worked on it, the more I realized that the full history didn’t matter that much. Most people care about where their shipment is right now, not two weeks ago. It also raised a lot of questions around where should the most recent content appear, at the top or at the bottom of the page? So I decided to move on to a different concept.</p>
           </Column>
           <Column width={4} start={5}>
-            <img src={timeline} alt="Timeline exploration" />
+            <img src={timeline} alt="Timeline exploration" loading="lazy" />
           </Column>
         </Grid>
       </Section>
@@ -234,16 +248,20 @@ const OrderStatusPage = ({location}) => (
             <p>To better visualize everything, I printed every card on a piece of paper and asked my colleague Markus to help me cut them and decide on our favorites.</p>
           </Column>
           <Column width={2} start={1} align='end'>
-            <FigCaption title="Sketch Tip">
+            <CaptionTitle>Sketch Tip</CaptionTitle>
+            <Caption>
               I’ve always found Sketch’s printing functionality to be unreliable, so my trick is to export my artboard as a PDF and print that with an app like Preview.
-            </FigCaption>
+            </Caption>
           </Column>
         </Grid>
       </Section>
 
       <Section>
         <FullWidthContainer>
-          <CardExplorations />
+          <CardContainer>
+            <CardsFirst src={card_explorations_image} loading="lazy" />
+            <CardsSecond src={card_explorations_image} loading="lazy" />
+          </CardContainer>
         </FullWidthContainer>
       </Section>
 
@@ -257,8 +275,8 @@ const OrderStatusPage = ({location}) => (
             <p>Putting all of these pieces together really helped us get a better sense of how the entire process would be like from beginning to end and how the different flows branched out.</p>
           </Column>
           <Column width={4} start={5}>
-            <img src={flow} alt="Flow chart" />
-            <FigCaption><a href={full_flow}>View the full flow</a></FigCaption>
+            <img src={flow} alt="Flow chart" loading="lazy" />
+            <Caption><a href={full_flow}>View the full flow</a></Caption>
           </Column>
         </Grid>
       </Section>
@@ -278,7 +296,7 @@ const OrderStatusPage = ({location}) => (
             <NewFigure isPortrait={true}>
               <IphoneContainer>
                 <Iphone src={iphone} />
-                <IphoneScreen src={mobile} />
+                <IphoneScreen src={mobile} loading="lazy" />
               </IphoneContainer>
             </NewFigure>
           </Column>

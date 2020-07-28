@@ -4,7 +4,7 @@ import Section from '../../../components/Section'
 import PullQuote from '../../../components/PullQuote'
 import { Grid, Column } from '../../../components/ContentGrid'
 import OffsetImage from '../../../components/OffsetImage'
-import { FigCaption } from '../../../components/Figure'
+import { CaptionTitle, Caption } from '../../../components/TextStyles'
 import { device } from '../../../components/Media'
 import Project from '../../../templates/project'
 
@@ -73,9 +73,10 @@ const Tipsy = ({location}) => (
             <p>Listening to the first few videos and following along, I was able to pick up the basics of Objective-C pretty quickly. The language is intimidating at first, but when you look past the square brackets and verbose method names, it’s a pretty good language.</p>
           </Column>
           <Column width={2}>
-            <FigCaption title="Note" decoration={true}>
-             The course is now pretty outdated, so if you’re also interested in learning how to develop for iOS, I wouldn’t recommend it. I haven’t found any new courses with a similar focus unfortunately.
-           </FigCaption>
+            <CaptionTitle>Note</CaptionTitle>
+            <Caption>
+              The course is now pretty outdated, so if you’re also interested in learning how to develop for iOS, I wouldn’t recommend it. I haven’t found any new courses with a similar focus unfortunately.
+            </Caption>
           </Column>
         </Grid>
       </Section>

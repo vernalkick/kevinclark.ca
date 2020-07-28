@@ -57,8 +57,8 @@ const year = today.getFullYear()
 
 const Footer = () => (
   <FooterContainer>
-    <Copyright>Copyright © {year} <FooterLink>Kevin Clark</FooterLink></Copyright>
-    <Contact>Email me at <FooterLink to='mailto:kevin@kevinclark.ca'>kevin@kevinclark.ca</FooterLink></Contact>
+    <Copyright>Copyright © {year} <FooterLink href="/">Kevin Clark</FooterLink></Copyright>
+    <Contact>Email me at <FooterLink href='mailto:kevin@kevinclark.ca'>kevin@kevinclark.ca</FooterLink></Contact>
     <div>
       <SocialLink href='http://instagram.com/vernalkick/'><Instagram /></SocialLink>
       <SocialLink href='http://twitter.com/vernalkick'><Twitter /></SocialLink>

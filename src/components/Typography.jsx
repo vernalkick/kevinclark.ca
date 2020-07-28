@@ -13,7 +13,7 @@ import graphikMedium from '../assets/fonts/Graphik-Medium.woff'
 import gtPressuraMono2 from '../assets/fonts/GTPressuraMonoTrial-Regular.woff2'
 import gtPressuraMono from '../assets/fonts/GTPressuraMonoTrial-Regular.woff'
 
-export const GlobalStyle = createGlobalStyle `
+export const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'Graphik';
     src: url('${graphikRegular2}') format('woff2'),
@@ -52,6 +52,7 @@ export const GlobalStyle = createGlobalStyle `
     --paragraph-text-color: #333;
     --primary-text-color: #333;
     --secondary-text-color: #777;
+    --not-too-subdued-elements-color: #fff;
     --subdued-elements-color: #fff;
     --really-subdued-elements-color: #fff;
     --top-background-color: #fff;
@@ -66,6 +67,7 @@ export const GlobalStyle = createGlobalStyle `
     --paragraph-text-color: #ccc;
     --primary-text-color: #fff;
     --secondary-text-color: #999;
+    --not-too-subdued-elements-color: rgba(255, 255, 255, 0.4);
     --subdued-elements-color: rgba(255, 255, 255, 0.15);
     --really-subdued-elements-color: rgba(255, 255, 255, 0.09);
     --top-background-color: #161616;
@@ -114,12 +116,11 @@ export const GlobalStyle = createGlobalStyle `
 
   p a,
   li a {
-    border-bottom: 2px solid var(--subdued-elements-color);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--not-too-subdued-elements-color);
+    text-underline-position: under;
     font-weight: 500;
-
-    &:hover {
-      background: var(--subdued-elements-color);
-    }
   }
 
   ul {

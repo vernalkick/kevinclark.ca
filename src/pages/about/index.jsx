@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { device } from '../../components/Media'
 import MainPageHeader from '../../components/MainPageHeader'
 import NewFigure from '../../components/NewFigure'
-import {FigCaption} from '../../components/Figure'
+import { Caption } from '../../components/TextStyles'
 
 import AboutItem from './AboutItem'
 
@@ -90,6 +90,39 @@ const Items = styled.div`
   margin-top: 1.5rem;
 `
 
+const features = [
+  {
+    title: "Rooki.Design",
+    desc: "Interview",
+    url: "https://www.rooki.design/interviews/kevin-clark",
+  },
+  {
+    title: "Infopresse 30 under 30",
+    desc: "Award",
+    url: "https://www.infopresse.com/dossier/2016/10/24/kevin-clark-redefinir-le-monde-du-commerce",
+  },
+  {
+    title: "Design Details",
+    desc: "Episode 196",
+    url: "https://spec.fm/podcasts/design-details/68532",
+  },
+  {
+    title: "The Artboard",
+    desc: "Episode 3",
+    url: "http://www.theartboard.net/episodes/2015/5/26/03-managing-side-projects-with-kevin-clark",
+  },
+  {
+    title: "Typekit blog",
+    desc: "Feature",
+    url: "https://blog.typekit.com/2014/08/01/sites-we-like-kevin-clark-evan-kerrigan-isaac-paavola/",
+  },
+  {
+    title: "Typ.io",
+    desc: "Feature",
+    url: "http://typ.io/s/4cmb",
+  }
+]
+
 class AboutPage extends React.Component {
   render() {
     return (
@@ -106,9 +139,9 @@ class AboutPage extends React.Component {
             <Portrait>
               <NewFigure>
                 <img src={profilePicture} alt="Kevin Clark" />
-                <FigCaption>
+                <Caption>
                   Picture by <a href="https://www.instagram.com/sweetyams/?hl=en">Willem Shepherd</a>
-                </FigCaption>
+                </Caption>
               </NewFigure>
             </Portrait>
 
@@ -130,7 +163,7 @@ class AboutPage extends React.Component {
             <SidebarContent>
               <InfoBlock>
                 <h4>Contact</h4>
-                <p>If you'd like to talk about anything, please don't hesitate to <a href="mailto:kevin@kevinclark.ca">email me</a>. </p>
+                <p>If you'd like to talk about anything, please don't hesitate to <a href="mailto:kevin@kevinclark.ca">email me</a>.</p>
               </InfoBlock>
               <InfoBlock>
                 <h4>Work Inquiries</h4>
@@ -139,12 +172,9 @@ class AboutPage extends React.Component {
               <InfoBlock>
                 <h4>Featured in</h4>
                 <Items>
-                  <AboutItem title="Rooki.Design" description="Interview" url="https://www.rooki.design/interviews/kevin-clark" />
-                  <AboutItem title="Infopresse 30 under 30" description="Award" url="https://www.infopresse.com/dossier/2016/10/24/kevin-clark-redefinir-le-monde-du-commerce" />
-                  <AboutItem title="Design Details" description="Episode 196" url="https://spec.fm/podcasts/design-details/68532" />
-                  <AboutItem title="The Artboard" description="Episode 3" url="http://www.theartboard.net/episodes/2015/5/26/03-managing-side-projects-with-kevin-clark" />
-                  <AboutItem title="Typekit blog" description="Feature" url="https://blog.typekit.com/2014/08/01/sites-we-like-kevin-clark-evan-kerrigan-isaac-paavola/" />
-                  <AboutItem title="Typ.io" description="Feature" url="http://typ.io/s/4cmb" />
+                  {features.map(feature =>
+                    <AboutItem title={feature.title} description={feature.desc} url={feature.url} />
+                  )}
                 </Items>
               </InfoBlock>
             </SidebarContent>

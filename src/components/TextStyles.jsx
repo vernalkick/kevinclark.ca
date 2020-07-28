@@ -1,28 +1,24 @@
-
 import styled from 'styled-components'
 
-export const CaptionText = styled.span`
+export const CaptionTitle = styled.span`
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  
+  &:not(:first-child) {
+    margin-top: 1.5em;
+  }
+`
+
+export const Caption = styled.span`
+  display: block;
   color: var(--secondary-text-color);
   font-size: 16px;
   font-family: var(--secondary-font);
   line-height: 1.5;
-  display: block;
-  position: relative;
-
-  &:before {
-    content: "";
-    display: ${props => props.decoration ? 'block' : 'none'};
-    position: absolute;
-    height: 140px;
-    width: 2px;
-    background: var(--subdued-elements-color);
-    transform: rotate(45deg) translateY(15%);
-    bottom: -2rem;
-    right: 1rem;
-    z-index: -1;
-  }
-
-  a {
-    border-bottom: 2px solid var(--subdued-elements-color);
+  
+  &:first-child, img + & {
+    margin-top: 1.5em;
   }
 `

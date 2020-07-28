@@ -1,7 +1,7 @@
 import React from 'react'
 import Section from '../../../components/Section'
 import {Grid, Column} from '../../../components/ContentGrid'
-import {FigCaption} from '../../../components/Figure'
+import {CaptionTitle, Caption} from '../../../components/TextStyles'
 import Project from '../../../templates/project'
 import NewFigure from '../../../components/NewFigure'
 
@@ -15,6 +15,7 @@ import iconsDark from './wl-icons-dark.png'
 
 const ImageBackground = styled.div`
   background-color: var(--top-background-color);
+  margin-bottom: 1.5em;
 `
 
 export const frontmatter = {
@@ -65,7 +66,8 @@ const WeatherLine = ({location}) => (
               <ImageBackground>
                 <img src={coral} alt="Coral theme" />
               </ImageBackground>
-              <FigCaption title="Coral Theme">Paired with the Coral iPhone XR</FigCaption>
+              <CaptionTitle>Coral Theme</CaptionTitle>
+              <Caption>Paired with the Coral iPhone XR</Caption>
             </NewFigure>
           </Column>
           <Column width={4}>
@@ -73,7 +75,8 @@ const WeatherLine = ({location}) => (
               <ImageBackground>
                 <img src={dracula} alt="Dracula theme" />
               </ImageBackground>
-              <FigCaption title="Dracula theme">Paired with the Purple iPhone 11</FigCaption>
+              <CaptionTitle>Dracula theme</CaptionTitle>
+              <Caption>Paired with the Purple iPhone 11</Caption>
             </NewFigure>
           </Column>
         </Grid>
