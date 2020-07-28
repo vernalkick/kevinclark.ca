@@ -69,16 +69,6 @@ const CardsSecond = styled.img`
   left: 100%;
 `
 
-
-
-const CardExplorations = styled.div`
-  width: 100%;
-  padding-bottom: 50.64%;
-  background: url('${card_explorations_image}');
-  background-size: contain;
-  animation: ${translate} 80s infinite linear;
-`
-
 const IphoneContainer = styled.div`
   position: relative;
   filter: drop-shadow(0 18px 43px rgba(0,0,0,.15));
@@ -306,7 +296,7 @@ const OrderStatusPage = ({location}) => (
             <NewFigure isPortrait={true}>
               <IphoneContainer>
                 <Iphone src={iphone} />
-                <IphoneScreen src={mobile} />
+                <IphoneScreen src={mobile} loading="lazy" />
               </IphoneContainer>
             </NewFigure>
           </Column>
