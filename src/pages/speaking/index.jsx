@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../../layouts/layout'
 import MainPageHeader from '../../components/MainPageHeader'
-import Button from '../../components/Button'
+import {ButtonLink} from '../../components/Button'
 import Event from '../../components/Event'
 import styled from 'styled-components'
 import { device } from '../../components/Media'
@@ -169,7 +169,7 @@ class SpeakingPage extends React.Component {
               </Column>
               <Column width={4} start={1} row={2} align='start'>
                 <p>One thing I love about the world of technology is that you have to be continually learning new things. More and more, a big part of my career is sharing with others my process designing experiences used by millions of people. My talks range from inspirational (diving into what motivates us to make things) to more practical (filled with real-world examples and tips that people can apply into their own work). My goal is to give people a good time while hopefully teaching them a thing or two.</p>
-                <Button href='mailto:kevin@kevinclark.ca' primary={true}>Get in touch</Button>
+                <ButtonLink href='mailto:kevin@kevinclark.ca' primary={true}>Get in touch</ButtonLink>
               </Column>
             </Grid>
           </Section>

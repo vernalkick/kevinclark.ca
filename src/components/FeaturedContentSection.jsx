@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Button from '../components/Button'
+import {ButtonLink} from '../components/Button'
 import { device } from '../components/Media'
 
 const Container = styled.div`
@@ -42,10 +42,6 @@ const SectionTitle = styled.h1`
   }
 `
 
-const ViewMoreButton = styled(Button)`
-
-`
-
 const ButtonContainer = styled.div`
   position: relative;
   z-index: 2;
@@ -66,7 +62,7 @@ const FeaturedContentSection = ({title, url, children}) => (
       {children}
     </Content>
     <ButtonContainer>
-      <ViewMoreButton href={url} icon="plus">View All</ViewMoreButton>
+      <ButtonLink href={url} icon="plus">View All</ButtonLink>
     </ButtonContainer>
   </Container>
 )

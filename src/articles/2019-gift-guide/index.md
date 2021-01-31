@@ -4,7 +4,7 @@ date: 2019-12-13
 published: true
 ---
 
-import Button from "../../components/Button"
+import {ButtonLink} from "../../components/Button"
 import Image from '../../components/Image'
 
 
@@ -17,7 +17,7 @@ I'm a notoriously difficult person to buy gifts for. With this holiday season co
 
 The best gifts are experiences. The second best gifts are small luxuries that you wouldn't necessarily buy for yourself. An Aesop bottle elevates any space that it's in and the Mandarin Rind in this hand soap will bring joy to something we do mechanically all the time. If you're not sure where to start with Aesop, this is the gateway drug.
 
-<Button primary={false} href="https://www.aesop.com/ca/en/p/body-hand/hand/resurrection-aromatique-hand-wash/">Buy at Aesop&ensp;&middot;&ensp;$51</Button>
+<ButtonLink primary={false} href="https://www.aesop.com/ca/en/p/body-hand/hand/resurrection-aromatique-hand-wash/">Buy at Aesop&ensp;&middot;&ensp;$51</ButtonLink>
 
 
 ### [Wallet Type 1](https://store.leibal.com/products/wallet-type1)
@@ -25,7 +25,7 @@ The best gifts are experiences. The second best gifts are small luxuries that yo
 
 I first discovered this wallet on [Andrew Kim's Instagram](https://www.instagram.com/p/B1CYs7VgVKp/). But what sold me on it was the craftsmanship involved into making a wallet like this with no visible stitches. I've been using it for a few days and I'm absolutely in love with how it looks and functions as a practical object.
 
-<Button primary={false} href="https://store.leibal.com/products/wallet-type1">Buy at Leibal&ensp;&middot;&ensp;$149</Button>
+<ButtonLink primary={false} href="https://store.leibal.com/products/wallet-type1">Buy at Leibal&ensp;&middot;&ensp;$149</ButtonLink>
 
 
 ### [Beside Magazine](https://shop.beside.media/products/issue-07)
@@ -33,7 +33,7 @@ I first discovered this wallet on [Andrew Kim's Instagram](https://www.instagram
 
 Made in Montréal, this magazine brings together philosophers, artists, entrepreneurs, farmers, scientists and adventurers around one compelling question: what risks are we willing to bear? On top of being a fantastic read, this magazine is guaranteed to look fantastic on your coffee table.
 
-<Button primary={false} href="https://shop.beside.media/products/issue-07">Buy from Beside&ensp;&middot;&ensp;$20</Button>
+<ButtonLink primary={false} href="https://shop.beside.media/products/issue-07">Buy from Beside&ensp;&middot;&ensp;$20</ButtonLink>
 
 
 ### [Côte & Ciel Isar Rucksack](https://www.coteetciel.com/collections/all-black/products/isar-m-ecoyarn-black)
@@ -41,9 +41,9 @@ Made in Montréal, this magazine brings together philosophers, artists, entrepre
 
 I've been using this backpack every day for the past 3 years and I still love it as much as I did when I bought it. In fact, I might love it more. The design philosophy of this company is that they want the contents of your bag to influence the outside appearance of the bag. Therefore, depending what you put in it, its shape will adapt to fit the contents.
 
-<Button primary={false} href="https://www.coteetciel.com/collections/all-black/products/isar-m-ecoyarn-black">
+<ButtonLink primary={false} href="https://www.coteetciel.com/collections/all-black/products/isar-m-ecoyarn-black">
   Buy at Côte & Ciel&ensp;&middot;&ensp;$295
-</Button>
+</ButtonLink>
 
 
 ### [Orbitkey Ring](https://www.orbitkey.com/collections/orbitkey-ring/products/orbitkey-ring?variant=12219371454560)
@@ -51,9 +51,9 @@ I've been using this backpack every day for the past 3 years and I still love it
 
 I don't know how often you think of your key ring. The only time I really think about my keyring is when I have to take keys in and out of it. How terrible is that design? For most of my life I just pushed through it and just accepted it as a fact of life. That's until I discovered the [Orbitkey Ring](https://www.orbitkey.com/collections/orbitkey-ring/products/orbitkey-ring?variant=12219371454560), which uses a clever mechanism to make getting keys in and out of it super easy.
 
-<Button primary={false} href="https://www.orbitkey.com/collections/orbitkey-ring/products/orbitkey-ring?variant=12219371454560">
+<ButtonLink primary={false} href="https://www.orbitkey.com/collections/orbitkey-ring/products/orbitkey-ring?variant=12219371454560">
   Buy from Orbitkey&ensp;&middot;&ensp;$14.90
-</Button>
+</ButtonLink>
 
 
 ### [Memobottle A6](https://www.memobottle.us/collections/shop-all/products/a6-memobottle-1)
@@ -61,9 +61,9 @@ I don't know how often you think of your key ring. The only time I really think 
 
 Memo bottles are water bottles that are rectangular instead of being circular. That makes them much easier to carry with you in a jacket pocket wherever you go. It's simple as that.
 
-<Button primary={false} href="https://www.memobottle.us/collections/shop-all/products/a6-memobottle-1">
+<ButtonLink primary={false} href="https://www.memobottle.us/collections/shop-all/products/a6-memobottle-1">
   Buy from Memobottle&ensp;&middot;&ensp;$38
-</Button>
+</ButtonLink>
 
 
 ### [Aesop: The Book](https://www.aesop.com/ca/en/p/home/home-gifts/aesop-the-book/)
@@ -71,6 +71,6 @@ Memo bottles are water bottles that are rectangular instead of being circular. T
 
 For the Aesop fan in your life, this book documents the company ethos, how their packaging has evolved throughout the years and breaks down the artistic collaborations that produced some of their most iconic retail locations.
 
-<Button primary={false} href="https://www.aesop.com/ca/en/p/home/home-gifts/aesop-the-book/">
+<ButtonLink primary={false} href="https://www.aesop.com/ca/en/p/home/home-gifts/aesop-the-book/">
   Buy at Aesop&ensp;&middot;&ensp;$100
-</Button>
+</ButtonLink>
