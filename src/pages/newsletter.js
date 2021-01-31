@@ -20,13 +20,11 @@ export default ({ location }) => (
     <Section>
     <Grid>
       <Column width={5}>
-      <h3>There’s always been something magical to me about receiving letters in the mail. They tend to be very few and far between, but that only contributes to the feeling of receiving one. It’s kind of a lost art.</h3>
+        <h3>There’s always been something magical to me about receiving letters in the mail. They tend to be very few and far between, but that only contributes to the feeling of receiving one. It’s kind of a lost art.</h3>
       </Column>
     </Grid>
       <Grid>
         <Column width={4}>
-          
-          
           <p>Our inboxes on the other hand, are filled with notifications and bills to pay and random spam mails that somehow made it through even some of the world’s most sophisticated algorithms. I’d like to try and bring some of the whimsy back. Let’s bring back the feeling of an old friend, writing you a personal letter. Now don’t get me wrong, these newsletters will be infrequent. On purpose.</p>
         </Column>
         <Column width={3} start={6} align='end'>
@@ -35,7 +33,5 @@ export default ({ location }) => (
         </Column>
       </Grid>
     </Section>
-    
-    
   </Layout>
 )
