@@ -2,6 +2,9 @@ module.exports = {
   siteMetadata: {
     title: 'Kevin Clark',
   },
+  flags: {
+    DEV_SSR: false
+  },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',

@@ -57,7 +57,9 @@ export const GlobalStyle = createGlobalStyle`
     --really-subdued-elements-color: #fff;
     --top-background-color: #fff;
     --bottom-background-color: #F1F1F1;
+    --error-color: #DA2626;
     --dark-tiles: #333;
+    --border-radius: 12px;
   }
 
 @media (prefers-color-scheme: dark) {
@@ -72,6 +74,7 @@ export const GlobalStyle = createGlobalStyle`
     --really-subdued-elements-color: rgba(255, 255, 255, 0.09);
     --top-background-color: #161616;
     --bottom-background-color: #000;
+    --error-color: #FF7060;
     --dark-tiles: #222;
   }
 }

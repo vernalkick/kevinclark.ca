@@ -143,7 +143,7 @@ const IndexPage = ({
         <PostList>
           {allMdx.edges.map(edge => <PostItem post={edge.node} key={edge.node.fields.slug} />)}
         </PostList>
-      </FeaturedContentSection>
+      </FeaturedContentSection> 
     </Layout>
   )
 };

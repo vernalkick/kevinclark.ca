@@ -3,11 +3,14 @@ import styled from 'styled-components'
 import { device } from '../components/Media'
 import PlusIcon from '../assets/plus.svg'
 
-const Button = styled.a`
+const ButtonInput = styled.button`
   display: inline-block;
-  border-radius: 12px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
   font-weight: 500;
   font-size: 18px;
+  font-family: var(--base-font);
   background: var(${props => props.primary ? "--primary-text-color" : "--really-subdued-elements-color"});
   color: var(${props => props.primary ? "--bottom-background-color" : "--primary-text-color"});
 
@@ -33,8 +36,8 @@ const Icon = styled.div`
   align-items: center;
 `
 
-export default ({ href, icon, primary, children }) => (
-  <Button href={href} primary={primary}>
+const Button = ({ icon, primary, children, ...props }) => (
+  <ButtonInput primary={primary} {...props}>
     <Inner>
       {icon &&
         <Icon>
@@ -45,5 +48,11 @@ export default ({ href, icon, primary, children }) => (
       }
       {children}
     </Inner>
-  </Button>
+  </ButtonInput>
 )
+
+const ButtonLink = ({...props}) => (
+  <Button as="a" {...props} />
+)
+
+export { Button, ButtonLink }
