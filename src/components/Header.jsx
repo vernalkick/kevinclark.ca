@@ -82,7 +82,7 @@ const Header = ({ siteTitle, pathName }) => (
   <MainHeader>
     <Logo to='/'>
       <Name>Kevin Clark</Name>
-      <Role>Design Lead, Shopify</Role>
+      <Role>UX Director, Shopify</Role>
     </Logo>
     <List>
       <NavItem url='/articles' currentPath={pathName}>Articles</NavItem>
